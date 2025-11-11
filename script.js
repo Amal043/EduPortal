@@ -611,6 +611,24 @@ function signInWithGoogle() {
     authSystem.signInWithGoogle();
 }
 
+// Mobile navigation toggle (for small screens)
+function toggleMobileNav(forceState) {
+    const navMenu = document.querySelector('.nav-menu');
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    if (!navMenu || !toggleBtn) return;
+
+    const isOpen = navMenu.classList.contains('open');
+    let shouldOpen = typeof forceState === 'boolean' ? forceState : !isOpen;
+
+    if (shouldOpen) {
+        navMenu.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+    } else {
+        navMenu.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+}
+
 // State-based opportunity data
 const stateOpportunities = {
     'andhra-pradesh': {
@@ -2255,6 +2273,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize state selector
     initializeStateSelector();
+
+    // Mobile nav: close when clicking outside and close on item click (small screens)
+    const mobileToggle = document.getElementById('mobileNavToggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (mobileToggle && navMenu) {
+        // Close nav when clicking outside
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            if (window.innerWidth <= 900) {
+                if (!navMenu.contains(target) && !mobileToggle.contains(target)) {
+                    toggleMobileNav(false);
+                }
+            }
+        });
+
+        // Close nav when a nav-item is clicked (for single-page navigation)
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 900) toggleMobileNav(false);
+            });
+        });
+    }
 });
 
 // Setup search functionality
