@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Opportunities Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="comparison.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="ai_system.js"></script>
+    <script src="live_opportunities.js"></script>
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <button class="theme-btn" onclick="toggleTheme()" title="Toggle Dark/Light Theme" aria-label="Toggle theme">
+            <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+    </div>
+
+    <div class="auth-overlay" id="authOverlay">
+        <div class="auth-container">
+            <div class="auth-form-container">
+                <div class="auth-form" id="loginForm">
+                    <div class="form-header">
+                        <h2><i class="fas fa-sign-in-alt"></i> Welcome Back</h2>
+                        <p>Sign in to access personalized opportunities</p>
+                    </div>
+                    <form id="loginFormElement">
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('loginPassword')"></i>
+                        </div>
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="auth-btn">
+                            <span>Sign In</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <button class="google-auth-btn" onclick="signInWithGoogle()">
+                        <i class="fab fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" onclick="switchAuthForm('signup')">Sign Up</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-form" id="signupForm" style="display: none;">
+                    <div class="form-header">
+                        <h2><i class="fas fa-user-plus"></i> Create Account</h2>
+                        <p>Join us to discover amazing opportunities</p>
+                    </div>
+                    <form id="signupFormElement">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="signupName" placeholder="Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signupPassword" placeholder="Password" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('signupPassword')"></i>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('confirmPassword')"></i>
+                        </div>
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#">Terms & Conditions</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="auth-btn">
+                            <span>Create Account</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <button class="google-auth-btn" onclick="signInWithGoogle()">
+                        <i class="fab fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" onclick="switchAuthForm('login')">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                    <div class="shape shape-5"></div>
+                </div>
+                <div class="auth-content">
+                    <h1><i class="fas fa-graduation-cap"></i> Educational Portal</h1>
+                    <p>Your gateway to endless opportunities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-app" id="mainApp" style="display: none;">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EduPortal</span>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-item" onclick="showHomePage()" data-translate="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </div>
+                    <div class="nav-item" onclick="showDashboard()" data-translate="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="nav-item" onclick="showComparison()" data-translate="compare">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Compare</span>
+                        <span class="comparison-count" id="comparisonCount" style="display: none;">0</span>
+                    </div>
+                    <div class="nav-item language-selector">
+                        <i class="fas fa-language"></i>
+                        <select id="languageSelect" class="language-dropdown">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                        </select>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-user"></i>
+                        <span id="userName">User</span>
+                    </div>
+                    <div class="nav-item logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <header>
+                <h1><i class="fas fa-graduation-cap"></i> <span data-translate="portalTitle">Educational Opportunities Portal</span></h1>
+                <p data-translate="portalSubtitle">Discover scholarships, hackathons, workshops, and internships tailored to your state</p>
+            </header>
+
+            <!-- Search Section -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Search here for opportunities..." data-translate="searchPlaceholder">
+                    <button id="voiceSearchBtn" class="voice-search-btn" title="Voice Search">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button id="searchButton" class="search-btn" data-translate="search">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                    <div id="searchSuggestions" class="search-suggestions"></div>
+                </div>
+                
+                <!-- Compact State Selection Below Search -->
+                <div class="state-selector-small">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="stateSelect" class="state-select-compact">
+                        <option value="" data-translate="selectState">Select Your State</option>
+                        <option value="andhra-pradesh" data-translate="state_ap">Andhra Pradesh</option>
+                        <option value="arunachal-pradesh" data-translate="state_ar">Arunachal Pradesh</option>
+                        <option value="assam" data-translate="state_as">Assam</option>
+                        <option value="bihar" data-translate="state_br">Bihar</option>
+                        <option value="chhattisgarh" data-translate="state_cg">Chhattisgarh</option>
+                        <option value="goa" data-translate="state_ga">Goa</option>
+                        <option value="gujarat" data-translate="state_gj">Gujarat</option>
+                        <option value="haryana" data-translate="state_hr">Haryana</option>
+                        <option value="himachal-pradesh" data-translate="state_hp">Himachal Pradesh</option>
+                        <option value="jharkhand" data-translate="state_jh">Jharkhand</option>
+                        <option value="karnataka" data-translate="state_ka">Karnataka</option>
+                        <option value="kerala" data-translate="state_kl">Kerala</option>
+                        <option value="madhya-pradesh" data-translate="state_mp">Madhya Pradesh</option>
+                        <option value="maharashtra" data-translate="state_mh">Maharashtra</option>
+                        <option value="manipur" data-translate="state_mn">Manipur</option>
+                        <option value="meghalaya" data-translate="state_ml">Meghalaya</option>
+                        <option value="mizoram" data-translate="state_mz">Mizoram</option>
+                        <option value="nagaland" data-translate="state_nl">Nagaland</option>
+                        <option value="odisha" data-translate="state_or">Odisha</option>
+                        <option value="punjab" data-translate="state_pb">Punjab</option>
+                        <option value="rajasthan" data-translate="state_rj">Rajasthan</option>
+                        <option value="sikkim" data-translate="state_sk">Sikkim</option>
+                        <option value="tamil-nadu" data-translate="state_tn">Tamil Nadu</option>
+                        <option value="telangana" data-translate="state_tg">Telangana</option>
+                        <option value="tripura" data-translate="state_tr">Tripura</option>
+                        <option value="uttar-pradesh" data-translate="state_up">Uttar Pradesh</option>
+                        <option value="uttarakhand" data-translate="state_uk">Uttarakhand</option>
+                        <option value="west-bengal" data-translate="state_wb">West Bengal</option>
+                        <option value="delhi" data-translate="state_dl">Delhi</option>
+                        <option value="chandigarh" data-translate="state_ch">Chandigarh</option>
+                        <option value="jammu-kashmir" data-translate="state_jk">Jammu & Kashmir</option>
+                        <option value="ladakh" data-translate="state_la">Ladakh</option>
+                        <option value="puducherry" data-translate="state_py">Puducherry</option>
+                    </select>
+                </div>
+                
+                <div class="search-results" id="searchResults">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+
+            <div class="options-container" id="optionsContainer">
+                <h2 data-translate="availableOpportunities">Available Opportunities</h2>
+                <div class="options-grid">
+                    <div class="option-card" data-category="scholarships">
+                        <div class="card-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 data-translate="scholarships">Scholarships</h3>
+                        <p data-translate="scholarshipsDesc">Find financial aid and scholarship opportunities for your education</p>
+                        <button class="explore-btn" onclick="openCategory('scholarships')">
+                            <span data-translate="explore">Explore</span> <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="option-card" data-category="hackathons">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 data-translate="hackathons">Hackathons</h3>
+                        <p data-translate="hackathonsDesc">Participate in coding competitions and innovation challenges</p>
+                        <button class="explore-btn" onclick="openCategory('hackathons')">
+                            <span data-translate="explore">Explore</span> <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="option-card" data-category="workshops">
+                        <div class="card-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 data-translate="workshops">Workshops</h3>
+                        <p data-translate="workshopsDesc">Join skill development workshops and training programs</p>
+                        <button class="explore-btn" onclick="openCategory('workshops')">
+                            <span data-translate="explore">Explore</span> <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="option-card" data-category="internships">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 data-translate="internships">Internships</h3>
+                        <p data-translate="internshipsDesc">Discover internship opportunities to gain practical experience</p>
+                        <button class="explore-btn" onclick="openCategory('internships')">
+                            <span data-translate="explore">Explore</span> <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Page -->
+            <div class="dashboard-container" id="dashboardContainer" style="display: none;">
+                <div class="dashboard-header">
+                    <h2 style="color: white; margin-bottom: 10px;">
+                        <i class="fas fa-tachometer-alt"></i> My Dashboard
+                    </h2>
+                    <button class="customize-btn" id="customizeDashboard" title="Customize Dashboard">
+                        <i class="fas fa-sliders-h"></i> Customize Layout
+                    </button>
+                </div>
+                
+                <!-- Dashboard Stats -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <h3 id="savedCount">0</h3>
+                        <p>Saved Opportunities</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-tasks"></i>
+                        <h3 id="appliedCount">0</h3>
+                        <p>Applications Tracked</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3 id="deadlineCount">0</h3>
+                        <p>Upcoming Deadlines</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-bell"></i>
+                        <h3 id="reminderCount">0</h3>
+                        <p>Active Reminders</p>
+                    </div>
+                </div>
+
+                <!-- Dashboard Widgets (Draggable) -->
+                <div class="widgets-container" id="widgetsContainer">
+                    <!-- Quick Stats Widget -->
+                    <div class="dashboard-widget" data-widget-id="quick-stats">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-chart-pie"></i> Quick Stats</h3>
+                            <button class="widget-toggle"><i class="fas fa-chevron-up"></i></button>
+                        </div>
+                        <div class="widget-content" id="quickStatsWidget">
+                            <div class="quick-stat-item">
+                                <span class="stat-label">Average Award Amount</span>
+                                <span class="stat-value" id="avgAmount">₹0</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <span class="stat-label">Acceptance Rate</span>
+                                <span class="stat-value" id="acceptanceRate">0%</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <span class="stat-label">Application Success</span>
+                                <span class="stat-value" id="successRate">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Widget -->
+                    <div class="dashboard-widget" data-widget-id="calendar">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-calendar"></i> Deadline Calendar</h3>
+                            <button class="widget-toggle"><i class="fas fa-chevron-up"></i></button>
+                        </div>
+                        <div class="widget-content" id="calendarWidget">
+                            <div class="calendar-view" id="miniCalendar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Opportunities Carousel -->
+                    <div class="dashboard-widget widget-full" data-widget-id="carousel">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-fire"></i> Trending Opportunities</h3>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="widget-refresh" id="refreshCarousel" title="Refresh trending opportunities">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                                <button class="widget-toggle"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <div class="opportunities-carousel" id="opportunitiesCarousel">
+                                <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                                <div class="carousel-track" id="carouselTrack"></div>
+                                <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Feed Widget -->
+                    <div class="dashboard-widget" data-widget-id="news">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-newspaper"></i> Education News</h3>
+                            <button class="widget-toggle"><i class="fas fa-chevron-up"></i></button>
+                        </div>
+                        <div class="widget-content" id="newsFeedWidget">
+                            <div class="news-items" id="newsItems"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saved Opportunities -->
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-heart"></i> Saved Opportunities</h3>
+                    <div id="savedOpportunities" class="opportunity-grid">
+                        <div class="empty-state">
+                            <i class="fas fa-bookmark"></i>
+                            <p>No saved opportunities yet</p>
+                            <p class="empty-state-hint">Save opportunities from search results to track them here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Tracker -->
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-tasks"></i> Application Tracker</h3>
+                    <div id="applicationTracker" class="tracker-list">
+                        <div class="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            <p>No applications tracked yet</p>
+                            <p class="empty-state-hint">Mark opportunities as "Applied" to track their status</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Deadlines -->
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-calendar-alt"></i> Upcoming Deadlines</h3>
+                    <div id="upcomingDeadlines" class="deadline-list">
+                        <div class="empty-state">
+                            <i class="fas fa-calendar-check"></i>
+                            <p>No deadlines set</p>
+                            <p class="empty-state-hint">Add deadlines to opportunities to track them here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-lightbulb"></i> Recommended for You</h3>
+                    <div id="recommendedOpportunities" class="opportunity-grid">
+                        <p style="color: rgba(255,255,255,0.7);">Loading personalized recommendations...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Container -->
+            <div class="comparison-container" id="comparisonContainer" style="display: none;">
+                <div id="comparisonContent">
+                    <!-- Comparison content will be generated by comparison_tool.js -->
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading opportunities for your state...</p>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <p>Made With ❤️...</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EduPortal. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading Amazing Content...</div>
+    </div>
+
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="dashboard_widgets.js"></script>
+    <script src="comparison_tool.js"></script>
+    <script src="ai_system.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="multilanguage.js"></script>
+</body>
+</html>
