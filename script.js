@@ -705,7 +705,49 @@ const stateOpportunities = {
             },
             { name: 'AP State Scholarship', url: 'https://www.ap.gov.in/scholarships', description: 'State government scholarships for students from all categories' },
             { name: 'AP EAMCET Merit Scholarship', url: 'https://www.apeamcet.nic.in', description: 'Merit-based scholarships for engineering students from General, OBC, SC, ST categories' },
-            { name: 'AP Post Matric Scholarship', url: 'https://www.nsp.gov.in', description: 'Post-matriculation scholarship scheme for SC, ST, OBC, and minority students' }
+            { name: 'AP Post Matric Scholarship', url: 'https://www.nsp.gov.in', description: 'Post-matriculation scholarship scheme for SC, ST, OBC, and minority students' },
+            // ANDHRA PRADESH STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'AP ST Welfare Department Post-Matric Scholarship', url: 'https://www.ap.gov.in/tribal-welfare', description: 'Andhra Pradesh state scholarship for ST students pursuing post-matriculation courses in recognized institutions within AP.', source: 'AP Tribal Welfare Department', priority: 2 },
+            { name: 'AP ST Pre-Matric Scholarship', url: 'https://www.ap.gov.in/tribal-welfare', description: 'Financial assistance for ST students in AP studying in classes 9th and 10th to encourage education continuation.', source: 'AP Tribal Welfare Department', priority: 2 },
+            { name: 'AP Tribal Students Fee Reimbursement', url: 'https://www.ap.gov.in/tribal-welfare', description: 'Complete fee reimbursement for ST students in AP pursuing professional courses like Engineering, Medical, MBA in government and private colleges.', source: 'AP Tribal Welfare Department', priority: 2 },
+            { name: 'AP ST Girls Education Incentive', url: 'https://www.ap.gov.in/tribal-welfare', description: 'Special incentive scheme for ST girl students in AP for higher education to promote female literacy in tribal areas.', source: 'AP Tribal Welfare Department', priority: 2 },
+            { name: 'AP Tribal Overseas Education Loan Subsidy', url: 'https://www.ap.gov.in/tribal-welfare', description: 'Interest subsidy on education loans for ST students from AP pursuing higher studies abroad.', source: 'AP Tribal Welfare Department', priority: 2 },
+            // ANDHRA PRADESH STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'AP SC Welfare Department Post-Matric Scholarship', url: 'https://www.ap.gov.in/social-welfare', description: 'Andhra Pradesh state scholarship for SC students pursuing post-matriculation education in recognized institutions.', source: 'AP Social Welfare Department', priority: 2 },
+            { name: 'AP SC Pre-Matric Scholarship', url: 'https://www.ap.gov.in/social-welfare', description: 'State scholarship for SC students in AP studying in classes 9th and 10th to reduce dropout rates.', source: 'AP Social Welfare Department', priority: 2 },
+            { name: 'AP SC Students Fee Reimbursement Scheme', url: 'https://www.ap.gov.in/social-welfare', description: 'Full tuition fee reimbursement for SC students in AP pursuing professional and technical courses in government and aided colleges.', source: 'AP Social Welfare Department', priority: 2 },
+            { name: 'Dr. B.R. Ambedkar Overseas Vidya Nidhi (AP)', url: 'https://www.ap.gov.in/social-welfare', description: 'Financial assistance for SC students from AP to pursue Masters and Ph.D. programs in foreign universities.', source: 'AP Social Welfare Department', priority: 2 },
+            { name: 'AP SC Girls Hostel Maintenance Scheme', url: 'https://www.ap.gov.in/social-welfare', description: 'Support for SC girl students in AP for hostel accommodation while pursuing higher education.', source: 'AP Social Welfare Department', priority: 2 },
+            { name: 'AP SC Students Laptop Distribution', url: 'https://www.ap.gov.in/social-welfare', description: 'Free laptop distribution to meritorious SC students in AP pursuing higher education.', source: 'AP Social Welfare Department', priority: 2 },
+            // NATIONAL ST-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for ST Students', url: 'https://tribal.nic.in/ST/NationalFellowshipforST.aspx', description: 'Fellowship scheme for ST students pursuing M.Phil and Ph.D programs in Indian universities. Provides financial support for research work.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Top Class Education Scheme for ST Students', url: 'https://tribal.nic.in/ST/TopClassEducationScheme.aspx', description: 'Full financial support for ST students admitted to top-notch institutions for pursuing quality higher education. Covers tuition fees and living expenses.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'ST Girls Hostel Scheme', url: 'https://tribal.nic.in/scholarships', description: 'Financial assistance for construction and running of hostels for ST girls pursuing higher secondary education and above in selected educational institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Upgradation of Merit for ST Students', url: 'https://tribal.nic.in/ST/UpgradationMeritST.aspx', description: 'Scholarship for meritorious ST students studying in classes 9th to 12th to upgrade their merit. Coaching support for competitive examinations.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Vocational Training Centers for ST Youth', url: 'https://tribal.nic.in/ST/VocationalTraining.aspx', description: 'Skill development and vocational training programs for ST youth to enhance employability and entrepreneurship opportunities.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Ashram Schools Scholarship for ST Students', url: 'https://tribal.nic.in/scholarships', description: 'Support for ST students in Ashram schools (residential schools in tribal areas) for quality education from elementary to higher secondary level.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'National Overseas Scholarship for ST Students', url: 'https://tribal.nic.in/ST/NationalOverseasScholarship.aspx', description: 'Financial assistance for ST students to pursue higher studies (Masters, Ph.D.) in prestigious foreign universities and institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for ST Students', url: 'https://ugc.ac.in/st/', description: 'Fellowship for ST candidates admitted to M.Phil/Ph.D programs in universities and research institutions. Monthly stipend and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            // SC-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for SC Students', url: 'https://socialjustice.nic.in/scholarships/national-fellowship-sc', description: 'Fellowship scheme for SC students pursuing M.Phil and Ph.D programs. Provides monthly stipend, contingency, and other allowances for research.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Top Class Education Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/top-class-education-sc', description: 'Full financial support for SC students in notified top-class institutions. Covers admission fees, tuition fees, living expenses, and books.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'SC Girls Hostel Scheme', url: 'https://socialjustice.nic.in/scholarships', description: 'Construction and maintenance of hostels for SC girls pursuing higher secondary, college, and university education.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Babu Jagjivan Ram Chhatravas Yojana', url: 'https://socialjustice.nic.in/scholarships', description: 'Hostel facilities for SC boys and girls pursuing higher and technical education. Provides accommodation and basic amenities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Free Coaching Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/free-coaching-sc', description: 'Free coaching for SC candidates appearing for competitive examinations like UPSC, SSC, Banking, Railways, IIT, Medical entrance tests.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Dr. Ambedkar Central Sector Scheme of Interest Subsidy', url: 'https://socialjustice.nic.in/scholarships/ambedkar-interest-subsidy', description: 'Interest subsidy on education loans for SC students pursuing higher education in India and abroad. Covers professional and technical courses.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'National Overseas Scholarship for SC Students', url: 'https://socialjustice.nic.in/scholarships/overseas-scholarship-sc', description: 'Financial assistance for SC students to pursue Masters and Ph.D. programs in top-ranked foreign universities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for SC Students', url: 'https://ugc.ac.in/sc/', description: 'Fellowship for SC candidates admitted to M.Phil/Ph.D programs in universities. Monthly stipend, HRA, and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            { name: 'SC Book Bank Scheme', url: 'https://scholarships.gov.in', description: 'Free textbooks and study materials for SC students pursuing higher education. Books can be retained after course completion.', source: 'State Social Welfare Department', priority: 2 },
+            // COMBINED SC/ST SCHOLARSHIPS
+            { name: 'SC/ST Coaching Scheme for Civil Services', url: 'https://dopt.gov.in/scholarships', description: 'Specialized coaching for SC and ST candidates preparing for UPSC Civil Services, IAS, IPS, IFS examinations with expert faculty.', source: 'Department of Personnel and Training', priority: 1 },
+            { name: 'SC/ST Students Study in India Scheme', url: 'https://scholarships.gov.in', description: 'Financial assistance for SC and ST students from remote areas to pursue higher education in better institutions within India.', source: 'Ministry of Social Justice & Ministry of Tribal Affairs', priority: 1 },
+            { name: 'SC/ST Merit-cum-Means Scholarship', url: 'https://scholarships.gov.in', description: 'Combined merit and need-based scholarship for economically weaker SC and ST students showing academic excellence.', source: 'State Government', priority: 2 },
+            { name: 'SC/ST Students Laptop/Tablet Scheme', url: 'https://scholarships.gov.in', description: 'Free laptops or tablets for meritorious SC and ST students to facilitate digital learning and skill development.', source: 'State Government', priority: 2 },
+            // ANDHRA PRADESH STATE-SPECIFIC OBC SCHOLARSHIPS
+            { name: 'AP OBC Welfare Scholarship', url: 'https://www.apobcwelfare.gov.in', description: 'Andhra Pradesh state scholarship for OBC students pursuing higher education.', source: 'AP OBC Welfare Department', priority: 2 },
+            { name: 'AP OBC Post-Matric Scholarship', url: 'https://www.apobcwelfare.gov.in', description: 'Financial assistance for OBC students in AP for post-matriculation courses.', source: 'AP OBC Welfare Department', priority: 2 },
+            { name: 'AP OBC Fee Reimbursement Scheme', url: 'https://www.apobcwelfare.gov.in', description: 'Fee reimbursement for OBC students in AP pursuing professional courses.', source: 'AP OBC Welfare Department', priority: 2 },
+            { name: 'AP OBC Girls Education Scheme', url: 'https://www.apobcwelfare.gov.in', description: 'Special scheme for OBC girl students in Andhra Pradesh for higher education.', source: 'AP OBC Welfare Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -723,20 +765,61 @@ const stateOpportunities = {
             { name: 'Entrepreneurship Workshop', url: 'https://www.apentrepreneur.com', description: 'Business and entrepreneurship training' }
         ],
         internships: [
-            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1 },
-            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Internships under Digital India scheme for technology and digital transformation projects', source: 'Ministry of Electronics & Information Technology (MeitY)', priority: 1 },
-            { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Internships at MEA headquarters, two terms per year for students interested in foreign affairs', source: 'Ministry of External Affairs (MEA)', priority: 1 },
-            { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'National Internship Portal for students in technical education to apply for various internships', source: 'All India Council for Technical Education (AICTE)', priority: 1 },
-            { name: 'AP Government Internship', url: 'https://www.ap.gov.in/internships', description: 'Government sector internship opportunities' },
-            { name: 'AP IT Internship Program', url: 'https://www.apit.gov.in', description: 'IT industry internship placements' },
-            { name: 'AP Startup Internship', url: 'https://www.apstartup.com', description: 'Startup ecosystem internship programs' }
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Internships under Digital India scheme for technology and digital transformation projects', source: 'Ministry of Electronics & Information Technology (MeitY)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Internships at MEA headquarters, two terms per year for students interested in foreign affairs', source: 'Ministry of External Affairs (MEA)', priority: 1, branches: ['MBA', 'Others'] },
+            { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'National Internship Portal for students in technical education to apply for various internships', source: 'All India Council for Technical Education (AICTE)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+            // AP GOVERNMENT INTERNSHIPS
+            { name: 'AP Government Secretariat Internship', url: 'https://www.ap.gov.in/internships', description: 'Internship opportunities in AP state government departments and secretariat for policy and administration exposure', source: 'AP State Government', priority: 2, branches: ['MBA', 'Others'] },
+            { name: 'AP IT Department Internship', url: 'https://www.apit.gov.in', description: 'Technical internships in AP IT Department for software development, data analytics, and digital initiatives', source: 'AP IT Department', priority: 2, branches: ['CSE', 'IT', 'ECE'] },
+            { name: 'AP Innovation Society Internship', url: 'https://www.apinnovation.in', description: 'Internships in innovation and startup ecosystem development in Andhra Pradesh', source: 'AP Innovation Society', priority: 2, branches: ['CSE', 'IT', 'MBA', 'Others'] },
+            // AP CORPORATE INTERNSHIPS
+            { name: 'Visakhapatnam Steel Plant Internship', url: 'https://www.vizagsteel.com/careers', description: 'Engineering and management internships at Rashtriya Ispat Nigam Limited (RINL), Vizag', source: 'RINL-Vizag Steel', priority: 2, branches: ['Mechanical', 'Metallurgy', 'Chemical', 'EEE', 'Civil', 'MBA'] },
+            { name: 'TCS Visakhapatnam Internship', url: 'https://www.tcs.com/careers', description: 'IT internships at TCS development center in Visakhapatnam for software engineering students', source: 'Tata Consultancy Services', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'Infosys Visakhapatnam Campus Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Vizag for computer science and IT students', source: 'Infosys', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'Tech Mahindra Hyderabad Internship', url: 'https://www.techmahindra.com/careers', description: 'IT services and digital transformation internships at Tech Mahindra for AP students', source: 'Tech Mahindra', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            // AP STARTUP & PRIVATE INTERNSHIPS
+            { name: 'AP Startup Ecosystem Internship', url: 'https://www.apstartup.in', description: 'Internships with funded startups in Vizag, Vijayawada, and Tirupati for hands-on entrepreneurial experience', source: 'AP Startup Ecosystem', priority: 2, branches: ['CSE', 'IT', 'MBA', 'Others'] },
+            { name: 'Amara Raja Batteries Internship', url: 'https://www.amararaja.com/careers', description: 'Engineering internships at Amara Raja manufacturing facilities in AP for automobile and battery technology', source: 'Amara Raja Group', priority: 2, branches: ['Mechanical', 'EEE', 'Chemical', 'Electronics'] },
+            { name: 'Heritage Foods Internship', url: 'https://www.heritagefoods.in/careers', description: 'Internships in dairy operations, supply chain, and food technology at Heritage Foods in AP', source: 'Heritage Foods', priority: 2, branches: ['Food Technology', 'Chemical', 'MBA', 'Others'] },
+            { name: 'AP EdTech Startup Internships', url: 'https://www.internshala.com', description: 'Internships with education technology startups based in Andhra Pradesh for content, marketing, and tech roles', source: 'Various EdTech Startups', priority: 3, branches: ['CSE', 'IT', 'MBA', 'Others'] }
         ]
     },
     'maharashtra': {
         scholarships: [
             { name: 'Maharashtra State Scholarship', url: 'https://www.maharashtra.gov.in/scholarships', description: 'State government scholarship programs' },
             { name: 'Mumbai University Merit Scholarship', url: 'https://www.mu.ac.in', description: 'University-level merit scholarships' },
-            { name: 'Pune Tech Scholarship', url: 'https://www.punetech.edu', description: 'Technology-focused scholarship programs' }
+            { name: 'Pune Tech Scholarship', url: 'https://www.punetech.edu', description: 'Technology-focused scholarship programs' },
+            // ST-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for ST Students', url: 'https://tribal.nic.in/ST/NationalFellowshipforST.aspx', description: 'Fellowship scheme for ST students pursuing M.Phil and Ph.D programs in Indian universities. Provides financial support for research work.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Top Class Education Scheme for ST Students', url: 'https://tribal.nic.in/ST/TopClassEducationScheme.aspx', description: 'Full financial support for ST students admitted to top-notch institutions for pursuing quality higher education. Covers tuition fees and living expenses.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'ST Girls Hostel Scheme', url: 'https://tribal.nic.in/scholarships', description: 'Financial assistance for construction and running of hostels for ST girls pursuing higher secondary education and above in selected educational institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Upgradation of Merit for ST Students', url: 'https://tribal.nic.in/ST/UpgradationMeritST.aspx', description: 'Scholarship for meritorious ST students studying in classes 9th to 12th to upgrade their merit. Coaching support for competitive examinations.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Vocational Training Centers for ST Youth', url: 'https://tribal.nic.in/ST/VocationalTraining.aspx', description: 'Skill development and vocational training programs for ST youth to enhance employability and entrepreneurship opportunities.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Ashram Schools Scholarship for ST Students', url: 'https://tribal.nic.in/scholarships', description: 'Support for ST students in Ashram schools (residential schools in tribal areas) for quality education from elementary to higher secondary level.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'National Overseas Scholarship for ST Students', url: 'https://tribal.nic.in/ST/NationalOverseasScholarship.aspx', description: 'Financial assistance for ST students to pursue higher studies (Masters, Ph.D.) in prestigious foreign universities and institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for ST Students', url: 'https://ugc.ac.in/st/', description: 'Fellowship for ST candidates admitted to M.Phil/Ph.D programs in universities and research institutions. Monthly stipend and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            // SC-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for SC Students', url: 'https://socialjustice.nic.in/scholarships/national-fellowship-sc', description: 'Fellowship scheme for SC students pursuing M.Phil and Ph.D programs. Provides monthly stipend, contingency, and other allowances for research.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Top Class Education Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/top-class-education-sc', description: 'Full financial support for SC students in notified top-class institutions. Covers admission fees, tuition fees, living expenses, and books.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'SC Girls Hostel Scheme', url: 'https://socialjustice.nic.in/scholarships', description: 'Construction and maintenance of hostels for SC girls pursuing higher secondary, college, and university education.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Babu Jagjivan Ram Chhatravas Yojana', url: 'https://socialjustice.nic.in/scholarships', description: 'Hostel facilities for SC boys and girls pursuing higher and technical education. Provides accommodation and basic amenities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Free Coaching Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/free-coaching-sc', description: 'Free coaching for SC candidates appearing for competitive examinations like UPSC, SSC, Banking, Railways, IIT, Medical entrance tests.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Dr. Ambedkar Central Sector Scheme of Interest Subsidy', url: 'https://socialjustice.nic.in/scholarships/ambedkar-interest-subsidy', description: 'Interest subsidy on education loans for SC students pursuing higher education in India and abroad. Covers professional and technical courses.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'National Overseas Scholarship for SC Students', url: 'https://socialjustice.nic.in/scholarships/overseas-scholarship-sc', description: 'Financial assistance for SC students to pursue Masters and Ph.D. programs in top-ranked foreign universities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for SC Students', url: 'https://ugc.ac.in/sc/', description: 'Fellowship for SC candidates admitted to M.Phil/Ph.D programs in universities. Monthly stipend, HRA, and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            { name: 'SC Book Bank Scheme', url: 'https://scholarships.gov.in', description: 'Free textbooks and study materials for SC students pursuing higher education. Books can be retained after course completion.', source: 'State Social Welfare Department', priority: 2 },
+            // COMBINED SC/ST SCHOLARSHIPS
+            { name: 'SC/ST Coaching Scheme for Civil Services', url: 'https://dopt.gov.in/scholarships', description: 'Specialized coaching for SC and ST candidates preparing for UPSC Civil Services, IAS, IPS, IFS examinations with expert faculty.', source: 'Department of Personnel and Training', priority: 1 },
+            { name: 'SC/ST Students Study in India Scheme', url: 'https://scholarships.gov.in', description: 'Financial assistance for SC and ST students from remote areas to pursue higher education in better institutions within India.', source: 'Ministry of Social Justice & Ministry of Tribal Affairs', priority: 1 },
+            { name: 'SC/ST Merit-cum-Means Scholarship', url: 'https://scholarships.gov.in', description: 'Combined merit and need-based scholarship for economically weaker SC and ST students showing academic excellence.', source: 'State Government', priority: 2 },
+            { name: 'SC/ST Students Laptop/Tablet Scheme', url: 'https://scholarships.gov.in', description: 'Free laptops or tablets for meritorious SC and ST students to facilitate digital learning and skill development.', source: 'State Government', priority: 2 },
+            // MAHARASHTRA STATE-SPECIFIC OBC SCHOLARSHIPS
+            { name: 'Maharashtra OBC Welfare Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Maharashtra state scholarship for OBC students pursuing higher education.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
+            { name: 'Maharashtra OBC Post-Matric Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Financial assistance for OBC students in Maharashtra for post-matriculation courses.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
+            { name: 'Maharashtra OBC Fee Reimbursement', url: 'https://www.mahadbtmahait.gov.in', description: 'Fee reimbursement for OBC students in Maharashtra pursuing professional courses.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
+            { name: 'Maharashtra OBC Girls Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Special scheme for OBC girl students in Maharashtra for higher education.', source: 'Maharashtra OBC Welfare Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -754,20 +837,62 @@ const stateOpportunities = {
             { name: 'Maharashtra Digital Workshop', url: 'https://www.mahdigital.gov.in', description: 'Digital literacy and training workshops' }
         ],
         internships: [
-            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1 },
-            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Internships under Digital India scheme for technology and digital transformation projects', source: 'Ministry of Electronics & Information Technology (MeitY)', priority: 1 },
-            { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Internships at MEA headquarters, two terms per year for students interested in foreign affairs', source: 'Ministry of External Affairs (MEA)', priority: 1 },
-            { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'National Internship Portal for students in technical education to apply for various internships', source: 'All India Council for Technical Education (AICTE)', priority: 1 },
-            { name: 'Mumbai Corporate Internship', url: 'https://www.mumbaicorporate.com', description: 'Corporate sector internship opportunities' },
-            { name: 'Pune IT Internship', url: 'https://www.puneit.com', description: 'IT industry internship programs' },
-            { name: 'Maharashtra Startup Internship', url: 'https://www.mahstartup.com', description: 'Startup ecosystem internships' }
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Internships under Digital India scheme for technology and digital transformation projects', source: 'Ministry of Electronics & Information Technology (MeitY)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Internships at MEA headquarters, two terms per year for students interested in foreign affairs', source: 'Ministry of External Affairs (MEA)', priority: 1, branches: ['MBA', 'Others'] },
+            { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'National Internship Portal for students in technical education to apply for various internships', source: 'All India Council for Technical Education (AICTE)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'Others'] },
+            // MAHARASHTRA GOVERNMENT INTERNSHIPS
+            { name: 'Maharashtra Government Secretariat Internship', url: 'https://www.maharashtra.gov.in/internships', description: 'Internship opportunities in Maharashtra state government departments for policy and administration exposure', source: 'Maharashtra State Government', priority: 2, branches: ['MBA', 'Others'] },
+            { name: 'MMRDA Internship Program', url: 'https://www.mmrda.maharashtra.gov.in', description: 'Internships at Mumbai Metropolitan Region Development Authority for urban planning and infrastructure projects', source: 'MMRDA', priority: 2, branches: ['Civil', 'MBA', 'Others'] },
+            // MAHARASHTRA CORPORATE INTERNSHIPS
+            { name: 'Tata Group Mumbai Internship', url: 'https://www.tata.com/careers', description: 'Corporate internships at Tata Group headquarters and companies in Mumbai across various sectors', source: 'Tata Group', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+            { name: 'Reliance Industries Internship', url: 'https://www.ril.com/careers', description: 'Internships at Reliance Industries in petrochemicals, retail, telecom, and digital services in Mumbai', source: 'Reliance Industries', priority: 2, branches: ['CSE', 'IT', 'Chemical', 'Mechanical', 'MBA', 'Others'] },
+            { name: 'Infosys Pune Campus Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys development center in Pune for IT and engineering students', source: 'Infosys', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'TCS Mumbai & Pune Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS offices in Mumbai and Pune for software development and consulting roles', source: 'Tata Consultancy Services', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'Wipro Pune Internship', url: 'https://www.wipro.com/careers', description: 'Technology and consulting internships at Wipro campus in Pune', source: 'Wipro', priority: 2, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+            { name: 'L&T Mumbai Internship', url: 'https://www.larsentoubro.com/careers', description: 'Engineering internships at Larsen & Toubro in construction, infrastructure, and manufacturing in Mumbai', source: 'Larsen & Toubro', priority: 2, branches: ['Mechanical', 'Civil', 'EEE', 'ECE'] },
+            // MAHARASHTRA STARTUP & PRIVATE INTERNSHIPS
+            { name: 'Maharashtra Startup Ecosystem Internship', url: 'https://www.startup.maharashtra.gov.in', description: 'Internships with funded startups in Mumbai and Pune for entrepreneurial experience', source: 'Maharashtra Startup Ecosystem', priority: 2, branches: ['CSE', 'IT', 'MBA', 'Others'] },
+            { name: 'Godrej Group Internship', url: 'https://www.godrej.com/careers', description: 'Internships in FMCG, real estate, and consumer products at Godrej companies in Mumbai', source: 'Godrej Group', priority: 2, branches: ['Chemical', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+            { name: 'Mahindra Group Internship', url: 'https://www.mahindra.com/careers', description: 'Internships in automobile, IT, and financial services at Mahindra Group in Mumbai and Pune', source: 'Mahindra Group', priority: 2, branches: ['Mechanical', 'CSE', 'IT', 'MBA', 'Others'] },
+            { name: 'Pune IT Park Internships', url: 'https://www.puneitpark.com', description: 'Internships with multiple IT companies at Hinjewadi IT Park, Pune', source: 'Pune IT Companies', priority: 3, branches: ['CSE', 'IT', 'ECE', 'EEE'] }
         ]
     },
     'karnataka': {
         scholarships: [
             { name: 'Karnataka State Scholarship', url: 'https://www.karnataka.gov.in/scholarships', description: 'State government scholarship schemes' },
             { name: 'Bangalore Tech Scholarship', url: 'https://www.bangaloretech.edu', description: 'Technology-focused scholarship programs' },
-            { name: 'Mysore University Scholarship', url: 'https://www.uni-mysore.ac.in', description: 'University merit scholarships' }
+            { name: 'Mysore University Scholarship', url: 'https://www.uni-mysore.ac.in', description: 'University merit scholarships' },
+            // ST-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for ST Students', url: 'https://tribal.nic.in/ST/NationalFellowshipforST.aspx', description: 'Fellowship scheme for ST students pursuing M.Phil and Ph.D programs in Indian universities. Provides financial support for research work.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Top Class Education Scheme for ST Students', url: 'https://tribal.nic.in/ST/TopClassEducationScheme.aspx', description: 'Full financial support for ST students admitted to top-notch institutions for pursuing quality higher education. Covers tuition fees and living expenses.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'ST Girls Hostel Scheme', url: 'https://tribal.nic.in/scholarships', description: 'Financial assistance for construction and running of hostels for ST girls pursuing higher secondary education and above in selected educational institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Upgradation of Merit for ST Students', url: 'https://tribal.nic.in/ST/UpgradationMeritST.aspx', description: 'Scholarship for meritorious ST students studying in classes 9th to 12th to upgrade their merit. Coaching support for competitive examinations.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Vocational Training Centers for ST Youth', url: 'https://tribal.nic.in/ST/VocationalTraining.aspx', description: 'Skill development and vocational training programs for ST youth to enhance employability and entrepreneurship opportunities.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Ashram Schools Scholarship for ST Students', url: 'https://tribal.nic.in/scholarships', description: 'Support for ST students in Ashram schools (residential schools in tribal areas) for quality education from elementary to higher secondary level.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'National Overseas Scholarship for ST Students', url: 'https://tribal.nic.in/ST/NationalOverseasScholarship.aspx', description: 'Financial assistance for ST students to pursue higher studies (Masters, Ph.D.) in prestigious foreign universities and institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for ST Students', url: 'https://ugc.ac.in/st/', description: 'Fellowship for ST candidates admitted to M.Phil/Ph.D programs in universities and research institutions. Monthly stipend and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            // SC-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for SC Students', url: 'https://socialjustice.nic.in/scholarships/national-fellowship-sc', description: 'Fellowship scheme for SC students pursuing M.Phil and Ph.D programs. Provides monthly stipend, contingency, and other allowances for research.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Top Class Education Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/top-class-education-sc', description: 'Full financial support for SC students in notified top-class institutions. Covers admission fees, tuition fees, living expenses, and books.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'SC Girls Hostel Scheme', url: 'https://socialjustice.nic.in/scholarships', description: 'Construction and maintenance of hostels for SC girls pursuing higher secondary, college, and university education.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Babu Jagjivan Ram Chhatravas Yojana', url: 'https://socialjustice.nic.in/scholarships', description: 'Hostel facilities for SC boys and girls pursuing higher and technical education. Provides accommodation and basic amenities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Free Coaching Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/free-coaching-sc', description: 'Free coaching for SC candidates appearing for competitive examinations like UPSC, SSC, Banking, Railways, IIT, Medical entrance tests.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Dr. Ambedkar Central Sector Scheme of Interest Subsidy', url: 'https://socialjustice.nic.in/scholarships/ambedkar-interest-subsidy', description: 'Interest subsidy on education loans for SC students pursuing higher education in India and abroad. Covers professional and technical courses.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'National Overseas Scholarship for SC Students', url: 'https://socialjustice.nic.in/scholarships/overseas-scholarship-sc', description: 'Financial assistance for SC students to pursue Masters and Ph.D. programs in top-ranked foreign universities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for SC Students', url: 'https://ugc.ac.in/sc/', description: 'Fellowship for SC candidates admitted to M.Phil/Ph.D programs in universities. Monthly stipend, HRA, and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            { name: 'SC Book Bank Scheme', url: 'https://scholarships.gov.in', description: 'Free textbooks and study materials for SC students pursuing higher education. Books can be retained after course completion.', source: 'State Social Welfare Department', priority: 2 },
+            // COMBINED SC/ST SCHOLARSHIPS
+            { name: 'SC/ST Coaching Scheme for Civil Services', url: 'https://dopt.gov.in/scholarships', description: 'Specialized coaching for SC and ST candidates preparing for UPSC Civil Services, IAS, IPS, IFS examinations with expert faculty.', source: 'Department of Personnel and Training', priority: 1 },
+            { name: 'SC/ST Students Study in India Scheme', url: 'https://scholarships.gov.in', description: 'Financial assistance for SC and ST students from remote areas to pursue higher education in better institutions within India.', source: 'Ministry of Social Justice & Ministry of Tribal Affairs', priority: 1 },
+            { name: 'SC/ST Merit-cum-Means Scholarship', url: 'https://scholarships.gov.in', description: 'Combined merit and need-based scholarship for economically weaker SC and ST students showing academic excellence.', source: 'State Government', priority: 2 },
+            { name: 'SC/ST Students Laptop/Tablet Scheme', url: 'https://scholarships.gov.in', description: 'Free laptops or tablets for meritorious SC and ST students to facilitate digital learning and skill development.', source: 'State Government', priority: 2 },
+            // KARNATAKA STATE-SPECIFIC OBC SCHOLARSHIPS
+            { name: 'Karnataka OBC Welfare Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Karnataka state scholarship for OBC students pursuing higher education.', source: 'Karnataka OBC Welfare Department', priority: 2 },
+            { name: 'Karnataka OBC Post-Matric Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Financial assistance for OBC students in Karnataka for post-matriculation courses.', source: 'Karnataka OBC Welfare Department', priority: 2 },
+            { name: 'Karnataka OBC Fee Concession', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Fee concession for OBC students in Karnataka pursuing professional and technical courses.', source: 'Karnataka OBC Welfare Department', priority: 2 },
+            { name: 'Karnataka OBC Merit Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Merit-based scholarship for academically excellent OBC students in Karnataka.', source: 'Karnataka OBC Welfare Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -785,20 +910,62 @@ const stateOpportunities = {
             { name: 'Karnataka Digital Workshop', url: 'https://www.kardigital.gov.in', description: 'Digital skills and literacy workshops' }
         ],
         internships: [
+            // NATIONAL INTERNSHIPS
             { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1 },
             { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Internships under Digital India scheme for technology and digital transformation projects', source: 'Ministry of Electronics & Information Technology (MeitY)', priority: 1 },
             { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Internships at MEA headquarters, two terms per year for students interested in foreign affairs', source: 'Ministry of External Affairs (MEA)', priority: 1 },
             { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'National Internship Portal for students in technical education to apply for various internships', source: 'All India Council for Technical Education (AICTE)', priority: 1 },
-            { name: 'Bangalore IT Internship', url: 'https://www.bangaloreit.com', description: 'IT industry internship opportunities' },
-            { name: 'Mysore Corporate Internship', url: 'https://www.mysorecorporate.com', description: 'Corporate sector internships' },
-            { name: 'Karnataka Startup Internship', url: 'https://www.karnatakastartup.com', description: 'Startup ecosystem internship programs' }
+            // KARNATAKA GOVERNMENT INTERNSHIPS
+            { name: 'Karnataka Government Secretariat Internship', url: 'https://www.karnataka.gov.in/internships', description: 'Internship opportunities in Karnataka state government departments for policy and administration exposure', source: 'Karnataka State Government', priority: 2 },
+            { name: 'Karnataka Innovation & Technology Society Internship', url: 'https://www.kits.kar.nic.in', description: 'Internships in innovation, technology, and startup ecosystem development in Karnataka', source: 'KITS Karnataka', priority: 2 },
+            // KARNATAKA CORPORATE INTERNSHIPS
+            { name: 'Infosys Bangalore Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys headquarters and development centers in Bangalore for IT students', source: 'Infosys', priority: 2 },
+            { name: 'Wipro Bangalore Internship', url: 'https://www.wipro.com/careers', description: 'IT services and consulting internships at Wipro offices in Bangalore', source: 'Wipro', priority: 2 },
+            { name: 'TCS Bangalore Internship', url: 'https://www.tcs.com/careers', description: 'Software development and consulting internships at TCS Bangalore campuses', source: 'Tata Consultancy Services', priority: 2 },
+            { name: 'Flipkart Bangalore Internship', url: 'https://www.flipkartcareers.com', description: 'E-commerce, technology, and supply chain internships at Flipkart headquarters in Bangalore', source: 'Flipkart', priority: 2 },
+            { name: 'Amazon Bangalore Internship', url: 'https://www.amazon.jobs', description: 'Software engineering, product management, and operations internships at Amazon development center in Bangalore', source: 'Amazon India', priority: 2 },
+            { name: 'Biocon Bangalore Internship', url: 'https://www.biocon.com/careers', description: 'Biotechnology and pharmaceutical research internships at Biocon in Bangalore', source: 'Biocon', priority: 2 },
+            { name: 'Bosch Bangalore Internship', url: 'https://www.bosch.in/careers', description: 'Engineering and R&D internships at Bosch India Technology Center in Bangalore', source: 'Bosch India', priority: 2 },
+            // KARNATAKA STARTUP & PRIVATE INTERNSHIPS
+            { name: 'Karnataka Startup Ecosystem Internship', url: 'https://www.startupkarnataka.gov.in', description: 'Internships with funded startups in Bangalore for entrepreneurial and tech experience', source: 'Karnataka Startup Ecosystem', priority: 2 },
+            { name: 'Bangalore Startup Internship Program', url: 'https://www.bangalorestartups.com', description: 'Internships with tech startups in Bangalore across product, marketing, and engineering roles', source: 'Bangalore Startups', priority: 3 },
+            { name: 'Mindtree Bangalore Internship', url: 'https://www.mindtree.com/careers', description: 'Digital transformation and IT services internships at Mindtree in Bangalore', source: 'Mindtree', priority: 2 }
         ]
     },
     'tamil-nadu': {
         scholarships: [
             { name: 'Tamil Nadu State Scholarship', url: 'https://www.tn.gov.in/scholarships', description: 'State government scholarship programs' },
             { name: 'Chennai Tech Scholarship', url: 'https://www.chennaitech.edu', description: 'Technology scholarship schemes' },
-            { name: 'Anna University Merit Scholarship', url: 'https://www.annauniv.edu', description: 'University-level merit scholarships' }
+            { name: 'Anna University Merit Scholarship', url: 'https://www.annauniv.edu', description: 'University-level merit scholarships' },
+            // ST-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for ST Students', url: 'https://tribal.nic.in/ST/NationalFellowshipforST.aspx', description: 'Fellowship scheme for ST students pursuing M.Phil and Ph.D programs in Indian universities. Provides financial support for research work.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Top Class Education Scheme for ST Students', url: 'https://tribal.nic.in/ST/TopClassEducationScheme.aspx', description: 'Full financial support for ST students admitted to top-notch institutions for pursuing quality higher education. Covers tuition fees and living expenses.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'ST Girls Hostel Scheme', url: 'https://tribal.nic.in/scholarships', description: 'Financial assistance for construction and running of hostels for ST girls pursuing higher secondary education and above in selected educational institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Upgradation of Merit for ST Students', url: 'https://tribal.nic.in/ST/UpgradationMeritST.aspx', description: 'Scholarship for meritorious ST students studying in classes 9th to 12th to upgrade their merit. Coaching support for competitive examinations.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Vocational Training Centers for ST Youth', url: 'https://tribal.nic.in/ST/VocationalTraining.aspx', description: 'Skill development and vocational training programs for ST youth to enhance employability and entrepreneurship opportunities.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Ashram Schools Scholarship for ST Students', url: 'https://tribal.nic.in/scholarships', description: 'Support for ST students in Ashram schools (residential schools in tribal areas) for quality education from elementary to higher secondary level.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'National Overseas Scholarship for ST Students', url: 'https://tribal.nic.in/ST/NationalOverseasScholarship.aspx', description: 'Financial assistance for ST students to pursue higher studies (Masters, Ph.D.) in prestigious foreign universities and institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for ST Students', url: 'https://ugc.ac.in/st/', description: 'Fellowship for ST candidates admitted to M.Phil/Ph.D programs in universities and research institutions. Monthly stipend and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            // SC-SPECIFIC SCHOLARSHIPS
+            { name: 'National Fellowship for SC Students', url: 'https://socialjustice.nic.in/scholarships/national-fellowship-sc', description: 'Fellowship scheme for SC students pursuing M.Phil and Ph.D programs. Provides monthly stipend, contingency, and other allowances for research.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Top Class Education Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/top-class-education-sc', description: 'Full financial support for SC students in notified top-class institutions. Covers admission fees, tuition fees, living expenses, and books.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'SC Girls Hostel Scheme', url: 'https://socialjustice.nic.in/scholarships', description: 'Construction and maintenance of hostels for SC girls pursuing higher secondary, college, and university education.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Babu Jagjivan Ram Chhatravas Yojana', url: 'https://socialjustice.nic.in/scholarships', description: 'Hostel facilities for SC boys and girls pursuing higher and technical education. Provides accommodation and basic amenities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Free Coaching Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/free-coaching-sc', description: 'Free coaching for SC candidates appearing for competitive examinations like UPSC, SSC, Banking, Railways, IIT, Medical entrance tests.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Dr. Ambedkar Central Sector Scheme of Interest Subsidy', url: 'https://socialjustice.nic.in/scholarships/ambedkar-interest-subsidy', description: 'Interest subsidy on education loans for SC students pursuing higher education in India and abroad. Covers professional and technical courses.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'National Overseas Scholarship for SC Students', url: 'https://socialjustice.nic.in/scholarships/overseas-scholarship-sc', description: 'Financial assistance for SC students to pursue Masters and Ph.D. programs in top-ranked foreign universities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+            { name: 'Rajiv Gandhi National Fellowship for SC Students', url: 'https://ugc.ac.in/sc/', description: 'Fellowship for SC candidates admitted to M.Phil/Ph.D programs in universities. Monthly stipend, HRA, and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+            { name: 'SC Book Bank Scheme', url: 'https://scholarships.gov.in', description: 'Free textbooks and study materials for SC students pursuing higher education. Books can be retained after course completion.', source: 'State Social Welfare Department', priority: 2 },
+            // COMBINED SC/ST SCHOLARSHIPS
+            { name: 'SC/ST Coaching Scheme for Civil Services', url: 'https://dopt.gov.in/scholarships', description: 'Specialized coaching for SC and ST candidates preparing for UPSC Civil Services, IAS, IPS, IFS examinations with expert faculty.', source: 'Department of Personnel and Training', priority: 1 },
+            { name: 'SC/ST Students Study in India Scheme', url: 'https://scholarships.gov.in', description: 'Financial assistance for SC and ST students from remote areas to pursue higher education in better institutions within India.', source: 'Ministry of Social Justice & Ministry of Tribal Affairs', priority: 1 },
+            { name: 'SC/ST Merit-cum-Means Scholarship', url: 'https://scholarships.gov.in', description: 'Combined merit and need-based scholarship for economically weaker SC and ST students showing academic excellence.', source: 'State Government', priority: 2 },
+            { name: 'SC/ST Students Laptop/Tablet Scheme', url: 'https://scholarships.gov.in', description: 'Free laptops or tablets for meritorious SC and ST students to facilitate digital learning and skill development.', source: 'State Government', priority: 2 },
+            // TAMIL NADU STATE-SPECIFIC OBC SCHOLARSHIPS
+            { name: 'Tamil Nadu OBC Welfare Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Tamil Nadu state scholarship for OBC students pursuing higher education.', source: 'TN OBC Welfare Department', priority: 2 },
+            { name: 'TN OBC Post-Matric Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Financial assistance for OBC students in Tamil Nadu for post-matriculation courses.', source: 'TN OBC Welfare Department', priority: 2 },
+            { name: 'TN OBC Fee Concession Scheme', url: 'https://www.tn.gov.in/obcwelfare', description: 'Fee concession for OBC students in TN pursuing engineering, medical, and professional courses.', source: 'TN OBC Welfare Department', priority: 2 },
+            { name: 'TN OBC Students Merit Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Merit-based scholarship for academically excellent OBC students in Tamil Nadu.', source: 'TN OBC Welfare Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -816,13 +983,549 @@ const stateOpportunities = {
             { name: 'Tamil Nadu Digital Workshop', url: 'https://www.tndigital.gov.in', description: 'Digital literacy workshops' }
         ],
         internships: [
+            // NATIONAL INTERNSHIPS
             { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1 },
             { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Internships under Digital India scheme for technology and digital transformation projects', source: 'Ministry of Electronics & Information Technology (MeitY)', priority: 1 },
             { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Internships at MEA headquarters, two terms per year for students interested in foreign affairs', source: 'Ministry of External Affairs (MEA)', priority: 1 },
             { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'National Internship Portal for students in technical education to apply for various internships', source: 'All India Council for Technical Education (AICTE)', priority: 1 },
-            { name: 'Chennai IT Internship', url: 'https://www.chennaiit.com', description: 'IT industry internship opportunities' },
-            { name: 'Coimbatore Corporate Internship', url: 'https://www.coimbatorecorporate.com', description: 'Corporate sector internships' },
-            { name: 'Tamil Nadu Startup Internship', url: 'https://www.tnstartup.com', description: 'Startup ecosystem internships' }
+            // TAMIL NADU GOVERNMENT INTERNSHIPS
+            { name: 'TN Government Secretariat Internship', url: 'https://www.tn.gov.in/internships', description: 'Internship opportunities in Tamil Nadu state government departments for policy and administration exposure', source: 'TN State Government', priority: 2 },
+            { name: 'TN e-Governance Internship', url: 'https://www.tnega.tn.gov.in', description: 'Internships in e-governance and digital transformation projects in Tamil Nadu', source: 'TNeGA', priority: 2 },
+            // TAMIL NADU CORPORATE INTERNSHIPS
+            { name: 'TCS Chennai Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Chennai', source: 'Tata Consultancy Services', priority: 2 },
+            { name: 'Infosys Chennai Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Chennai for software engineering students', source: 'Infosys', priority: 2 },
+            { name: 'Cognizant Chennai Internship', url: 'https://www.cognizant.com/careers', description: 'IT consulting and technology internships at Cognizant headquarters in Chennai', source: 'Cognizant', priority: 2 },
+            { name: 'HCL Technologies Chennai Internship', url: 'https://www.hcltech.com/careers', description: 'Software development and IT services internships at HCL campus in Chennai', source: 'HCL Technologies', priority: 2 },
+            { name: 'Ashok Leyland Internship', url: 'https://www.ashokleyland.com/careers', description: 'Automobile engineering internships at Ashok Leyland manufacturing facilities in Chennai', source: 'Ashok Leyland', priority: 2 },
+            { name: 'Ford India Chennai Internship', url: 'https://www.india.ford.com/careers', description: 'Automotive engineering and manufacturing internships at Ford plant in Chennai', source: 'Ford India', priority: 2 },
+            { name: 'Zoho Corporation Internship', url: 'https://www.zoho.com/careers', description: 'Software product development internships at Zoho headquarters in Chennai', source: 'Zoho Corporation', priority: 2 },
+            // TAMIL NADU STARTUP & PRIVATE INTERNSHIPS
+            { name: 'TN Startup Ecosystem Internship', url: 'https://www.startuptn.in', description: 'Internships with funded startups in Chennai and Coimbatore for entrepreneurial experience', source: 'TN Startup Ecosystem', priority: 2 },
+            { name: 'Freshworks Chennai Internship', url: 'https://www.freshworks.com/careers', description: 'Product and engineering internships at Freshworks in Chennai', source: 'Freshworks', priority: 2 },
+            { name: 'Coimbatore Manufacturing Internship', url: 'https://www.coimbatoreind.com', description: 'Internships in manufacturing and textiles industry in Coimbatore', source: 'Coimbatore Industries', priority: 3 }
+        ]
+    },
+    'kerala': {
+        scholarships: [
+            { name: 'Kerala State Scholarship', url: 'https://www.kerala.gov.in/scholarships', description: 'State government scholarship programs for all categories' },
+            // KERALA STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Kerala ST Development Department Post-Matric Scholarship', url: 'https://www.kerala.gov.in/st-development', description: 'Kerala state scholarship for ST students pursuing post-matriculation courses in recognized institutions.', source: 'Kerala ST Development Department', priority: 2 },
+            { name: 'Kerala Tribal Students Fee Concession', url: 'https://www.kerala.gov.in/st-development', description: 'Complete fee waiver for ST students in Kerala pursuing professional courses in government colleges.', source: 'Kerala ST Development Department', priority: 2 },
+            { name: 'Kerala ST Girls Higher Education Scholarship', url: 'https://www.kerala.gov.in/st-development', description: 'Special scholarship for ST girl students in Kerala for higher and professional education.', source: 'Kerala ST Development Department', priority: 2 },
+            // KERALA STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Kerala SC Development Department Post-Matric Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'State scholarship for SC students in Kerala pursuing post-matriculation education.', source: 'Kerala SC Development Department', priority: 2 },
+            { name: 'Kerala SC Students Fee Reimbursement', url: 'https://www.kerala.gov.in/sc-development', description: 'Full tuition fee reimbursement for SC students in Kerala pursuing professional courses.', source: 'Kerala SC Development Department', priority: 2 },
+            { name: 'Kerala Dr. Ambedkar Pre-Matric Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'Financial assistance for SC students in classes 9th and 10th in Kerala.', source: 'Kerala SC Development Department', priority: 2 },
+            { name: 'Kerala SC Students Merit-cum-Means Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'Combined merit and need-based scholarship for SC students in Kerala showing academic excellence.', source: 'Kerala SC Development Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Kerala Tech Hackathon', url: 'https://www.keralatech.gov.in', description: 'State-level technology hackathon' }
+        ],
+        workshops: [
+            { name: 'Kerala Skill Development Workshop', url: 'https://www.keralaskill.gov.in', description: 'Skill development programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // KERALA GOVERNMENT & PSU INTERNSHIPS
+            { name: 'Kerala Government Internship', url: 'https://www.kerala.gov.in/internships', description: 'Internship opportunities in Kerala state government departments', source: 'Kerala Government', priority: 2 },
+            { name: 'Cochin Shipyard Internship', url: 'https://www.cochinshipyard.com/careers', description: 'Engineering internships at Cochin Shipyard Limited for marine and mechanical engineering students', source: 'Cochin Shipyard Ltd', priority: 2 },
+            // KERALA CORPORATE & IT INTERNSHIPS
+            { name: 'UST Global Trivandrum Internship', url: 'https://www.ust.com/careers', description: 'Technology internships at UST Global headquarters in Trivandrum for IT students', source: 'UST Global', priority: 2 },
+            { name: 'TCS Kochi & Trivandrum Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS offices in Kochi and Trivandrum', source: 'TCS', priority: 2 },
+            { name: 'Infosys Trivandrum Internship', url: 'https://www.infosys.com/careers', description: 'Software development internships at Infosys campus in Trivandrum', source: 'Infosys', priority: 2 },
+            { name: 'Technopark Kochi/Trivandrum Internship', url: 'https://www.technopark.org', description: 'Internships with IT companies at Technopark campuses in Kerala', source: 'Technopark Kerala', priority: 2 },
+            // KERALA STARTUP & PRIVATE INTERNSHIPS
+            { name: 'Kerala Startup Mission Internship', url: 'https://startupmission.kerala.gov.in', description: 'Internships with funded startups in Kerala for entrepreneurial experience', source: 'Kerala Startup Mission', priority: 2 },
+            { name: 'V-Guard Industries Internship', url: 'https://www.vguard.in/careers', description: 'Engineering and management internships at V-Guard in Kochi', source: 'V-Guard Industries', priority: 2 }
+        ]
+    },
+    'delhi': {
+        scholarships: [
+            { name: 'Delhi State Scholarship', url: 'https://www.delhi.gov.in/scholarships', description: 'State government scholarship programs' },
+            // DELHI STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Delhi ST Welfare Department Scholarship', url: 'https://www.delhi.gov.in/st-welfare', description: 'Delhi state scholarship for ST students pursuing higher education in recognized institutions.', source: 'Delhi ST Welfare Department', priority: 2 },
+            { name: 'Delhi Tribal Students Education Assistance', url: 'https://www.delhi.gov.in/st-welfare', description: 'Financial assistance for ST students in Delhi for education expenses and books.', source: 'Delhi ST Welfare Department', priority: 2 },
+            // DELHI STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Delhi SC/ST/OBC/Minority Post-Matric Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'State scholarship for SC students in Delhi pursuing post-matriculation courses.', source: 'Delhi SC Welfare Department', priority: 2 },
+            { name: 'Delhi Dr. Ambedkar Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Merit scholarship for SC students in Delhi showing academic excellence.', source: 'Delhi SC Welfare Department', priority: 2 },
+            { name: 'Delhi SC Students Free Coaching Scheme', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Free coaching for SC students in Delhi for competitive examinations.', source: 'Delhi SC Welfare Department', priority: 2 },
+            { name: 'Delhi SC Girls Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Special scholarship for SC girl students in Delhi for higher education.', source: 'Delhi SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Delhi Innovation Challenge', url: 'https://www.delhiinnovation.gov.in', description: 'State innovation competition' }
+        ],
+        workshops: [
+            { name: 'Delhi Skill Development', url: 'https://www.delhiskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // DELHI GOVERNMENT INTERNSHIPS
+            { name: 'Delhi Government Secretariat Internship', url: 'https://www.delhi.gov.in/internships', description: 'Internship opportunities in Delhi government departments and offices', source: 'Delhi Government', priority: 2 },
+            { name: 'DMRC Internship Program', url: 'https://www.delhimetrorail.com/careers', description: 'Engineering and management internships at Delhi Metro Rail Corporation', source: 'DMRC', priority: 2 },
+            // DELHI CORPORATE INTERNSHIPS
+            { name: 'HCL Technologies Noida Internship', url: 'https://www.hcltech.com/careers', description: 'IT services and software development internships at HCL campus in Noida', source: 'HCL Technologies', priority: 2 },
+            { name: 'Adobe India Noida Internship', url: 'https://www.adobe.com/careers', description: 'Product development and software engineering internships at Adobe India in Noida', source: 'Adobe India', priority: 2 },
+            { name: 'Paytm Noida Internship', url: 'https://www.paytm.com/careers', description: 'Fintech, product, and technology internships at Paytm headquarters in Noida', source: 'Paytm', priority: 2 },
+            { name: 'Samsung R&D Noida Internship', url: 'https://www.samsung.com/in/about-us/careers', description: 'Research and development internships at Samsung R&D center in Noida', source: 'Samsung India', priority: 2 },
+            { name: 'Deloitte Gurgaon Internship', url: 'https://www.deloitte.com/careers', description: 'Consulting and audit internships at Deloitte offices in Gurgaon/Gurugram', source: 'Deloitte India', priority: 2 },
+            { name: 'Google Gurgaon Internship', url: 'https://careers.google.com', description: 'Software engineering and product internships at Google India in Gurgaon', source: 'Google India', priority: 2 },
+            // DELHI STARTUP & PRIVATE INTERNSHIPS
+            { name: 'Delhi NCR Startup Internship', url: 'https://www.startupindia.gov.in', description: 'Internships with funded startups in Delhi, Noida, and Gurgaon', source: 'Delhi Startup Ecosystem', priority: 2 },
+            { name: 'Zomato Gurgaon Internship', url: 'https://www.zomato.com/careers', description: 'Product, technology, and operations internships at Zomato in Gurgaon', source: 'Zomato', priority: 2 },
+            { name: 'Oyo Gurgaon Internship', url: 'https://www.oyorooms.com/careers', description: 'Hospitality tech and operations internships at Oyo headquarters in Gurgaon', source: 'Oyo', priority: 2 }
+        ]
+    },
+    'uttar-pradesh': {
+        scholarships: [
+            { name: 'UP State Scholarship', url: 'https://www.up.gov.in/scholarships', description: 'State government scholarship programs' },
+            // UP STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'UP Tribal Welfare Department Post-Matric Scholarship', url: 'https://www.up.gov.in/tribal-welfare', description: 'UP state scholarship for ST students pursuing post-matriculation courses.', source: 'UP Tribal Welfare Department', priority: 2 },
+            { name: 'UP ST Students Fee Reimbursement', url: 'https://www.up.gov.in/tribal-welfare', description: 'Fee reimbursement for ST students in UP pursuing professional courses.', source: 'UP Tribal Welfare Department', priority: 2 },
+            { name: 'UP Tribal Girls Education Scheme', url: 'https://www.up.gov.in/tribal-welfare', description: 'Financial support for ST girl students in UP for higher education.', source: 'UP Tribal Welfare Department', priority: 2 },
+            // UP STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'UP SC Welfare Department Post-Matric Scholarship', url: 'https://www.up.gov.in/sc-welfare', description: 'State scholarship for SC students in UP pursuing higher education.', source: 'UP SC Welfare Department', priority: 2 },
+            { name: 'UP Dr. Ambedkar Medhavi Chhatra Protsahan Yojana', url: 'https://www.up.gov.in/sc-welfare', description: 'Merit scholarship for SC students in UP showing academic excellence.', source: 'UP SC Welfare Department', priority: 2 },
+            { name: 'UP SC Students Fee Reimbursement Scheme', url: 'https://www.up.gov.in/sc-welfare', description: 'Full tuition fee reimbursement for SC students in UP pursuing professional courses.', source: 'UP SC Welfare Department', priority: 2 },
+            { name: 'UP SC Girls Hostel Scheme', url: 'https://www.up.gov.in/sc-welfare', description: 'Hostel facilities for SC girl students in UP pursuing higher education.', source: 'UP SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'UP Tech Hackathon', url: 'https://www.uptech.gov.in', description: 'State technology hackathon' }
+        ],
+        workshops: [
+            { name: 'UP Skill Development', url: 'https://www.upskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // UP GOVERNMENT & PSU INTERNSHIPS
+            { name: 'UP Government Secretariat Internship', url: 'https://www.up.gov.in/internships', description: 'Internship opportunities in UP state government departments', source: 'UP Government', priority: 2 },
+            { name: 'BHEL Lucknow Internship', url: 'https://www.bhel.com/careers', description: 'Engineering internships at Bharat Heavy Electricals Limited in Lucknow', source: 'BHEL', priority: 2 },
+            // UP CORPORATE & IT INTERNSHIPS
+            { name: 'TCS Lucknow & Noida Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS centers in Lucknow and Noida', source: 'TCS', priority: 2 },
+            { name: 'Infosys Lucknow Internship', url: 'https://www.infosys.com/careers', description: 'Software development internships at Infosys campus in Lucknow', source: 'Infosys', priority: 2 },
+            { name: 'HCL Lucknow Internship', url: 'https://www.hcltech.com/careers', description: 'IT services and technology internships at HCL in Lucknow', source: 'HCL Technologies', priority: 2 },
+            { name: 'Genpact Noida Internship', url: 'https://www.genpact.com/careers', description: 'Business process and analytics internships at Genpact in Noida', source: 'Genpact', priority: 2 },
+            // UP STARTUP & MANUFACTURING INTERNSHIPS
+            { name: 'UP Startup Ecosystem Internship', url: 'https://www.upstartup.in', description: 'Internships with funded startups in Noida, Lucknow, and Greater Noida', source: 'UP Startup Ecosystem', priority: 2 },
+            { name: 'ITC Lucknow Internship', url: 'https://www.itcportal.com/careers', description: 'FMCG and manufacturing internships at ITC facilities in UP', source: 'ITC Limited', priority: 2 }
+        ]
+    },
+    'gujarat': {
+        scholarships: [
+            { name: 'Gujarat State Scholarship', url: 'https://www.gujarat.gov.in/scholarships', description: 'State government scholarship programs' },
+            // GUJARAT STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Gujarat Tribal Development Department Scholarship', url: 'https://tribal.gujarat.gov.in', description: 'Gujarat state scholarship for ST students pursuing higher education.', source: 'Gujarat Tribal Development Department', priority: 2 },
+            { name: 'Gujarat ST Students Fee Concession', url: 'https://tribal.gujarat.gov.in', description: 'Fee waiver for ST students in Gujarat pursuing professional courses.', source: 'Gujarat Tribal Development Department', priority: 2 },
+            { name: 'Gujarat Tribal Girls Education Incentive', url: 'https://tribal.gujarat.gov.in', description: 'Special incentive for ST girl students in Gujarat for higher education.', source: 'Gujarat Tribal Development Department', priority: 2 },
+            // GUJARAT STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Gujarat SC Welfare Department Post-Matric Scholarship', url: 'https://sje.gujarat.gov.in', description: 'State scholarship for SC students in Gujarat pursuing post-matriculation courses.', source: 'Gujarat SC Welfare Department', priority: 2 },
+            { name: 'Gujarat Dr. Ambedkar Scholarship', url: 'https://sje.gujarat.gov.in', description: 'Merit-based scholarship for SC students in Gujarat.', source: 'Gujarat SC Welfare Department', priority: 2 },
+            { name: 'Gujarat SC Students Fee Reimbursement', url: 'https://sje.gujarat.gov.in', description: 'Full tuition fee reimbursement for SC students in Gujarat.', source: 'Gujarat SC Welfare Department', priority: 2 },
+            { name: 'Gujarat SC Girls Higher Education Scheme', url: 'https://sje.gujarat.gov.in', description: 'Financial assistance for SC girl students in Gujarat for higher education.', source: 'Gujarat SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Gujarat Hackathon', url: 'https://www.gujarattech.gov.in', description: 'State innovation hackathon' }
+        ],
+        workshops: [
+            { name: 'Gujarat Skill Development', url: 'https://www.gujaratskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // GUJARAT GOVERNMENT & PSU INTERNSHIPS
+            { name: 'Gujarat Government Secretariat Internship', url: 'https://www.gujarat.gov.in/internships', description: 'Internship opportunities in Gujarat state government departments', source: 'Gujarat Government', priority: 2 },
+            { name: 'GSPC & ONGC Gujarat Internship', url: 'https://www.gspc.co.in/careers', description: 'Engineering internships at Gujarat State Petroleum Corporation and ONGC facilities', source: 'GSPC/ONGC', priority: 2 },
+            // GUJARAT CORPORATE INTERNSHIPS
+            { name: 'TCS Gandhinagar & Ahmedabad Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS centers in Gandhinagar and Ahmedabad', source: 'TCS', priority: 2 },
+            { name: 'Infosys Gandhinagar Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Gandhinagar', source: 'Infosys', priority: 2 },
+            { name: 'Reliance Jamnagar Internship', url: 'https://www.ril.com/careers', description: 'Petrochemicals and refinery engineering internships at Reliance in Jamnagar', source: 'Reliance Industries', priority: 2 },
+            { name: 'Adani Group Ahmedabad Internship', url: 'https://www.adani.com/careers', description: 'Infrastructure, energy, and logistics internships at Adani Group in Ahmedabad', source: 'Adani Group', priority: 2 },
+            { name: 'Torrent Pharma Ahmedabad Internship', url: 'https://www.torrentpharma.com/careers', description: 'Pharmaceutical research and manufacturing internships at Torrent in Ahmedabad', source: 'Torrent Pharmaceuticals', priority: 2 },
+            // GUJARAT STARTUP & PRIVATE INTERNSHIPS
+            { name: 'Gujarat Startup Ecosystem Internship', url: 'https://www.startupgujarat.in', description: 'Internships with funded startups in Ahmedabad and Gandhinagar', source: 'Gujarat Startup Ecosystem', priority: 2 },
+            { name: 'GIFT City Gandhinagar Internship', url: 'https://www.giftcity.in', description: 'Finance and banking internships at companies in GIFT City, Gandhinagar', source: 'GIFT City Companies', priority: 2 }
+        ]
+    },
+    'rajasthan': {
+        scholarships: [
+            { name: 'Rajasthan State Scholarship', url: 'https://www.rajasthan.gov.in/scholarships', description: 'State government scholarship programs' },
+            // RAJASTHAN STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Rajasthan Tribal Area Development Scholarship', url: 'https://tribal.rajasthan.gov.in', description: 'Rajasthan state scholarship for ST students pursuing higher education.', source: 'Rajasthan Tribal Area Development', priority: 2 },
+            { name: 'Rajasthan ST Students Post-Matric Scholarship', url: 'https://tribal.rajasthan.gov.in', description: 'Financial assistance for ST students in Rajasthan for post-matriculation courses.', source: 'Rajasthan Tribal Area Development', priority: 2 },
+            { name: 'Rajasthan Tribal Girls Education Scheme', url: 'https://tribal.rajasthan.gov.in', description: 'Special scheme for ST girl students in Rajasthan for higher education.', source: 'Rajasthan Tribal Area Development', priority: 2 },
+            // RAJASTHAN STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Rajasthan SC Welfare Department Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'State scholarship for SC students in Rajasthan pursuing higher education.', source: 'Rajasthan SC Welfare Department', priority: 2 },
+            { name: 'Rajasthan Dr. Ambedkar Post-Matric Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'Post-matric scholarship for SC students in Rajasthan.', source: 'Rajasthan SC Welfare Department', priority: 2 },
+            { name: 'Rajasthan SC Students Fee Reimbursement', url: 'https://sje.rajasthan.gov.in', description: 'Fee reimbursement for SC students in Rajasthan pursuing professional courses.', source: 'Rajasthan SC Welfare Department', priority: 2 },
+            { name: 'Rajasthan SC Girls Merit Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'Merit-based scholarship for SC girl students in Rajasthan.', source: 'Rajasthan SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Rajasthan IT Hackathon', url: 'https://www.rajasthanit.gov.in', description: 'State technology hackathon' }
+        ],
+        workshops: [
+            { name: 'Rajasthan Skill Development', url: 'https://www.rajasthanskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // RAJASTHAN GOVERNMENT INTERNSHIPS
+            { name: 'Rajasthan Government Secretariat Internship', url: 'https://www.rajasthan.gov.in/internships', description: 'Internship opportunities in Rajasthan state government departments', source: 'Rajasthan Government', priority: 2 },
+            { name: 'Rajasthan Tourism Internship', url: 'https://www.tourism.rajasthan.gov.in', description: 'Tourism management and hospitality internships with Rajasthan Tourism Department', source: 'Rajasthan Tourism', priority: 2 },
+            // RAJASTHAN CORPORATE & IT INTERNSHIPS
+            { name: 'Infosys Jaipur Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Jaipur', source: 'Infosys', priority: 2 },
+            { name: 'Genpact Jaipur Internship', url: 'https://www.genpact.com/careers', description: 'Business process and analytics internships at Genpact in Jaipur', source: 'Genpact', priority: 2 },
+            { name: 'TCS Jaipur Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS center in Jaipur', source: 'TCS', priority: 2 },
+            // RAJASTHAN MANUFACTURING & PRIVATE INTERNSHIPS
+            { name: 'Hindustan Zinc Udaipur Internship', url: 'https://www.hzlindia.com/careers', description: 'Mining and metallurgy engineering internships at Hindustan Zinc in Udaipur', source: 'Hindustan Zinc', priority: 2 },
+            { name: 'Rajasthan Startup Ecosystem Internship', url: 'https://www.startup.rajasthan.gov.in', description: 'Internships with funded startups in Jaipur and Udaipur', source: 'Rajasthan Startup Ecosystem', priority: 2 }
+        ]
+    },
+    'punjab': {
+        scholarships: [
+            { name: 'Punjab State Scholarship', url: 'https://www.punjab.gov.in/scholarships', description: 'State government scholarship programs' },
+            // PUNJAB STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Punjab ST Welfare Scholarship', url: 'https://www.punjab.gov.in/st-welfare', description: 'Punjab state scholarship for ST students pursuing higher education.', source: 'Punjab ST Welfare Department', priority: 2 },
+            { name: 'Punjab Tribal Students Education Assistance', url: 'https://www.punjab.gov.in/st-welfare', description: 'Financial assistance for ST students in Punjab for education.', source: 'Punjab ST Welfare Department', priority: 2 },
+            // PUNJAB STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Punjab SC Welfare Department Post-Matric Scholarship', url: 'https://punjab.gov.in/sc-welfare', description: 'State scholarship for SC students in Punjab pursuing higher education.', source: 'Punjab SC Welfare Department', priority: 2 },
+            { name: 'Punjab Dr. Ambedkar Scholarship', url: 'https://punjab.gov.in/sc-welfare', description: 'Merit scholarship for SC students in Punjab.', source: 'Punjab SC Welfare Department', priority: 2 },
+            { name: 'Punjab SC Students Fee Concession', url: 'https://punjab.gov.in/sc-welfare', description: 'Fee waiver for SC students in Punjab pursuing professional courses.', source: 'Punjab SC Welfare Department', priority: 2 },
+            { name: 'Punjab SC Girls Education Scheme', url: 'https://punjab.gov.in/sc-welfare', description: 'Special scheme for SC girl students in Punjab for higher education.', source: 'Punjab SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Punjab Tech Challenge', url: 'https://www.punjabtech.gov.in', description: 'State technology challenge' }
+        ],
+        workshops: [
+            { name: 'Punjab Skill Development', url: 'https://www.punjabskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // PUNJAB GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Punjab Government Internship', url: 'https://www.punjab.gov.in/internships', description: 'Internship opportunities in Punjab state government departments', source: 'Punjab Government', priority: 2 },
+            { name: 'TCS Mohali Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS center in Mohali', source: 'TCS', priority: 2 },
+            { name: 'Infosys Chandigarh Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Chandigarh', source: 'Infosys', priority: 2 },
+            { name: 'Tech Mahindra Mohali Internship', url: 'https://www.techmahindra.com/careers', description: 'IT services and digital transformation internships at Tech Mahindra in Mohali', source: 'Tech Mahindra', priority: 2 },
+            // PUNJAB MANUFACTURING & STARTUP INTERNSHIPS
+            { name: 'Hero MotoCorp Ludhiana Internship', url: 'https://www.heromotocorp.com/careers', description: 'Automobile manufacturing internships at Hero MotoCorp facilities in Ludhiana', source: 'Hero MotoCorp', priority: 2 },
+            { name: 'Punjab Startup Ecosystem Internship', url: 'https://www.startuppunjab.in', description: 'Internships with funded startups in Mohali and Chandigarh', source: 'Punjab Startup Ecosystem', priority: 2 }
+        ]
+    },
+    'west-bengal': {
+        scholarships: [
+            { name: 'West Bengal State Scholarship', url: 'https://www.wb.gov.in/scholarships', description: 'State government scholarship programs' },
+            // WEST BENGAL STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'West Bengal Tribal Development Scholarship', url: 'https://www.wbtribal.gov.in', description: 'West Bengal state scholarship for ST students pursuing higher education.', source: 'WB Tribal Development Department', priority: 2 },
+            { name: 'West Bengal ST Students Post-Matric Scholarship', url: 'https://www.wbtribal.gov.in', description: 'Financial assistance for ST students in WB for post-matriculation courses.', source: 'WB Tribal Development Department', priority: 2 },
+            { name: 'West Bengal Tribal Girls Education Scheme', url: 'https://www.wbtribal.gov.in', description: 'Special scheme for ST girl students in WB for higher education.', source: 'WB Tribal Development Department', priority: 2 },
+            // WEST BENGAL STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'West Bengal SC/ST Welfare Scholarship', url: 'https://www.wbscst.gov.in', description: 'State scholarship for SC students in West Bengal pursuing higher education.', source: 'WB SC/ST Welfare Department', priority: 2 },
+            { name: 'West Bengal Dr. Ambedkar Medhabi Scholarship', url: 'https://www.wbscst.gov.in', description: 'Merit scholarship for SC students in West Bengal.', source: 'WB SC/ST Welfare Department', priority: 2 },
+            { name: 'West Bengal SC Students Fee Reimbursement', url: 'https://www.wbscst.gov.in', description: 'Fee reimbursement for SC students in WB pursuing professional courses.', source: 'WB SC/ST Welfare Department', priority: 2 },
+            { name: 'West Bengal SC Girls Higher Education Assistance', url: 'https://www.wbscst.gov.in', description: 'Financial assistance for SC girl students in WB for higher education.', source: 'WB SC/ST Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Kolkata Tech Hackathon', url: 'https://www.kolkatatech.gov.in', description: 'State technology hackathon' }
+        ],
+        workshops: [
+            { name: 'WB Skill Development', url: 'https://www.wbskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // WB GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'West Bengal Government Internship', url: 'https://www.wb.gov.in/internships', description: 'Internship opportunities in WB state government departments', source: 'WB Government', priority: 2 },
+            { name: 'TCS Kolkata Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Kolkata', source: 'TCS', priority: 2 },
+            { name: 'Infosys Kolkata Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Kolkata', source: 'Infosys', priority: 2 },
+            { name: 'Wipro Kolkata Internship', url: 'https://www.wipro.com/careers', description: 'IT services and consulting internships at Wipro in Kolkata', source: 'Wipro', priority: 2 },
+            { name: 'Cognizant Kolkata Internship', url: 'https://www.cognizant.com/careers', description: 'IT consulting and technology internships at Cognizant in Kolkata', source: 'Cognizant', priority: 2 },
+            { name: 'ITC Kolkata Internship', url: 'https://www.itcportal.com/careers', description: 'FMCG, hospitality, and agribusiness internships at ITC headquarters in Kolkata', source: 'ITC Limited', priority: 2 },
+            // WB STARTUP & PSU INTERNSHIPS
+            { name: 'Bengal Silicon Valley Initiative Internship', url: 'https://www.wb.gov.in/it', description: 'Internships with tech startups and IT companies in Kolkata under Bengal Silicon Valley initiative', source: 'WB IT Department', priority: 2 },
+            { name: 'Coal India Kolkata Internship', url: 'https://www.coalindia.in/careers', description: 'Mining engineering internships at Coal India Limited in Kolkata', source: 'Coal India Ltd', priority: 2 }
+        ]
+    },
+    'telangana': {
+        scholarships: [
+            { name: 'Telangana State Scholarship', url: 'https://www.telangana.gov.in/scholarships', description: 'State government scholarship programs' },
+            // TELANGANA STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Telangana Tribal Welfare Scholarship', url: 'https://telanganatribal.gov.in', description: 'Telangana state scholarship for ST students pursuing higher education.', source: 'Telangana Tribal Welfare', priority: 2 },
+            { name: 'Telangana ST Students Post-Matric Scholarship', url: 'https://telanganatribal.gov.in', description: 'Financial assistance for ST students in Telangana for post-matriculation courses.', source: 'Telangana Tribal Welfare', priority: 2 },
+            { name: 'Telangana ST Girls Education Incentive', url: 'https://telanganatribal.gov.in', description: 'Special incentive for ST girl students in Telangana for higher education.', source: 'Telangana Tribal Welfare', priority: 2 },
+            // TELANGANA STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Telangana SC Welfare Department Scholarship', url: 'https://telanganascwelfare.gov.in', description: 'State scholarship for SC students in Telangana pursuing higher education.', source: 'Telangana SC Welfare Department', priority: 2 },
+            { name: 'Telangana SC Students Fee Reimbursement', url: 'https://telanganascwelfare.gov.in', description: 'Full tuition fee reimbursement for SC students in Telangana.', source: 'Telangana SC Welfare Department', priority: 2 },
+            { name: 'Telangana SC Girls Scholarship', url: 'https://telanganascwelfare.gov.in', description: 'Special scholarship for SC girl students in Telangana.', source: 'Telangana SC Welfare Department', priority: 2 },
+            { name: 'Telangana Dr. Ambedkar Overseas Vidya Nidhi', url: 'https://telanganascwelfare.gov.in', description: 'Financial assistance for SC students from Telangana to study abroad.', source: 'Telangana SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
+            { name: 'Hyderabad Hackathon', url: 'https://www.hyderabadhackathon.com', description: 'State technology hackathon' }
+        ],
+        workshops: [
+            { name: 'Telangana Skill Development', url: 'https://www.telanganaskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // TELANGANA GOVERNMENT & IT INTERNSHIPS
+            { name: 'Telangana Government Internship', url: 'https://www.telangana.gov.in/internships', description: 'Internship opportunities in Telangana state government departments', source: 'TS Government', priority: 2 },
+            { name: 'T-Hub Startup Internship', url: 'https://t-hub.co/careers', description: 'Internships with T-Hub incubated startups in Hyderabad', source: 'T-Hub', priority: 2 },
+            { name: 'Infosys Hyderabad Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Hyderabad', source: 'Infosys', priority: 2 },
+            { name: 'TCS Hyderabad Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Hyderabad', source: 'TCS', priority: 2 },
+            { name: 'Microsoft Hyderabad Internship', url: 'https://careers.microsoft.com', description: 'Software engineering internships at Microsoft India Development Center in Hyderabad', source: 'Microsoft', priority: 2 },
+            { name: 'Amazon Hyderabad Internship', url: 'https://www.amazon.jobs', description: 'Technology and operations internships at Amazon campus in Hyderabad', source: 'Amazon', priority: 2 },
+            { name: 'Google Hyderabad Internship', url: 'https://careers.google.com', description: 'Engineering and product internships at Google in Hyderabad', source: 'Google', priority: 2 },
+            { name: 'Deloitte Hyderabad Internship', url: 'https://www.deloitte.com/careers', description: 'Consulting and technology internships at Deloitte USI in Hyderabad', source: 'Deloitte', priority: 2 },
+            // TELANGANA PHARMA & STARTUP INTERNSHIPS
+            { name: 'Dr. Reddy\'s Laboratories Internship', url: 'https://www.drreddys.com/careers', description: 'Pharmaceutical research and development internships in Hyderabad', source: 'Dr. Reddy\'s', priority: 2 },
+            { name: 'Aurobindo Pharma Internship', url: 'https://www.aurobindo.com/careers', description: 'Pharma manufacturing and quality internships at Aurobindo in Hyderabad', source: 'Aurobindo', priority: 2 },
+            { name: 'WE Hub Women Entrepreneurship Internship', url: 'https://wehub.telangana.gov.in', description: 'Internships supporting women-led startups at WE Hub in Hyderabad', source: 'WE Hub', priority: 2 }
+        ]
+    },
+    'bihar': {
+        scholarships: [
+            { name: 'Bihar State Scholarship', url: 'https://www.bihar.gov.in/scholarships', description: 'State government scholarship programs' },
+            // BIHAR STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Bihar Tribal Welfare Scholarship', url: 'https://www.bihartribal.gov.in', description: 'Bihar state scholarship for ST students pursuing higher education.', source: 'Bihar Tribal Welfare Department', priority: 2 },
+            { name: 'Bihar ST Students Post-Matric Scholarship', url: 'https://www.bihartribal.gov.in', description: 'Financial assistance for ST students in Bihar for post-matriculation courses.', source: 'Bihar Tribal Welfare Department', priority: 2 },
+            // BIHAR STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Bihar SC/ST Welfare Department Scholarship', url: 'https://www.biharscst.gov.in', description: 'State scholarship for SC students in Bihar pursuing higher education.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
+            { name: 'Bihar Dr. Ambedkar Post-Matric Scholarship', url: 'https://www.biharscst.gov.in', description: 'Post-matric scholarship for SC students in Bihar.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
+            { name: 'Bihar SC Students Fee Reimbursement', url: 'https://www.biharscst.gov.in', description: 'Fee reimbursement for SC students in Bihar pursuing professional courses.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
+            { name: 'Bihar SC Girls Education Scheme', url: 'https://www.biharscst.gov.in', description: 'Special scheme for SC girl students in Bihar for higher education.', source: 'Bihar SC/ST Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'Bihar Skill Development', url: 'https://www.biharskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // BIHAR GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Bihar Government Internship', url: 'https://www.bihar.gov.in/internships', description: 'Internship opportunities in Bihar state government departments', source: 'Bihar Government', priority: 2 },
+            { name: 'TCS Patna Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Patna', source: 'TCS', priority: 2 },
+            { name: 'Infosys Bihar Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships with Infosys in Bihar', source: 'Infosys', priority: 2 },
+            { name: 'Bihar Startup Internship', url: 'https://startup.bihar.gov.in', description: 'Internships with startups under Bihar Startup Policy', source: 'Bihar Startup', priority: 2 },
+            { name: 'NTPC Barh Internship', url: 'https://www.ntpc.co.in/careers', description: 'Power engineering internships at NTPC thermal plant in Barh', source: 'NTPC', priority: 2 },
+            { name: 'Genpact Patna Internship', url: 'https://www.genpact.com/careers', description: 'Business process and analytics internships at Genpact in Patna', source: 'Genpact', priority: 2 }
+        ]
+    },
+    'madhya-pradesh': {
+        scholarships: [
+            { name: 'MP State Scholarship', url: 'https://www.mp.gov.in/scholarships', description: 'State government scholarship programs' },
+            // MP STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'MP Tribal Welfare Scholarship', url: 'https://www.mptribal.gov.in', description: 'MP state scholarship for ST students pursuing higher education.', source: 'MP Tribal Welfare Department', priority: 2 },
+            { name: 'MP ST Students Post-Matric Scholarship', url: 'https://www.mptribal.gov.in', description: 'Financial assistance for ST students in MP for post-matriculation courses.', source: 'MP Tribal Welfare Department', priority: 2 },
+            { name: 'MP Tribal Girls Education Scheme', url: 'https://www.mptribal.gov.in', description: 'Special scheme for ST girl students in MP for higher education.', source: 'MP Tribal Welfare Department', priority: 2 },
+            // MP STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'MP SC Welfare Department Scholarship', url: 'https://www.mpscwelfare.gov.in', description: 'State scholarship for SC students in MP pursuing higher education.', source: 'MP SC Welfare Department', priority: 2 },
+            { name: 'MP Dr. Ambedkar Scholarship', url: 'https://www.mpscwelfare.gov.in', description: 'Merit scholarship for SC students in MP.', source: 'MP SC Welfare Department', priority: 2 },
+            { name: 'MP SC Students Fee Reimbursement', url: 'https://www.mpscwelfare.gov.in', description: 'Fee reimbursement for SC students in MP pursuing professional courses.', source: 'MP SC Welfare Department', priority: 2 },
+            { name: 'MP SC Girls Higher Education Assistance', url: 'https://www.mpscwelfare.gov.in', description: 'Financial assistance for SC girl students in MP for higher education.', source: 'MP SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'MP Skill Development', url: 'https://www.mpskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // MP GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Madhya Pradesh Government Internship', url: 'https://www.mp.gov.in/internships', description: 'Internship opportunities in MP state government departments', source: 'MP Government', priority: 2 },
+            { name: 'TCS Indore Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Indore', source: 'TCS', priority: 2 },
+            { name: 'Infosys Indore Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Indore', source: 'Infosys', priority: 2 },
+            { name: 'Wipro Indore Internship', url: 'https://www.wipro.com/careers', description: 'IT services and consulting internships at Wipro in Indore', source: 'Wipro', priority: 2 },
+            { name: 'BHEL Bhopal Internship', url: 'https://www.bhel.com/careers', description: 'Heavy engineering internships at BHEL plant in Bhopal', source: 'BHEL', priority: 2 },
+            { name: 'Collabera Indore Internship', url: 'https://www.collabera.com/careers', description: 'IT staffing and technology internships at Collabera in Indore', source: 'Collabera', priority: 2 },
+            { name: 'Pithampur Industrial Area Internship', url: 'https://www.mpindustry.gov.in', description: 'Manufacturing internships at companies in Pithampur industrial area', source: 'MP Industry', priority: 2 }
+        ]
+    },
+    'odisha': {
+        scholarships: [
+            { name: 'Odisha State Scholarship', url: 'https://www.odisha.gov.in/scholarships', description: 'State government scholarship programs' },
+            // ODISHA STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Odisha ST & SC Development Scholarship', url: 'https://www.odishatribal.gov.in', description: 'Odisha state scholarship for ST students pursuing higher education.', source: 'Odisha ST & SC Development Department', priority: 2 },
+            { name: 'Odisha Tribal Students Post-Matric Scholarship', url: 'https://www.odishatribal.gov.in', description: 'Financial assistance for ST students in Odisha for post-matriculation courses.', source: 'Odisha ST & SC Development Department', priority: 2 },
+            { name: 'Odisha ST Girls Education Scheme', url: 'https://www.odishatribal.gov.in', description: 'Special scheme for ST girl students in Odisha for higher education.', source: 'Odisha ST & SC Development Department', priority: 2 },
+            // ODISHA STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Odisha SC Welfare Scholarship', url: 'https://www.odishascwelfare.gov.in', description: 'State scholarship for SC students in Odisha pursuing higher education.', source: 'Odisha SC Welfare Department', priority: 2 },
+            { name: 'Odisha Dr. Ambedkar Merit Scholarship', url: 'https://www.odishascwelfare.gov.in', description: 'Merit scholarship for SC students in Odisha.', source: 'Odisha SC Welfare Department', priority: 2 },
+            { name: 'Odisha SC Students Fee Reimbursement', url: 'https://www.odishascwelfare.gov.in', description: 'Fee reimbursement for SC students in Odisha pursuing professional courses.', source: 'Odisha SC Welfare Department', priority: 2 },
+            { name: 'Odisha SC Girls Higher Education Scheme', url: 'https://www.odishascwelfare.gov.in', description: 'Financial assistance for SC girl students in Odisha for higher education.', source: 'Odisha SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'Odisha Skill Development', url: 'https://www.odishaskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // ODISHA GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Odisha Government Internship', url: 'https://www.odisha.gov.in/internships', description: 'Internship opportunities in Odisha state government departments', source: 'Odisha Government', priority: 2 },
+            { name: 'TCS Bhubaneswar Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Bhubaneswar', source: 'TCS', priority: 2 },
+            { name: 'Infosys Bhubaneswar Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Bhubaneswar', source: 'Infosys', priority: 2 },
+            { name: 'Mindtree Bhubaneswar Internship', url: 'https://www.mindtree.com/careers', description: 'Digital transformation internships at Mindtree in Bhubaneswar', source: 'Mindtree', priority: 2 },
+            { name: 'Odisha Startup Internship', url: 'https://startup.odisha.gov.in', description: 'Internships with startups at Odisha Startup Launchpad', source: 'Odisha Startup', priority: 2 },
+            { name: 'NALCO Internship', url: 'https://www.nalcoindia.com/careers', description: 'Metallurgy and mining internships at National Aluminium Company in Odisha', source: 'NALCO', priority: 2 },
+            { name: 'Paradeep Phosphates Internship', url: 'https://www.ppl.co.in/careers', description: 'Chemical engineering internships at Paradeep Phosphates Limited', source: 'PPL', priority: 2 }
+        ]
+    },
+    'haryana': {
+        scholarships: [
+            { name: 'Haryana State Scholarship', url: 'https://www.haryana.gov.in/scholarships', description: 'State government scholarship programs' },
+            // HARYANA STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Haryana Tribal Welfare Scholarship', url: 'https://www.haryanatribal.gov.in', description: 'Haryana state scholarship for ST students pursuing higher education.', source: 'Haryana Tribal Welfare', priority: 2 },
+            { name: 'Haryana ST Students Education Assistance', url: 'https://www.haryanatribal.gov.in', description: 'Financial assistance for ST students in Haryana for education.', source: 'Haryana Tribal Welfare', priority: 2 },
+            // HARYANA STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Haryana SC Welfare Department Scholarship', url: 'https://haryanascbc.gov.in', description: 'State scholarship for SC students in Haryana pursuing higher education.', source: 'Haryana SC Welfare Department', priority: 2 },
+            { name: 'Haryana Dr. Ambedkar Medhavi Chhatra Scholarship', url: 'https://haryanascbc.gov.in', description: 'Merit scholarship for SC students in Haryana.', source: 'Haryana SC Welfare Department', priority: 2 },
+            { name: 'Haryana SC Students Fee Reimbursement', url: 'https://haryanascbc.gov.in', description: 'Fee reimbursement for SC students in Haryana pursuing professional courses.', source: 'Haryana SC Welfare Department', priority: 2 },
+            { name: 'Haryana SC Girls Education Incentive', url: 'https://haryanascbc.gov.in', description: 'Special incentive for SC girl students in Haryana for higher education.', source: 'Haryana SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'Haryana Skill Development', url: 'https://www.haryanaskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // HARYANA GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Haryana Government Internship', url: 'https://www.haryana.gov.in/internships', description: 'Internship opportunities in Haryana state government departments', source: 'Haryana Government', priority: 2 },
+            { name: 'TCS Gurgaon Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Gurgaon', source: 'TCS', priority: 2 },
+            { name: 'Infosys Gurgaon Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Gurgaon', source: 'Infosys', priority: 2 },
+            { name: 'HCL Gurgaon Internship', url: 'https://www.hcltech.com/careers', description: 'IT services internships at HCL headquarters in Noida (NCR Haryana)', source: 'HCL', priority: 2 },
+            { name: 'Maruti Suzuki Internship', url: 'https://www.marutisuzuki.com/careers', description: 'Automotive engineering internships at Maruti Suzuki plants in Gurgaon and Manesar', source: 'Maruti Suzuki', priority: 2 },
+            { name: 'American Express Gurgaon Internship', url: 'https://www.americanexpress.com/careers', description: 'Fintech and business internships at American Express in Gurgaon', source: 'American Express', priority: 2 },
+            { name: 'IBM Gurgaon Internship', url: 'https://www.ibm.com/careers', description: 'Technology consulting internships at IBM in Gurgaon', source: 'IBM', priority: 2 },
+            { name: 'Startup Haryana Internship', url: 'https://startupharyana.org', description: 'Internships with startups under Startup Haryana initiative', source: 'Startup Haryana', priority: 2 }
+        ]
+    },
+    'jharkhand': {
+        scholarships: [
+            { name: 'Jharkhand State Scholarship', url: 'https://www.jharkhand.gov.in/scholarships', description: 'State government scholarship programs' },
+            // JHARKHAND STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Jharkhand Tribal Welfare Scholarship', url: 'https://www.jharkhandtribal.gov.in', description: 'Jharkhand state scholarship for ST students pursuing higher education.', source: 'Jharkhand Tribal Welfare Department', priority: 2 },
+            { name: 'Jharkhand ST Students Post-Matric Scholarship', url: 'https://www.jharkhandtribal.gov.in', description: 'Financial assistance for ST students in Jharkhand for post-matriculation courses.', source: 'Jharkhand Tribal Welfare Department', priority: 2 },
+            { name: 'Jharkhand Tribal Girls Education Scheme', url: 'https://www.jharkhandtribal.gov.in', description: 'Special scheme for ST girl students in Jharkhand for higher education.', source: 'Jharkhand Tribal Welfare Department', priority: 2 },
+            // JHARKHAND STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Jharkhand SC Welfare Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'State scholarship for SC students in Jharkhand pursuing higher education.', source: 'Jharkhand SC Welfare Department', priority: 2 },
+            { name: 'Jharkhand Dr. Ambedkar Post-Matric Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Post-matric scholarship for SC students in Jharkhand.', source: 'Jharkhand SC Welfare Department', priority: 2 },
+            { name: 'Jharkhand SC Students Fee Reimbursement', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Fee reimbursement for SC students in Jharkhand pursuing professional courses.', source: 'Jharkhand SC Welfare Department', priority: 2 },
+            { name: 'Jharkhand SC Girls Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Special scholarship for SC girl students in Jharkhand.', source: 'Jharkhand SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'Jharkhand Skill Development', url: 'https://www.jharkhandskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // JHARKHAND GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Jharkhand Government Internship', url: 'https://www.jharkhand.gov.in/internships', description: 'Internship opportunities in Jharkhand state government departments', source: 'Jharkhand Government', priority: 2 },
+            { name: 'TCS Ranchi Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Ranchi', source: 'TCS', priority: 2 },
+            { name: 'Tata Steel Jamshedpur Internship', url: 'https://www.tatasteel.com/careers', description: 'Steel manufacturing and metallurgy internships at Tata Steel in Jamshedpur', source: 'Tata Steel', priority: 2 },
+            { name: 'Coal India Ranchi Internship', url: 'https://www.coalindia.in/careers', description: 'Mining engineering internships at Coal India Limited in Ranchi', source: 'Coal India', priority: 2 },
+            { name: 'MECON Ranchi Internship', url: 'https://www.meconlimited.co.in/careers', description: 'Metallurgical consultancy internships at MECON in Ranchi', source: 'MECON', priority: 2 },
+            { name: 'HEC Ranchi Internship', url: 'https://www.hecterex.com/careers', description: 'Heavy engineering internships at Heavy Engineering Corporation in Ranchi', source: 'HEC', priority: 2 },
+            { name: 'Jharkhand Startup Internship', url: 'https://startup.jharkhand.gov.in', description: 'Internships with startups under Jharkhand Startup Policy', source: 'Jharkhand Startup', priority: 2 }
+        ]
+    },
+    'chhattisgarh': {
+        scholarships: [
+            { name: 'Chhattisgarh State Scholarship', url: 'https://www.chhattisgarh.gov.in/scholarships', description: 'State government scholarship programs' },
+            // CHHATTISGARH STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Chhattisgarh Tribal Welfare Scholarship', url: 'https://www.cgstate.gov.in/tribal', description: 'Chhattisgarh state scholarship for ST students pursuing higher education.', source: 'CG Tribal Welfare Department', priority: 2 },
+            { name: 'Chhattisgarh ST Students Post-Matric Scholarship', url: 'https://www.cgstate.gov.in/tribal', description: 'Financial assistance for ST students in CG for post-matriculation courses.', source: 'CG Tribal Welfare Department', priority: 2 },
+            { name: 'Chhattisgarh Tribal Girls Education Scheme', url: 'https://www.cgstate.gov.in/tribal', description: 'Special scheme for ST girl students in CG for higher education.', source: 'CG Tribal Welfare Department', priority: 2 },
+            // CHHATTISGARH STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Chhattisgarh SC Welfare Scholarship', url: 'https://www.cgstate.gov.in/scwelfare', description: 'State scholarship for SC students in Chhattisgarh pursuing higher education.', source: 'CG SC Welfare Department', priority: 2 },
+            { name: 'Chhattisgarh Dr. Ambedkar Scholarship', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Merit scholarship for SC students in Chhattisgarh.', source: 'CG SC Welfare Department', priority: 2 },
+            { name: 'Chhattisgarh SC Students Fee Reimbursement', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Fee reimbursement for SC students in CG pursuing professional courses.', source: 'CG SC Welfare Department', priority: 2 },
+            { name: 'Chhattisgarh SC Girls Higher Education Scheme', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Financial assistance for SC girl students in CG for higher education.', source: 'CG SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'CG Skill Development', url: 'https://www.cgskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // CHHATTISGARH GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Chhattisgarh Government Internship', url: 'https://www.chhattisgarh.gov.in/internships', description: 'Internship opportunities in CG state government departments', source: 'CG Government', priority: 2 },
+            { name: 'TCS Raipur Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Raipur', source: 'TCS', priority: 2 },
+            { name: 'NTPC Korba Internship', url: 'https://www.ntpc.co.in/careers', description: 'Power engineering internships at NTPC thermal plants in Korba', source: 'NTPC', priority: 2 },
+            { name: 'SECL Internship', url: 'https://www.secl-cil.in/careers', description: 'Coal mining internships at South Eastern Coalfields Limited in CG', source: 'SECL', priority: 2 },
+            { name: 'Bhilai Steel Plant Internship', url: 'https://www.sail.co.in/careers', description: 'Steel manufacturing internships at SAIL Bhilai Steel Plant', source: 'SAIL', priority: 2 },
+            { name: 'Chhattisgarh Startup Internship', url: 'https://startup.cg.gov.in', description: 'Internships with startups under Chhattisgarh Startup Policy', source: 'CG Startup', priority: 2 }
+        ]
+    },
+    'assam': {
+        scholarships: [
+            { name: 'Assam State Scholarship', url: 'https://www.assam.gov.in/scholarships', description: 'State government scholarship programs' },
+            // ASSAM STATE-SPECIFIC ST SCHOLARSHIPS
+            { name: 'Assam Tribal Welfare Scholarship', url: 'https://www.assamtribal.gov.in', description: 'Assam state scholarship for ST students pursuing higher education.', source: 'Assam Tribal Welfare Department', priority: 2 },
+            { name: 'Assam ST Students Post-Matric Scholarship', url: 'https://www.assamtribal.gov.in', description: 'Financial assistance for ST students in Assam for post-matriculation courses.', source: 'Assam Tribal Welfare Department', priority: 2 },
+            { name: 'Assam Tribal Girls Education Incentive', url: 'https://www.assamtribal.gov.in', description: 'Special incentive for ST girl students in Assam for higher education.', source: 'Assam Tribal Welfare Department', priority: 2 },
+            // ASSAM STATE-SPECIFIC SC SCHOLARSHIPS
+            { name: 'Assam SC Welfare Scholarship', url: 'https://www.assamscwelfare.gov.in', description: 'State scholarship for SC students in Assam pursuing higher education.', source: 'Assam SC Welfare Department', priority: 2 },
+            { name: 'Assam Dr. Ambedkar Merit Scholarship', url: 'https://www.assamscwelfare.gov.in', description: 'Merit scholarship for SC students in Assam.', source: 'Assam SC Welfare Department', priority: 2 },
+            { name: 'Assam SC Students Fee Reimbursement', url: 'https://www.assamscwelfare.gov.in', description: 'Fee reimbursement for SC students in Assam pursuing professional courses.', source: 'Assam SC Welfare Department', priority: 2 },
+            { name: 'Assam SC Girls Education Scheme', url: 'https://www.assamscwelfare.gov.in', description: 'Financial assistance for SC girl students in Assam for higher education.', source: 'Assam SC Welfare Department', priority: 2 }
+        ],
+        hackathons: [
+            { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
+        ],
+        workshops: [
+            { name: 'Assam Skill Development', url: 'https://www.assamskill.gov.in', description: 'Skill training programs' }
+        ],
+        internships: [
+            // NATIONAL INTERNSHIPS
+            { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'National internship opportunities with top companies', source: 'MCA', priority: 1 },
+            { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Technology internships under Digital India initiative', source: 'MeitY', priority: 1 },
+            // ASSAM GOVERNMENT & CORPORATE INTERNSHIPS
+            { name: 'Assam Government Internship', url: 'https://www.assam.gov.in/internships', description: 'Internship opportunities in Assam state government departments', source: 'Assam Government', priority: 2 },
+            { name: 'TCS Guwahati Internship', url: 'https://www.tcs.com/careers', description: 'IT services internships at TCS development centers in Guwahati', source: 'TCS', priority: 2 },
+            { name: 'Infosys Guwahati Internship', url: 'https://www.infosys.com/careers', description: 'Technology internships at Infosys campus in Guwahati', source: 'Infosys', priority: 2 },
+            { name: 'Oil India Limited Internship', url: 'https://www.oil-india.com/careers', description: 'Petroleum engineering internships at Oil India Limited in Assam', source: 'Oil India', priority: 2 },
+            { name: 'ONGC Assam Internship', url: 'https://www.ongcindia.com/careers', description: 'Oil and gas exploration internships with ONGC in Assam', source: 'ONGC', priority: 2 },
+            { name: 'Assam Startup Internship', url: 'https://startup.assam.gov.in', description: 'Internships with startups under Assam Startup Policy', source: 'Assam Startup', priority: 2 },
+            { name: 'Guwahati Biotech Park Internship', url: 'https://www.biotechwelfare.assam.gov.in', description: 'Biotechnology internships at Guwahati Biotech Park', source: 'Assam Biotech', priority: 2 }
         ]
     }
 };
@@ -863,6 +1566,112 @@ const defaultOpportunities = {
             url: 'https://scholarships.gov.in',
             description: 'Government scholarship scheme for OBC students from economically backward families pursuing higher education.',
             source: 'Ministry of Social Justice and Empowerment',
+            priority: 1
+        },
+        // OBC-SPECIFIC SCHOLARSHIPS
+        {
+            name: 'Pre Matric Scholarship for OBC Students',
+            url: 'https://scholarships.gov.in',
+            description: 'Financial assistance for OBC students studying in classes 9th and 10th from economically backward families.',
+            source: 'Ministry of Social Justice and Empowerment',
+            priority: 1
+        },
+        {
+            name: 'OBC Students Free Coaching Scheme',
+            url: 'https://socialjustice.nic.in/scholarships/obc-coaching',
+            description: 'Free coaching for OBC candidates preparing for competitive examinations like UPSC, SSC, Banking, Railways, IIT-JEE, NEET.',
+            source: 'Ministry of Social Justice and Empowerment',
+            priority: 1
+        },
+        {
+            name: 'Central Sector Interest Subsidy Scheme for OBC Students',
+            url: 'https://scholarships.gov.in',
+            description: 'Interest subsidy on education loans taken by OBC students for pursuing professional and technical courses in India.',
+            source: 'Ministry of Social Justice and Empowerment',
+            priority: 1
+        },
+        {
+            name: 'OBC Students Merit Scholarship',
+            url: 'https://scholarships.gov.in',
+            description: 'Merit-based scholarship for academically excellent OBC students pursuing higher education in recognized institutions.',
+            source: 'State Government',
+            priority: 2
+        },
+        {
+            name: 'OBC Girls Education Scheme',
+            url: 'https://scholarships.gov.in',
+            description: 'Special financial assistance for OBC girl students to encourage higher education and reduce dropout rates.',
+            source: 'State Government',
+            priority: 2
+        },
+        {
+            name: 'OBC Students Hostel Facilities Scheme',
+            url: 'https://scholarships.gov.in',
+            description: 'Construction and maintenance of hostels for OBC students pursuing higher secondary and college education.',
+            source: 'Ministry of Social Justice and Empowerment',
+            priority: 1
+        },
+        {
+            name: 'OBC Professional Course Fee Reimbursement',
+            url: 'https://scholarships.gov.in',
+            description: 'Reimbursement of tuition fees for OBC students pursuing professional courses like Engineering, Medical, MBA, etc.',
+            source: 'State Government',
+            priority: 2
+        },
+        {
+            name: 'OBC Students Book Bank Scheme',
+            url: 'https://scholarships.gov.in',
+            description: 'Free textbooks and study materials for OBC students pursuing higher and professional education.',
+            source: 'State Government',
+            priority: 2
+        },
+        {
+            name: 'OBC Students Laptop/Digital Device Scheme',
+            url: 'https://scholarships.gov.in',
+            description: 'Free laptops or tablets for meritorious OBC students to support digital learning and skill development.',
+            source: 'State Government',
+            priority: 2
+        },
+        {
+            name: 'OBC Minority Scholarship',
+            url: 'https://scholarships.gov.in',
+            description: 'Scholarship for OBC students belonging to minority communities for pursuing higher education.',
+            source: 'Ministry of Minority Affairs',
+            priority: 1
+        },
+        {
+            name: 'OBC Students Skill Development Scholarship',
+            url: 'https://scholarships.gov.in',
+            description: 'Financial support for OBC students to pursue vocational training and skill development courses for employability.',
+            source: 'Ministry of Skill Development',
+            priority: 1
+        },
+        {
+            name: 'OBC Students Research Fellowship',
+            url: 'https://scholarships.gov.in',
+            description: 'Fellowship for OBC students pursuing M.Phil and Ph.D programs in universities and research institutions.',
+            source: 'UGC',
+            priority: 1
+        },
+        {
+            name: 'OBC Students Overseas Education Scholarship',
+            url: 'https://scholarships.gov.in',
+            description: 'Financial assistance for meritorious OBC students to pursue higher education in foreign universities.',
+            source: 'Ministry of Social Justice and Empowerment',
+            priority: 1
+        },
+        {
+            name: 'OBC Students Medical/Engineering Entrance Coaching',
+            url: 'https://scholarships.gov.in',
+            description: 'Free or subsidized coaching for OBC students preparing for NEET, JEE, and other professional entrance examinations.',
+            source: 'State Government',
+            priority: 2
+        },
+        {
+            name: 'OBC Students Post-Doctoral Fellowship',
+            url: 'https://scholarships.gov.in',
+            description: 'Post-doctoral research fellowship for OBC candidates in science, engineering, and humanities.',
+            source: 'UGC/CSIR',
             priority: 1
         },
         {
@@ -909,7 +1718,31 @@ const defaultOpportunities = {
             name: 'Educational Loan Scheme', 
             url: 'https://www.eduloan.gov.in', 
             description: 'Government educational loan programs for all categories' 
-        }
+        },
+        // ST-SPECIFIC SCHOLARSHIPS
+        { name: 'National Fellowship for ST Students', url: 'https://tribal.nic.in/ST/NationalFellowshipforST.aspx', description: 'Fellowship scheme for ST students pursuing M.Phil and Ph.D programs in Indian universities. Provides financial support for research work.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'Top Class Education Scheme for ST Students', url: 'https://tribal.nic.in/ST/TopClassEducationScheme.aspx', description: 'Full financial support for ST students admitted to top-notch institutions for pursuing quality higher education. Covers tuition fees and living expenses.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'ST Girls Hostel Scheme', url: 'https://tribal.nic.in/scholarships', description: 'Financial assistance for construction and running of hostels for ST girls pursuing higher secondary education and above in selected educational institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'Upgradation of Merit for ST Students', url: 'https://tribal.nic.in/ST/UpgradationMeritST.aspx', description: 'Scholarship for meritorious ST students studying in classes 9th to 12th to upgrade their merit. Coaching support for competitive examinations.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'Vocational Training Centers for ST Youth', url: 'https://tribal.nic.in/ST/VocationalTraining.aspx', description: 'Skill development and vocational training programs for ST youth to enhance employability and entrepreneurship opportunities.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'Ashram Schools Scholarship for ST Students', url: 'https://tribal.nic.in/scholarships', description: 'Support for ST students in Ashram schools (residential schools in tribal areas) for quality education from elementary to higher secondary level.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'National Overseas Scholarship for ST Students', url: 'https://tribal.nic.in/ST/NationalOverseasScholarship.aspx', description: 'Financial assistance for ST students to pursue higher studies (Masters, Ph.D.) in prestigious foreign universities and institutions.', source: 'Ministry of Tribal Affairs, Government of India', priority: 1 },
+        { name: 'Rajiv Gandhi National Fellowship for ST Students', url: 'https://ugc.ac.in/st/', description: 'Fellowship for ST candidates admitted to M.Phil/Ph.D programs in universities and research institutions. Monthly stipend and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+        // SC-SPECIFIC SCHOLARSHIPS
+        { name: 'National Fellowship for SC Students', url: 'https://socialjustice.nic.in/scholarships/national-fellowship-sc', description: 'Fellowship scheme for SC students pursuing M.Phil and Ph.D programs. Provides monthly stipend, contingency, and other allowances for research.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'Top Class Education Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/top-class-education-sc', description: 'Full financial support for SC students in notified top-class institutions. Covers admission fees, tuition fees, living expenses, and books.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'SC Girls Hostel Scheme', url: 'https://socialjustice.nic.in/scholarships', description: 'Construction and maintenance of hostels for SC girls pursuing higher secondary, college, and university education.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'Babu Jagjivan Ram Chhatravas Yojana', url: 'https://socialjustice.nic.in/scholarships', description: 'Hostel facilities for SC boys and girls pursuing higher and technical education. Provides accommodation and basic amenities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'Free Coaching Scheme for SC Students', url: 'https://socialjustice.nic.in/scholarships/free-coaching-sc', description: 'Free coaching for SC candidates appearing for competitive examinations like UPSC, SSC, Banking, Railways, IIT, Medical entrance tests.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'Dr. Ambedkar Central Sector Scheme of Interest Subsidy', url: 'https://socialjustice.nic.in/scholarships/ambedkar-interest-subsidy', description: 'Interest subsidy on education loans for SC students pursuing higher education in India and abroad. Covers professional and technical courses.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'National Overseas Scholarship for SC Students', url: 'https://socialjustice.nic.in/scholarships/overseas-scholarship-sc', description: 'Financial assistance for SC students to pursue Masters and Ph.D. programs in top-ranked foreign universities.', source: 'Ministry of Social Justice and Empowerment', priority: 1 },
+        { name: 'Rajiv Gandhi National Fellowship for SC Students', url: 'https://ugc.ac.in/sc/', description: 'Fellowship for SC candidates admitted to M.Phil/Ph.D programs in universities. Monthly stipend, HRA, and contingency grants provided.', source: 'University Grants Commission (UGC)', priority: 1 },
+        { name: 'SC Book Bank Scheme', url: 'https://scholarships.gov.in', description: 'Free textbooks and study materials for SC students pursuing higher education. Books can be retained after course completion.', source: 'State Social Welfare Department', priority: 2 },
+        // COMBINED SC/ST SCHOLARSHIPS
+        { name: 'SC/ST Coaching Scheme for Civil Services', url: 'https://dopt.gov.in/scholarships', description: 'Specialized coaching for SC and ST candidates preparing for UPSC Civil Services, IAS, IPS, IFS examinations with expert faculty.', source: 'Department of Personnel and Training', priority: 1 },
+        { name: 'SC/ST Students Study in India Scheme', url: 'https://scholarships.gov.in', description: 'Financial assistance for SC and ST students from remote areas to pursue higher education in better institutions within India.', source: 'Ministry of Social Justice & Ministry of Tribal Affairs', priority: 1 },
+        { name: 'SC/ST Merit-cum-Means Scholarship', url: 'https://scholarships.gov.in', description: 'Combined merit and need-based scholarship for economically weaker SC and ST students showing academic excellence.', source: 'State Government', priority: 2 },
+        { name: 'SC/ST Students Laptop/Tablet Scheme', url: 'https://scholarships.gov.in', description: 'Free laptops or tablets for meritorious SC and ST students to facilitate digital learning and skill development.', source: 'State Government', priority: 2 }
     ],
     hackathons: [
         { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -927,13 +1760,13 @@ const defaultOpportunities = {
         { name: 'Tech Training Program', url: 'https://www.techtraining.gov.in', description: 'Technology training programs' }
     ],
     internships: [
-        { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1 },
-        { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Hands-on training in emerging technologies like AI, IoT, and cybersecurity', source: 'Ministry of Electronics & IT (MeitY)', priority: 1 },
-        { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Opportunities in Indian missions abroad and MEA headquarters', source: 'Ministry of External Affairs (MEA)', priority: 1 },
-        { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'Technical internships in collaboration with industries for engineering students', source: 'All India Council for Technical Education (AICTE)', priority: 1 },
-        { name: 'Government Internship', url: 'https://www.internship.gov.in', description: 'Government sector internship opportunities' },
-        { name: 'Industry Internship Program', url: 'https://www.industryinternship.gov.in', description: 'Industry internship placements' },
-        { name: 'Startup Internship', url: 'https://www.startupinternship.gov.in', description: 'Startup ecosystem internships' }
+        { name: 'Prime Minister\'s Internship Scheme (PMIS)', url: 'https://pminternship.mca.gov.in', description: 'Targeting 1 crore internship opportunities over 5 years with top 500 companies', source: 'Ministry of Corporate Affairs (MCA)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+        { name: 'Digital India Internship Programme', url: 'https://intern.meity.gov.in', description: 'Hands-on training in emerging technologies like AI, IoT, and cybersecurity', source: 'Ministry of Electronics & IT (MeitY)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE'] },
+        { name: 'MEA Internship Programme', url: 'https://internship.mea.gov.in', description: 'Opportunities in Indian missions abroad and MEA headquarters', source: 'Ministry of External Affairs (MEA)', priority: 1, branches: ['MBA', 'Others'] },
+        { name: 'AICTE Internship Scheme', url: 'https://internship.aicte-india.org', description: 'Technical internships in collaboration with industries for engineering students', source: 'All India Council for Technical Education (AICTE)', priority: 1, branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'Others'] },
+        { name: 'Government Internship', url: 'https://www.internship.gov.in', description: 'Government sector internship opportunities', branches: ['MBA', 'Others'] },
+        { name: 'Industry Internship Program', url: 'https://www.industryinternship.gov.in', description: 'Industry internship placements', branches: ['CSE', 'IT', 'ECE', 'EEE', 'Mechanical', 'Civil', 'MBA', 'Others'] },
+        { name: 'Startup Internship', url: 'https://www.startupinternship.gov.in', description: 'Startup ecosystem internships', branches: ['CSE', 'IT', 'MBA', 'Others'] }
     ]
 };
 
@@ -1576,18 +2409,47 @@ function showBranchInputModal(state) {
         <div class="modal-overlay">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3><i class="fas fa-user-graduate"></i> Enter Branch Details</h3>
+                    <h3><i class="fas fa-user-graduate"></i> Select Your Branch</h3>
                     <button class="modal-close" onclick="this.closest('.scholarship-modal').remove()">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p style="margin-bottom: 15px; color: #666;">Please enter your branch or field of study to find relevant internships:</p>
-                    <input type="text" id="branchInput" placeholder="e.g., Computer Science, Mechanical, Civil..." style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 2px solid #4ECDC4; font-size: 1rem; outline: none;">
-                    <button onclick="processBranchSearch('${state}')" class="auth-btn" style="width: 100%;">
-                        <span>Search Internships</span>
-                        <i class="fas fa-search"></i>
-                    </button>
+                    <p style="margin-bottom: 20px; color: #666;">Choose your branch to find relevant internships:</p>
+                    <div class="category-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                        <div class="category-card" onclick="processBranchSearch('CSE', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-laptop-code" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">Computer Science</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('IT', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-network-wired" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">IT</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('ECE', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-microchip" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">ECE</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('EEE', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-bolt" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">EEE</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('Mechanical', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-cogs" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">Mechanical</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('Civil', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-building" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">Civil</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('MBA', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-briefcase" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">MBA</h4>
+                        </div>
+                        <div class="category-card" onclick="processBranchSearch('Others', '${state}')" style="cursor: pointer; padding: 20px; border: 2px solid #4ECDC4; border-radius: 12px; text-align: center; transition: all 0.3s;">
+                            <i class="fas fa-ellipsis-h" style="font-size: 2rem; color: #4ECDC4; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0; font-size: 0.95rem;">Others</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1597,39 +2459,29 @@ function showBranchInputModal(state) {
         modal.querySelector('.modal-content').style.transform = 'scale(1)';
         modal.querySelector('.modal-overlay').style.opacity = '1';
     }, 10);
-    
-    // Focus on input field
-    setTimeout(() => {
-        document.getElementById('branchInput')?.focus();
-    }, 100);
 }
 
 // Process branch search
-function processBranchSearch(state) {
-    const branch = document.getElementById('branchInput')?.value.trim();
-    
-    if (!branch) {
-        authSystem.showToast('Please enter your branch or field of study', 'warning');
-        return;
-    }
-    
+function processBranchSearch(branch, state) {
     document.querySelector('.scholarship-modal')?.remove();
     
     const stateData = stateOpportunities[state] || defaultOpportunities;
     let opportunities = stateData.internships || [];
     let filterMessage = null;
-    const branchLower = branch.toLowerCase();
     
-    const filteredOpportunities = opportunities.filter(i =>
-        i.name.toLowerCase().includes(branchLower) ||
-        i.description.toLowerCase().includes(branchLower)
-    );
+    // Filter internships by branch using the branches array
+    const filteredOpportunities = opportunities.filter(i => {
+        if (i.branches && Array.isArray(i.branches)) {
+            return i.branches.includes(branch);
+        }
+        return false;
+    });
     
     if (filteredOpportunities.length > 0) {
         opportunities = filteredOpportunities;
         filterMessage = `Found ${filteredOpportunities.length} internship(s) for ${branch} branch`;
     } else {
-        filterMessage = `No branch-specific internships found. All ${opportunities.length} internships listed below are open to students from ${branch} and all branches.`;
+        filterMessage = `No specific internships found for ${branch}. Showing all ${opportunities.length} internships - most are open to multiple branches.`;
     }
     
     const categoryPage = createCategoryPage('internships', opportunities, state, null, branch, filterMessage);
@@ -1653,7 +2505,19 @@ function selectInternshipOption(option, state) {
         const categoryPage = createCategoryPage('internships', opportunities, state, null, null, filterMessage);
         openInNewWindow(categoryPage);
     } else if (option === 'private') {
-        opportunities = opportunities.filter(i => i.name.toLowerCase().includes('private') || i.name.toLowerCase().includes('corporate') || i.description.toLowerCase().includes('private') || i.description.toLowerCase().includes('corporate'));
+        // Filter to show only private/corporate internships (exclude government and national schemes)
+        opportunities = opportunities.filter(i => {
+            const name = i.name.toLowerCase();
+            const desc = i.description.toLowerCase();
+            const source = (i.source || '').toLowerCase();
+            
+            // Exclude government schemes
+            const isGovt = name.includes('government') || name.includes('prime minister') || 
+                          name.includes('digital india') || source.includes('government') || 
+                          source.includes('mca') || source.includes('meity');
+            
+            return !isGovt; // Return all non-government internships (i.e., private/corporate)
+        });
         filterMessage = `Showing ${opportunities.length} private/corporate internship(s)`;
         const categoryPage = createCategoryPage('internships', opportunities, state, null, null, filterMessage);
         openInNewWindow(categoryPage);
