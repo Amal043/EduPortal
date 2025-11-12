@@ -747,7 +747,12 @@ const stateOpportunities = {
             { name: 'AP OBC Welfare Scholarship', url: 'https://www.apobcwelfare.gov.in', description: 'Andhra Pradesh state scholarship for OBC students pursuing higher education.', source: 'AP OBC Welfare Department', priority: 2 },
             { name: 'AP OBC Post-Matric Scholarship', url: 'https://www.apobcwelfare.gov.in', description: 'Financial assistance for OBC students in AP for post-matriculation courses.', source: 'AP OBC Welfare Department', priority: 2 },
             { name: 'AP OBC Fee Reimbursement Scheme', url: 'https://www.apobcwelfare.gov.in', description: 'Fee reimbursement for OBC students in AP pursuing professional courses.', source: 'AP OBC Welfare Department', priority: 2 },
-            { name: 'AP OBC Girls Education Scheme', url: 'https://www.apobcwelfare.gov.in', description: 'Special scheme for OBC girl students in Andhra Pradesh for higher education.', source: 'AP OBC Welfare Department', priority: 2 }
+            { name: 'AP OBC Girls Education Scheme', url: 'https://www.apobcwelfare.gov.in', description: 'Special scheme for OBC girl students in Andhra Pradesh for higher education.', source: 'AP OBC Welfare Department', priority: 2 },
+            // ANDHRA PRADESH STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'AP Economically Weaker Section (EWS) Scholarship', url: 'https://www.ap.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Andhra Pradesh.', source: 'AP Education Department', priority: 2 },
+            { name: 'AP Merit Scholarship for General Students', url: 'https://www.ap.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in AP.', source: 'AP Education Department', priority: 2 },
+            { name: 'AP Fee Reimbursement for General Category', url: 'https://www.ap.gov.in/scholarships', description: 'Fee reimbursement for general category students pursuing professional courses in AP.', source: 'AP Education Department', priority: 2 },
+            { name: 'AP Girls Education Scholarship (General)', url: 'https://www.ap.gov.in/scholarships', description: 'Special scholarship for general category girl students in Andhra Pradesh.', source: 'AP Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -819,7 +824,12 @@ const stateOpportunities = {
             { name: 'Maharashtra OBC Welfare Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Maharashtra state scholarship for OBC students pursuing higher education.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
             { name: 'Maharashtra OBC Post-Matric Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Financial assistance for OBC students in Maharashtra for post-matriculation courses.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
             { name: 'Maharashtra OBC Fee Reimbursement', url: 'https://www.mahadbtmahait.gov.in', description: 'Fee reimbursement for OBC students in Maharashtra pursuing professional courses.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
-            { name: 'Maharashtra OBC Girls Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Special scheme for OBC girl students in Maharashtra for higher education.', source: 'Maharashtra OBC Welfare Department', priority: 2 }
+            { name: 'Maharashtra OBC Girls Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Special scheme for OBC girl students in Maharashtra for higher education.', source: 'Maharashtra OBC Welfare Department', priority: 2 },
+            // MAHARASHTRA STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Maharashtra EWS Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Scholarship for general category students from economically weaker sections in Maharashtra.', source: 'Maharashtra Education Department', priority: 2 },
+            { name: 'Maharashtra Merit Scholarship for General Students', url: 'https://www.mahadbtmahait.gov.in', description: 'Merit-based scholarship for academically excellent general category students in Maharashtra.', source: 'Maharashtra Education Department', priority: 2 },
+            { name: 'Maharashtra Rajarshi Shahu Maharaj Scholarship', url: 'https://www.mahadbtmahait.gov.in', description: 'Scholarship for meritorious general category students in Maharashtra.', source: 'Maharashtra Government', priority: 2 },
+            { name: 'Maharashtra Girls Education Scholarship (General)', url: 'https://www.mahadbtmahait.gov.in', description: 'Special scholarship for general category girl students in Maharashtra for higher education.', source: 'Maharashtra Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -892,7 +902,12 @@ const stateOpportunities = {
             { name: 'Karnataka OBC Welfare Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Karnataka state scholarship for OBC students pursuing higher education.', source: 'Karnataka OBC Welfare Department', priority: 2 },
             { name: 'Karnataka OBC Post-Matric Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Financial assistance for OBC students in Karnataka for post-matriculation courses.', source: 'Karnataka OBC Welfare Department', priority: 2 },
             { name: 'Karnataka OBC Fee Concession', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Fee concession for OBC students in Karnataka pursuing professional and technical courses.', source: 'Karnataka OBC Welfare Department', priority: 2 },
-            { name: 'Karnataka OBC Merit Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Merit-based scholarship for academically excellent OBC students in Karnataka.', source: 'Karnataka OBC Welfare Department', priority: 2 }
+            { name: 'Karnataka OBC Merit Scholarship', url: 'https://www.karnataka.gov.in/obcwelfare', description: 'Merit-based scholarship for academically excellent OBC students in Karnataka.', source: 'Karnataka OBC Welfare Department', priority: 2 },
+            // KARNATAKA STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Karnataka EWS Scholarship', url: 'https://www.karnataka.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Karnataka.', source: 'Karnataka Education Department', priority: 2 },
+            { name: 'Karnataka Merit-cum-Means Scholarship', url: 'https://www.karnataka.gov.in/scholarships', description: 'Merit and need-based scholarship for general category students in Karnataka.', source: 'Karnataka Education Department', priority: 2 },
+            { name: 'Karnataka Vidyasiri Scholarship', url: 'https://www.karnataka.gov.in/scholarships', description: 'Scholarship for meritorious general category students pursuing higher education in Karnataka.', source: 'Karnataka Government', priority: 2 },
+            { name: 'Karnataka Girls Scholarship (General)', url: 'https://www.karnataka.gov.in/scholarships', description: 'Special scholarship for general category girl students in Karnataka.', source: 'Karnataka Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -965,7 +980,12 @@ const stateOpportunities = {
             { name: 'Tamil Nadu OBC Welfare Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Tamil Nadu state scholarship for OBC students pursuing higher education.', source: 'TN OBC Welfare Department', priority: 2 },
             { name: 'TN OBC Post-Matric Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Financial assistance for OBC students in Tamil Nadu for post-matriculation courses.', source: 'TN OBC Welfare Department', priority: 2 },
             { name: 'TN OBC Fee Concession Scheme', url: 'https://www.tn.gov.in/obcwelfare', description: 'Fee concession for OBC students in TN pursuing engineering, medical, and professional courses.', source: 'TN OBC Welfare Department', priority: 2 },
-            { name: 'TN OBC Students Merit Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Merit-based scholarship for academically excellent OBC students in Tamil Nadu.', source: 'TN OBC Welfare Department', priority: 2 }
+            { name: 'TN OBC Students Merit Scholarship', url: 'https://www.tn.gov.in/obcwelfare', description: 'Merit-based scholarship for academically excellent OBC students in Tamil Nadu.', source: 'TN OBC Welfare Department', priority: 2 },
+            // TAMIL NADU STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'TN EWS Scholarship', url: 'https://www.tn.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Tamil Nadu.', source: 'TN Education Department', priority: 2 },
+            { name: 'TN Chief Minister\'s Merit Scholarship', url: 'https://www.tn.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Tamil Nadu.', source: 'TN Government', priority: 2 },
+            { name: 'TN First Graduate Scholarship', url: 'https://www.tn.gov.in/scholarships', description: 'Scholarship for first-generation learners from general category in Tamil Nadu.', source: 'TN Education Department', priority: 2 },
+            { name: 'TN Girls Education Scholarship (General)', url: 'https://www.tn.gov.in/scholarships', description: 'Special scholarship for general category girl students in Tamil Nadu for higher education.', source: 'TN Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'One of India\'s largest national-level hackathons organised by the Government of India', source: 'Ministry of Education, Government of India', priority: 1 },
@@ -1016,7 +1036,12 @@ const stateOpportunities = {
             { name: 'Kerala SC Development Department Post-Matric Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'State scholarship for SC students in Kerala pursuing post-matriculation education.', source: 'Kerala SC Development Department', priority: 2 },
             { name: 'Kerala SC Students Fee Reimbursement', url: 'https://www.kerala.gov.in/sc-development', description: 'Full tuition fee reimbursement for SC students in Kerala pursuing professional courses.', source: 'Kerala SC Development Department', priority: 2 },
             { name: 'Kerala Dr. Ambedkar Pre-Matric Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'Financial assistance for SC students in classes 9th and 10th in Kerala.', source: 'Kerala SC Development Department', priority: 2 },
-            { name: 'Kerala SC Students Merit-cum-Means Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'Combined merit and need-based scholarship for SC students in Kerala showing academic excellence.', source: 'Kerala SC Development Department', priority: 2 }
+            { name: 'Kerala SC Students Merit-cum-Means Scholarship', url: 'https://www.kerala.gov.in/sc-development', description: 'Combined merit and need-based scholarship for SC students in Kerala showing academic excellence.', source: 'Kerala SC Development Department', priority: 2 },
+            // KERALA STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Kerala EWS Scholarship', url: 'https://www.kerala.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Kerala.', source: 'Kerala Education Department', priority: 2 },
+            { name: 'Kerala Merit Scholarship for General Students', url: 'https://www.kerala.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Kerala.', source: 'Kerala Education Department', priority: 2 },
+            { name: 'Kerala Professional Course Fee Concession', url: 'https://www.kerala.gov.in/scholarships', description: 'Fee concession for general category students pursuing professional courses in Kerala.', source: 'Kerala Education Department', priority: 2 },
+            { name: 'Kerala Girls Higher Education Scholarship', url: 'https://www.kerala.gov.in/scholarships', description: 'Special scholarship for general category girl students in Kerala for higher education.', source: 'Kerala Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1052,7 +1077,12 @@ const stateOpportunities = {
             { name: 'Delhi SC/ST/OBC/Minority Post-Matric Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'State scholarship for SC students in Delhi pursuing post-matriculation courses.', source: 'Delhi SC Welfare Department', priority: 2 },
             { name: 'Delhi Dr. Ambedkar Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Merit scholarship for SC students in Delhi showing academic excellence.', source: 'Delhi SC Welfare Department', priority: 2 },
             { name: 'Delhi SC Students Free Coaching Scheme', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Free coaching for SC students in Delhi for competitive examinations.', source: 'Delhi SC Welfare Department', priority: 2 },
-            { name: 'Delhi SC Girls Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Special scholarship for SC girl students in Delhi for higher education.', source: 'Delhi SC Welfare Department', priority: 2 }
+            { name: 'Delhi SC Girls Scholarship', url: 'https://www.delhi.gov.in/sc-welfare', description: 'Special scholarship for SC girl students in Delhi for higher education.', source: 'Delhi SC Welfare Department', priority: 2 },
+            // DELHI STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Delhi EWS Scholarship', url: 'https://www.delhi.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Delhi.', source: 'Delhi Education Department', priority: 2 },
+            { name: 'Delhi Merit Scholarship for General Students', url: 'https://www.delhi.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Delhi.', source: 'Delhi Education Department', priority: 2 },
+            { name: 'Delhi Professional Course Scholarship', url: 'https://www.delhi.gov.in/scholarships', description: 'Scholarship for general category students pursuing professional courses in Delhi.', source: 'Delhi Education Department', priority: 2 },
+            { name: 'Delhi Girls Education Incentive (General)', url: 'https://www.delhi.gov.in/scholarships', description: 'Special incentive for general category girl students in Delhi for higher education.', source: 'Delhi Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1092,7 +1122,12 @@ const stateOpportunities = {
             { name: 'UP SC Welfare Department Post-Matric Scholarship', url: 'https://www.up.gov.in/sc-welfare', description: 'State scholarship for SC students in UP pursuing higher education.', source: 'UP SC Welfare Department', priority: 2 },
             { name: 'UP Dr. Ambedkar Medhavi Chhatra Protsahan Yojana', url: 'https://www.up.gov.in/sc-welfare', description: 'Merit scholarship for SC students in UP showing academic excellence.', source: 'UP SC Welfare Department', priority: 2 },
             { name: 'UP SC Students Fee Reimbursement Scheme', url: 'https://www.up.gov.in/sc-welfare', description: 'Full tuition fee reimbursement for SC students in UP pursuing professional courses.', source: 'UP SC Welfare Department', priority: 2 },
-            { name: 'UP SC Girls Hostel Scheme', url: 'https://www.up.gov.in/sc-welfare', description: 'Hostel facilities for SC girl students in UP pursuing higher education.', source: 'UP SC Welfare Department', priority: 2 }
+            { name: 'UP SC Girls Hostel Scheme', url: 'https://www.up.gov.in/sc-welfare', description: 'Hostel facilities for SC girl students in UP pursuing higher education.', source: 'UP SC Welfare Department', priority: 2 },
+            // UP STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'UP EWS Scholarship', url: 'https://www.up.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Uttar Pradesh.', source: 'UP Education Department', priority: 2 },
+            { name: 'UP Merit Scholarship for General Students', url: 'https://www.up.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in UP.', source: 'UP Education Department', priority: 2 },
+            { name: 'UP Professional Course Fee Reimbursement', url: 'https://www.up.gov.in/scholarships', description: 'Fee reimbursement for general category students pursuing professional courses in UP.', source: 'UP Education Department', priority: 2 },
+            { name: 'UP Girls Education Scholarship (General)', url: 'https://www.up.gov.in/scholarships', description: 'Special scholarship for general category girl students in Uttar Pradesh.', source: 'UP Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1129,7 +1164,12 @@ const stateOpportunities = {
             { name: 'Gujarat SC Welfare Department Post-Matric Scholarship', url: 'https://sje.gujarat.gov.in', description: 'State scholarship for SC students in Gujarat pursuing post-matriculation courses.', source: 'Gujarat SC Welfare Department', priority: 2 },
             { name: 'Gujarat Dr. Ambedkar Scholarship', url: 'https://sje.gujarat.gov.in', description: 'Merit-based scholarship for SC students in Gujarat.', source: 'Gujarat SC Welfare Department', priority: 2 },
             { name: 'Gujarat SC Students Fee Reimbursement', url: 'https://sje.gujarat.gov.in', description: 'Full tuition fee reimbursement for SC students in Gujarat.', source: 'Gujarat SC Welfare Department', priority: 2 },
-            { name: 'Gujarat SC Girls Higher Education Scheme', url: 'https://sje.gujarat.gov.in', description: 'Financial assistance for SC girl students in Gujarat for higher education.', source: 'Gujarat SC Welfare Department', priority: 2 }
+            { name: 'Gujarat SC Girls Higher Education Scheme', url: 'https://sje.gujarat.gov.in', description: 'Financial assistance for SC girl students in Gujarat for higher education.', source: 'Gujarat SC Welfare Department', priority: 2 },
+            // GUJARAT STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Gujarat EWS Scholarship', url: 'https://www.digitalgujarat.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Gujarat.', source: 'Gujarat Education Department', priority: 2 },
+            { name: 'Gujarat Merit Scholarship for General Students', url: 'https://www.digitalgujarat.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Gujarat.', source: 'Gujarat Education Department', priority: 2 },
+            { name: 'Gujarat Vahli Dikri Yojana', url: 'https://www.digitalgujarat.gov.in/scholarships', description: 'Special scholarship for girl students including general category in Gujarat.', source: 'Gujarat Government', priority: 2 },
+            { name: 'Gujarat Professional Course Scholarship', url: 'https://www.digitalgujarat.gov.in/scholarships', description: 'Scholarship for general category students pursuing professional courses in Gujarat.', source: 'Gujarat Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1167,7 +1207,12 @@ const stateOpportunities = {
             { name: 'Rajasthan SC Welfare Department Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'State scholarship for SC students in Rajasthan pursuing higher education.', source: 'Rajasthan SC Welfare Department', priority: 2 },
             { name: 'Rajasthan Dr. Ambedkar Post-Matric Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'Post-matric scholarship for SC students in Rajasthan.', source: 'Rajasthan SC Welfare Department', priority: 2 },
             { name: 'Rajasthan SC Students Fee Reimbursement', url: 'https://sje.rajasthan.gov.in', description: 'Fee reimbursement for SC students in Rajasthan pursuing professional courses.', source: 'Rajasthan SC Welfare Department', priority: 2 },
-            { name: 'Rajasthan SC Girls Merit Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'Merit-based scholarship for SC girl students in Rajasthan.', source: 'Rajasthan SC Welfare Department', priority: 2 }
+            { name: 'Rajasthan SC Girls Merit Scholarship', url: 'https://sje.rajasthan.gov.in', description: 'Merit-based scholarship for SC girl students in Rajasthan.', source: 'Rajasthan SC Welfare Department', priority: 2 },
+            // RAJASTHAN STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Rajasthan EWS Scholarship', url: 'https://www.rajasthan.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Rajasthan.', source: 'Rajasthan Education Department', priority: 2 },
+            { name: 'Rajasthan Chief Minister Higher Education Scholarship', url: 'https://www.rajasthan.gov.in/scholarships', description: 'Merit-based scholarship for general category students in Rajasthan.', source: 'Rajasthan Government', priority: 2 },
+            { name: 'Rajasthan Mukhyamantri Yuva Sambal Yojana', url: 'https://www.rajasthan.gov.in/scholarships', description: 'Financial support for general category students pursuing higher education in Rajasthan.', source: 'Rajasthan Government', priority: 2 },
+            { name: 'Rajasthan Girls Education Scholarship (General)', url: 'https://www.rajasthan.gov.in/scholarships', description: 'Special scholarship for general category girl students in Rajasthan.', source: 'Rajasthan Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1202,7 +1247,12 @@ const stateOpportunities = {
             { name: 'Punjab SC Welfare Department Post-Matric Scholarship', url: 'https://punjab.gov.in/sc-welfare', description: 'State scholarship for SC students in Punjab pursuing higher education.', source: 'Punjab SC Welfare Department', priority: 2 },
             { name: 'Punjab Dr. Ambedkar Scholarship', url: 'https://punjab.gov.in/sc-welfare', description: 'Merit scholarship for SC students in Punjab.', source: 'Punjab SC Welfare Department', priority: 2 },
             { name: 'Punjab SC Students Fee Concession', url: 'https://punjab.gov.in/sc-welfare', description: 'Fee waiver for SC students in Punjab pursuing professional courses.', source: 'Punjab SC Welfare Department', priority: 2 },
-            { name: 'Punjab SC Girls Education Scheme', url: 'https://punjab.gov.in/sc-welfare', description: 'Special scheme for SC girl students in Punjab for higher education.', source: 'Punjab SC Welfare Department', priority: 2 }
+            { name: 'Punjab SC Girls Education Scheme', url: 'https://punjab.gov.in/sc-welfare', description: 'Special scheme for SC girl students in Punjab for higher education.', source: 'Punjab SC Welfare Department', priority: 2 },
+            // PUNJAB STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Punjab EWS Scholarship', url: 'https://www.punjab.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Punjab.', source: 'Punjab Education Department', priority: 2 },
+            { name: 'Punjab Merit Scholarship for General Students', url: 'https://www.punjab.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Punjab.', source: 'Punjab Education Department', priority: 2 },
+            { name: 'Punjab Professional Course Scholarship', url: 'https://www.punjab.gov.in/scholarships', description: 'Scholarship for general category students pursuing professional courses in Punjab.', source: 'Punjab Education Department', priority: 2 },
+            { name: 'Punjab Girls Education Incentive (General)', url: 'https://www.punjab.gov.in/scholarships', description: 'Special incentive for general category girl students in Punjab.', source: 'Punjab Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1236,7 +1286,12 @@ const stateOpportunities = {
             { name: 'West Bengal SC/ST Welfare Scholarship', url: 'https://www.wbscst.gov.in', description: 'State scholarship for SC students in West Bengal pursuing higher education.', source: 'WB SC/ST Welfare Department', priority: 2 },
             { name: 'West Bengal Dr. Ambedkar Medhabi Scholarship', url: 'https://www.wbscst.gov.in', description: 'Merit scholarship for SC students in West Bengal.', source: 'WB SC/ST Welfare Department', priority: 2 },
             { name: 'West Bengal SC Students Fee Reimbursement', url: 'https://www.wbscst.gov.in', description: 'Fee reimbursement for SC students in WB pursuing professional courses.', source: 'WB SC/ST Welfare Department', priority: 2 },
-            { name: 'West Bengal SC Girls Higher Education Assistance', url: 'https://www.wbscst.gov.in', description: 'Financial assistance for SC girl students in WB for higher education.', source: 'WB SC/ST Welfare Department', priority: 2 }
+            { name: 'West Bengal SC Girls Higher Education Assistance', url: 'https://www.wbscst.gov.in', description: 'Financial assistance for SC girl students in WB for higher education.', source: 'WB SC/ST Welfare Department', priority: 2 },
+            // WEST BENGAL STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'West Bengal EWS Scholarship', url: 'https://www.wb.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in West Bengal.', source: 'WB Education Department', priority: 2 },
+            { name: 'West Bengal Merit Scholarship for General Students', url: 'https://www.wb.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in WB.', source: 'WB Education Department', priority: 2 },
+            { name: 'West Bengal Kanyashree Prakalpa', url: 'https://www.wb.gov.in/scholarships', description: 'Special scholarship scheme for girl students including general category in West Bengal.', source: 'WB Government', priority: 2 },
+            { name: 'West Bengal Professional Course Scholarship', url: 'https://www.wb.gov.in/scholarships', description: 'Scholarship for general category students pursuing professional courses in WB.', source: 'WB Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1272,7 +1327,12 @@ const stateOpportunities = {
             { name: 'Telangana SC Welfare Department Scholarship', url: 'https://telanganascwelfare.gov.in', description: 'State scholarship for SC students in Telangana pursuing higher education.', source: 'Telangana SC Welfare Department', priority: 2 },
             { name: 'Telangana SC Students Fee Reimbursement', url: 'https://telanganascwelfare.gov.in', description: 'Full tuition fee reimbursement for SC students in Telangana.', source: 'Telangana SC Welfare Department', priority: 2 },
             { name: 'Telangana SC Girls Scholarship', url: 'https://telanganascwelfare.gov.in', description: 'Special scholarship for SC girl students in Telangana.', source: 'Telangana SC Welfare Department', priority: 2 },
-            { name: 'Telangana Dr. Ambedkar Overseas Vidya Nidhi', url: 'https://telanganascwelfare.gov.in', description: 'Financial assistance for SC students from Telangana to study abroad.', source: 'Telangana SC Welfare Department', priority: 2 }
+            { name: 'Telangana Dr. Ambedkar Overseas Vidya Nidhi', url: 'https://telanganascwelfare.gov.in', description: 'Financial assistance for SC students from Telangana to study abroad.', source: 'Telangana SC Welfare Department', priority: 2 },
+            // TELANGANA STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Telangana EWS Scholarship', url: 'https://www.telangana.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Telangana.', source: 'TS Education Department', priority: 2 },
+            { name: 'Telangana Merit Scholarship for General Students', url: 'https://www.telangana.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Telangana.', source: 'TS Education Department', priority: 2 },
+            { name: 'Telangana Professional Course Fee Reimbursement', url: 'https://www.telangana.gov.in/scholarships', description: 'Fee reimbursement for general category students pursuing professional courses in TS.', source: 'TS Government', priority: 2 },
+            { name: 'Telangana Kalyana Lakshmi for Girls Education', url: 'https://www.telangana.gov.in/scholarships', description: 'Financial assistance for girl students including general category in Telangana.', source: 'TS Government', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 },
@@ -1310,7 +1370,12 @@ const stateOpportunities = {
             { name: 'Bihar SC/ST Welfare Department Scholarship', url: 'https://www.biharscst.gov.in', description: 'State scholarship for SC students in Bihar pursuing higher education.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
             { name: 'Bihar Dr. Ambedkar Post-Matric Scholarship', url: 'https://www.biharscst.gov.in', description: 'Post-matric scholarship for SC students in Bihar.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
             { name: 'Bihar SC Students Fee Reimbursement', url: 'https://www.biharscst.gov.in', description: 'Fee reimbursement for SC students in Bihar pursuing professional courses.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
-            { name: 'Bihar SC Girls Education Scheme', url: 'https://www.biharscst.gov.in', description: 'Special scheme for SC girl students in Bihar for higher education.', source: 'Bihar SC/ST Welfare Department', priority: 2 }
+            { name: 'Bihar SC Girls Education Scheme', url: 'https://www.biharscst.gov.in', description: 'Special scheme for SC girl students in Bihar for higher education.', source: 'Bihar SC/ST Welfare Department', priority: 2 },
+            // BIHAR STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Bihar EWS Scholarship', url: 'https://www.bihar.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Bihar.', source: 'Bihar Education Department', priority: 2 },
+            { name: 'Bihar Merit Scholarship for General Students', url: 'https://www.bihar.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Bihar.', source: 'Bihar Education Department', priority: 2 },
+            { name: 'Bihar Mukhyamantri Kanya Utthan Yojana', url: 'https://www.bihar.gov.in/scholarships', description: 'Special scheme for girl students including general category in Bihar.', source: 'Bihar Government', priority: 2 },
+            { name: 'Bihar Professional Course Scholarship', url: 'https://www.bihar.gov.in/scholarships', description: 'Scholarship for general category students pursuing professional courses in Bihar.', source: 'Bihar Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
@@ -1342,7 +1407,12 @@ const stateOpportunities = {
             { name: 'MP SC Welfare Department Scholarship', url: 'https://www.mpscwelfare.gov.in', description: 'State scholarship for SC students in MP pursuing higher education.', source: 'MP SC Welfare Department', priority: 2 },
             { name: 'MP Dr. Ambedkar Scholarship', url: 'https://www.mpscwelfare.gov.in', description: 'Merit scholarship for SC students in MP.', source: 'MP SC Welfare Department', priority: 2 },
             { name: 'MP SC Students Fee Reimbursement', url: 'https://www.mpscwelfare.gov.in', description: 'Fee reimbursement for SC students in MP pursuing professional courses.', source: 'MP SC Welfare Department', priority: 2 },
-            { name: 'MP SC Girls Higher Education Assistance', url: 'https://www.mpscwelfare.gov.in', description: 'Financial assistance for SC girl students in MP for higher education.', source: 'MP SC Welfare Department', priority: 2 }
+            { name: 'MP SC Girls Higher Education Assistance', url: 'https://www.mpscwelfare.gov.in', description: 'Financial assistance for SC girl students in MP for higher education.', source: 'MP SC Welfare Department', priority: 2 },
+            // MP STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'MP EWS Scholarship', url: 'https://www.mp.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in MP.', source: 'MP Education Department', priority: 2 },
+            { name: 'MP Gaon Ki Beti Yojana', url: 'https://www.mp.gov.in/scholarships', description: 'Scholarship for rural girl students including general category in MP.', source: 'MP Government', priority: 2 },
+            { name: 'MP Pratibha Kiran Yojana', url: 'https://www.mp.gov.in/scholarships', description: 'Merit scholarship for urban girl students including general category in MP.', source: 'MP Government', priority: 2 },
+            { name: 'MP Professional Course Fee Reimbursement', url: 'https://www.mp.gov.in/scholarships', description: 'Fee reimbursement for general category students pursuing professional courses in MP.', source: 'MP Education Department', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
@@ -1375,7 +1445,12 @@ const stateOpportunities = {
             { name: 'Odisha SC Welfare Scholarship', url: 'https://www.odishascwelfare.gov.in', description: 'State scholarship for SC students in Odisha pursuing higher education.', source: 'Odisha SC Welfare Department', priority: 2 },
             { name: 'Odisha Dr. Ambedkar Merit Scholarship', url: 'https://www.odishascwelfare.gov.in', description: 'Merit scholarship for SC students in Odisha.', source: 'Odisha SC Welfare Department', priority: 2 },
             { name: 'Odisha SC Students Fee Reimbursement', url: 'https://www.odishascwelfare.gov.in', description: 'Fee reimbursement for SC students in Odisha pursuing professional courses.', source: 'Odisha SC Welfare Department', priority: 2 },
-            { name: 'Odisha SC Girls Higher Education Scheme', url: 'https://www.odishascwelfare.gov.in', description: 'Financial assistance for SC girl students in Odisha for higher education.', source: 'Odisha SC Welfare Department', priority: 2 }
+            { name: 'Odisha SC Girls Higher Education Scheme', url: 'https://www.odishascwelfare.gov.in', description: 'Financial assistance for SC girl students in Odisha for higher education.', source: 'Odisha SC Welfare Department', priority: 2 },
+            // ODISHA STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Odisha EWS Scholarship', url: 'https://www.odisha.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Odisha.', source: 'Odisha Education Department', priority: 2 },
+            { name: 'Odisha Merit Scholarship for General Students', url: 'https://www.odisha.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Odisha.', source: 'Odisha Education Department', priority: 2 },
+            { name: 'Odisha Professional Course Fee Concession', url: 'https://www.odisha.gov.in/scholarships', description: 'Fee concession for general category students pursuing professional courses in Odisha.', source: 'Odisha Government', priority: 2 },
+            { name: 'Odisha Biju Kanya Ratna Scholarship', url: 'https://www.odisha.gov.in/scholarships', description: 'Special scholarship for meritorious girl students including general category in Odisha.', source: 'Odisha Government', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
@@ -1407,7 +1482,12 @@ const stateOpportunities = {
             { name: 'Haryana SC Welfare Department Scholarship', url: 'https://haryanascbc.gov.in', description: 'State scholarship for SC students in Haryana pursuing higher education.', source: 'Haryana SC Welfare Department', priority: 2 },
             { name: 'Haryana Dr. Ambedkar Medhavi Chhatra Scholarship', url: 'https://haryanascbc.gov.in', description: 'Merit scholarship for SC students in Haryana.', source: 'Haryana SC Welfare Department', priority: 2 },
             { name: 'Haryana SC Students Fee Reimbursement', url: 'https://haryanascbc.gov.in', description: 'Fee reimbursement for SC students in Haryana pursuing professional courses.', source: 'Haryana SC Welfare Department', priority: 2 },
-            { name: 'Haryana SC Girls Education Incentive', url: 'https://haryanascbc.gov.in', description: 'Special incentive for SC girl students in Haryana for higher education.', source: 'Haryana SC Welfare Department', priority: 2 }
+            { name: 'Haryana SC Girls Education Incentive', url: 'https://haryanascbc.gov.in', description: 'Special incentive for SC girl students in Haryana for higher education.', source: 'Haryana SC Welfare Department', priority: 2 },
+            // HARYANA STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Haryana EWS Scholarship', url: 'https://www.haryana.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Haryana.', source: 'Haryana Education Department', priority: 2 },
+            { name: 'Haryana Merit Scholarship for General Students', url: 'https://www.haryana.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Haryana.', source: 'Haryana Education Department', priority: 2 },
+            { name: 'Haryana Professional Course Fee Reimbursement', url: 'https://www.haryana.gov.in/scholarships', description: 'Fee reimbursement for general category students pursuing professional courses in Haryana.', source: 'Haryana Government', priority: 2 },
+            { name: 'Haryana Ladli Social Security Allowance', url: 'https://www.haryana.gov.in/scholarships', description: 'Financial assistance for girl students including general category in Haryana.', source: 'Haryana Government', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
@@ -1441,7 +1521,12 @@ const stateOpportunities = {
             { name: 'Jharkhand SC Welfare Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'State scholarship for SC students in Jharkhand pursuing higher education.', source: 'Jharkhand SC Welfare Department', priority: 2 },
             { name: 'Jharkhand Dr. Ambedkar Post-Matric Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Post-matric scholarship for SC students in Jharkhand.', source: 'Jharkhand SC Welfare Department', priority: 2 },
             { name: 'Jharkhand SC Students Fee Reimbursement', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Fee reimbursement for SC students in Jharkhand pursuing professional courses.', source: 'Jharkhand SC Welfare Department', priority: 2 },
-            { name: 'Jharkhand SC Girls Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Special scholarship for SC girl students in Jharkhand.', source: 'Jharkhand SC Welfare Department', priority: 2 }
+            { name: 'Jharkhand SC Girls Scholarship', url: 'https://www.jharkhandscwelfare.gov.in', description: 'Special scholarship for SC girl students in Jharkhand.', source: 'Jharkhand SC Welfare Department', priority: 2 },
+            // JHARKHAND STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Jharkhand EWS Scholarship', url: 'https://www.jharkhand.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Jharkhand.', source: 'Jharkhand Education Department', priority: 2 },
+            { name: 'Jharkhand Merit Scholarship for General Students', url: 'https://www.jharkhand.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Jharkhand.', source: 'Jharkhand Education Department', priority: 2 },
+            { name: 'Jharkhand Professional Course Fee Reimbursement', url: 'https://www.jharkhand.gov.in/scholarships', description: 'Fee reimbursement for general category students pursuing professional courses in Jharkhand.', source: 'Jharkhand Government', priority: 2 },
+            { name: 'Jharkhand Savitribai Phule Kishori Samridhi Yojana', url: 'https://www.jharkhand.gov.in/scholarships', description: 'Financial assistance for girl students including general category in Jharkhand.', source: 'Jharkhand Government', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
@@ -1474,7 +1559,12 @@ const stateOpportunities = {
             { name: 'Chhattisgarh SC Welfare Scholarship', url: 'https://www.cgstate.gov.in/scwelfare', description: 'State scholarship for SC students in Chhattisgarh pursuing higher education.', source: 'CG SC Welfare Department', priority: 2 },
             { name: 'Chhattisgarh Dr. Ambedkar Scholarship', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Merit scholarship for SC students in Chhattisgarh.', source: 'CG SC Welfare Department', priority: 2 },
             { name: 'Chhattisgarh SC Students Fee Reimbursement', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Fee reimbursement for SC students in CG pursuing professional courses.', source: 'CG SC Welfare Department', priority: 2 },
-            { name: 'Chhattisgarh SC Girls Higher Education Scheme', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Financial assistance for SC girl students in CG for higher education.', source: 'CG SC Welfare Department', priority: 2 }
+            { name: 'Chhattisgarh SC Girls Higher Education Scheme', url: 'https://www.cgstate.gov.in/scwelfare', description: 'Financial assistance for SC girl students in CG for higher education.', source: 'CG SC Welfare Department', priority: 2 },
+            // CHHATTISGARH STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Chhattisgarh EWS Scholarship', url: 'https://www.chhattisgarh.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Chhattisgarh.', source: 'CG Education Department', priority: 2 },
+            { name: 'Chhattisgarh Merit Scholarship for General Students', url: 'https://www.chhattisgarh.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in CG.', source: 'CG Education Department', priority: 2 },
+            { name: 'Chhattisgarh Kaushal Vikas Yojana Scholarship', url: 'https://www.chhattisgarh.gov.in/scholarships', description: 'Skill development scholarship for general category students in CG.', source: 'CG Government', priority: 2 },
+            { name: 'Chhattisgarh Girls Education Promotion Scheme', url: 'https://www.chhattisgarh.gov.in/scholarships', description: 'Financial assistance for girl students including general category in Chhattisgarh.', source: 'CG Government', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
@@ -1506,7 +1596,12 @@ const stateOpportunities = {
             { name: 'Assam SC Welfare Scholarship', url: 'https://www.assamscwelfare.gov.in', description: 'State scholarship for SC students in Assam pursuing higher education.', source: 'Assam SC Welfare Department', priority: 2 },
             { name: 'Assam Dr. Ambedkar Merit Scholarship', url: 'https://www.assamscwelfare.gov.in', description: 'Merit scholarship for SC students in Assam.', source: 'Assam SC Welfare Department', priority: 2 },
             { name: 'Assam SC Students Fee Reimbursement', url: 'https://www.assamscwelfare.gov.in', description: 'Fee reimbursement for SC students in Assam pursuing professional courses.', source: 'Assam SC Welfare Department', priority: 2 },
-            { name: 'Assam SC Girls Education Scheme', url: 'https://www.assamscwelfare.gov.in', description: 'Financial assistance for SC girl students in Assam for higher education.', source: 'Assam SC Welfare Department', priority: 2 }
+            { name: 'Assam SC Girls Education Scheme', url: 'https://www.assamscwelfare.gov.in', description: 'Financial assistance for SC girl students in Assam for higher education.', source: 'Assam SC Welfare Department', priority: 2 },
+            // ASSAM STATE-SPECIFIC GENERAL CATEGORY SCHOLARSHIPS
+            { name: 'Assam EWS Scholarship', url: 'https://www.assam.gov.in/scholarships', description: 'Scholarship for general category students from economically weaker sections in Assam.', source: 'Assam Education Department', priority: 2 },
+            { name: 'Assam Merit Scholarship for General Students', url: 'https://www.assam.gov.in/scholarships', description: 'Merit-based scholarship for academically excellent general category students in Assam.', source: 'Assam Education Department', priority: 2 },
+            { name: 'Assam Professional Course Fee Concession', url: 'https://www.assam.gov.in/scholarships', description: 'Fee concession for general category students pursuing professional courses in Assam.', source: 'Assam Government', priority: 2 },
+            { name: 'Assam Pragyan Bharati Scheme', url: 'https://www.assam.gov.in/scholarships', description: 'Scholarship for meritorious girl students including general category in Assam.', source: 'Assam Government', priority: 2 }
         ],
         hackathons: [
             { name: 'Smart India Hackathon', url: 'https://www.sih.gov.in', description: 'National-level hackathon', source: 'Ministry of Education', priority: 1 }
