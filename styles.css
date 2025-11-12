@@ -3584,4 +3584,69 @@ header p {
     }
 }
 
+/* ================================================
+   MOBILE-ONLY FIXES - Add at end of styles.css
+   ================================================ */
+
+/* Hide mobile nav toggle on desktop (only show on mobile) */
+@media (min-width: 901px) {
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+}
+
+/* Mobile nav improvements - ensure text is visible */
+@media (max-width: 900px) {
+    /* Force readable text colors for dropdowns inside mobile nav */
+    .nav-menu select,
+    .nav-menu .state-selector-compact,
+    .nav-menu .state-select-compact,
+    .nav-menu .nav-state-dropdown,
+    .nav-menu .language-dropdown {
+        color: #2c3e50 !important;
+        background: #ffffff !important;
+        border-color: #667eea !important;
+    }
+    
+    .nav-menu select option,
+    .nav-menu .state-selector-compact option,
+    .nav-menu .state-select-compact option,
+    .nav-menu .nav-state-dropdown option,
+    .nav-menu .language-dropdown option {
+        color: #2c3e50 !important;
+        background: #ffffff !important;
+    }
+    
+    /* Show nav item text labels in mobile menu */
+    .nav-menu.open .nav-item span {
+        display: inline-block !important;
+    }
+    
+    /* Ensure nav items show both icon and text */
+    .nav-menu.open .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+    
+    /* Make comparison count visible */
+    .nav-menu.open .comparison-count {
+        display: inline-block !important;
+        margin-left: 6px;
+    }
+}
+
+/* Extra small screens - ensure everything is readable */
+@media (max-width: 480px) {
+    .nav-menu.open .nav-item {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+    }
+    
+    .nav-menu.open .nav-item span {
+        font-size: 0.9rem;
+    }
+}
+
 
