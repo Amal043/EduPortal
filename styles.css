@@ -3649,4 +3649,61 @@ header p {
     }
 }
 
+/* ================================================
+   FORCE SHOW NAV TEXT ON MOBILE - CRITICAL FIX
+   ================================================ */
+
+/* Override ALL rules that hide nav item text on mobile */
+@media (max-width: 900px) {
+    /* FORCE show text labels inside opened mobile menu */
+    .nav-menu.open .nav-item > span:not(.comparison-count) {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        font-size: 0.95rem !important;
+        color: var(--text-primary) !important;
+    }
+    
+    /* Override the rule that hides spans on mobile */
+    .nav-item > span:not(.comparison-count) {
+        display: inline-block !important;
+    }
+    
+    /* Make sure nav items have proper layout */
+    .nav-menu.open .nav-item {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 12px 16px !important;
+        color: var(--text-primary) !important;
+    }
+    
+    /* Ensure icons are visible too */
+    .nav-menu.open .nav-item i {
+        display: inline-block !important;
+        font-size: 1.2rem !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+/* Make dropdowns readable inside mobile nav */
+@media (max-width: 900px) {
+    .nav-menu select,
+    .nav-menu .nav-state-dropdown,
+    .nav-menu .language-dropdown,
+    .nav-menu .state-selector-compact {
+        color: #1a1a2e !important;
+        background: #ffffff !important;
+        border: 2px solid #667eea !important;
+    }
+    
+    .nav-menu select option,
+    .nav-menu .nav-state-dropdown option,
+    .nav-menu .language-dropdown option {
+        color: #1a1a2e !important;
+        background: #ffffff !important;
+    }
+}
+
 
