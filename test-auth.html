@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            background: #667eea;
+            color: white;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .log {
+            background: #000;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .log-entry {
+            margin: 5px 0;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 Authentication System Test</h1>
+    
+    <div class="test-section">
+        <h2>Test Buttons</h2>
+        <button onclick="testQuickAdmin()">Quick Admin Login</button>
+        <button onclick="testGoogleSignIn()">Google Sign In</button>
+        <button onclick="testSwitchForm('signup')">Switch to Signup</button>
+        <button onclick="testSwitchForm('login')">Switch to Login</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Manual Login Test</h2>
+        <div>
+            <input type="email" id="testEmail" placeholder="Email" value="admin@eduportal.com">
+            <input type="password" id="testPassword" placeholder="Password" value="admin123">
+            <button onclick="testManualLogin()">Test Login</button>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Function Availability Check</h2>
+        <button onclick="checkFunctions()">Check All Functions</button>
+    </div>
+    
+    <div class="log" id="log">
+        <div class="log-entry">📋 Console Log:</div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="ai_system.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Override console.log to show in our custom log
+        const originalLog = console.log;
+        const logDiv = document.getElementById('log');
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.textContent = args.map(a => 
+                typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)
+            ).join(' ');
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        };
+        
+        console.error = function(...args) {
+            originalLog.apply(console, args);
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.style.color = '#ff6b6b';
+            entry.textContent = '❌ ' + args.join(' ');
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        };
+        
+        function testQuickAdmin() {
+            console.log('🧪 Testing Quick Admin Login...');
+            if (typeof quickAdminLogin === 'function') {
+                quickAdminLogin();
+            } else {
+                console.error('quickAdminLogin function not found');
+            }
+        }
+        
+        function testGoogleSignIn() {
+            console.log('🧪 Testing Google Sign In...');
+            if (typeof signInWithGoogle === 'function') {
+                signInWithGoogle();
+            } else {
+                console.error('signInWithGoogle function not found');
+            }
+        }
+        
+        function testSwitchForm(type) {
+            console.log('🧪 Testing Switch Form:', type);
+            if (typeof switchAuthForm === 'function') {
+                switchAuthForm(type);
+            } else {
+                console.error('switchAuthForm function not found');
+            }
+        }
+        
+        function testManualLogin() {
+            console.log('🧪 Testing Manual Login...');
+            const email = document.getElementById('testEmail').value;
+            const password = document.getElementById('testPassword').value;
+            
+            if (window.authSystem && window.authSystem.handleLogin) {
+                // Temporarily set form values
+                const emailInput = document.getElementById('loginEmail');
+                const passwordInput = document.getElementById('loginPassword');
+                
+                if (emailInput && passwordInput) {
+                    emailInput.value = email;
+                    passwordInput.value = password;
+                    window.authSystem.handleLogin();
+                } else {
+                    console.error('Login form inputs not found');
+                }
+            } else {
+                console.error('authSystem.handleLogin not available');
+            }
+        }
+        
+        function checkFunctions() {
+            console.log('🔍 Checking function availability:');
+            const functions = [
+                'quickAdminLogin',
+                'signInWithGoogle',
+                'switchAuthForm',
+                'toggleTheme',
+                'logout',
+                'togglePassword'
+            ];
+            
+            functions.forEach(fn => {
+                const exists = typeof window[fn] === 'function';
+                console.log(`  ${exists ? '✅' : '❌'} ${fn}: ${exists ? 'Available' : 'Not found'}`);
+            });
+            
+            console.log('🔍 Checking objects:');
+            const objects = ['authSystem', 'themeManager', 'mainApp'];
+            objects.forEach(obj => {
+                const exists = !!window[obj];
+                console.log(`  ${exists ? '✅' : '❌'} ${obj}: ${exists ? 'Available' : 'Not found'}`);
+            });
+        }
+        
+        // Run check after 2 seconds
+        setTimeout(() => {
+            console.log('⏱️ Auto-checking after 2 seconds...');
+            checkFunctions();
+        }, 2000);
+    </script>
+</body>
+</html>

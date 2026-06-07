@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships | Opportunity Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="logo" href="index.html">Opportunity Portal</a>
+        <div class="controls">
+            <label for="stateSelect" class="visually-hidden">Select your state</label>
+            <select id="stateSelect" title="Select your state"></select>
+            <button id="themeToggle" type="button" aria-label="Toggle dark or light theme">Toggle Theme</button>
+        </div>
+    </header>
+
+    <main class="section-page">
+        <a class="back-link" href="index.html">Back to opportunities</a>
+
+        <section class="section-hero">
+            <h1>Scholarships</h1>
+            <p>Funding can accelerate your academic journey. Explore scholarships from trusted platforms to support tuition, research, and skill development.</p>
+            <p id="stateMessage" class="state-message">Select a state to find local and national scholarship opportunities.</p>
+        </section>
+
+        <section class="resource-list">
+            <article class="resource-card">
+                <h3>National Scholarship Portal (NSP)</h3>
+                <p>A one-stop platform for Central and State government scholarships for students from diverse backgrounds.</p>
+                <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">Visit NSP</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Buddy4Study</h3>
+                <p>India’s largest scholarship search and application platform featuring private and government opportunities.</p>
+                <a href="https://www.buddy4study.com/" target="_blank" rel="noopener noreferrer">Browse Buddy4Study</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Fulbright-Nehru Fellowships</h3>
+                <p>Prestigious fellowships for Indian students to pursue master’s or research programs in the United States.</p>
+                <a href="https://www.usief.org.in/Fulbright-Nehru-Fellowships.aspx" target="_blank" rel="noopener noreferrer">Explore Fulbright-Nehru</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Inlaks Shivdasani Scholarships</h3>
+                <p>Scholarships for exceptional students to pursue full-time master’s programs abroad in top institutions.</p>
+                <a href="https://www.inlaksfoundation.org/scholarships/" target="_blank" rel="noopener noreferrer">Learn About Inlaks</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Opportunity Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

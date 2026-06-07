@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">Opportunity Portal</div>
+        <div class="controls">
+            <label for="stateSelect" class="visually-hidden">Select your state</label>
+            <select id="stateSelect" title="Select your state"></select>
+            <button id="themeToggle" type="button" aria-label="Toggle dark or light theme">Toggle Theme</button>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="hero">
+            <h1>Discover Opportunities Tailored For You</h1>
+            <p>Select an option below to explore curated resources, events, and programs.</p>
+            <p id="stateMessage" class="state-message">Choose your state to personalize the experience.</p>
+        </section>
+
+        <section class="options-grid">
+            <article class="option-card option-card--hackathons">
+                <div class="card-body">
+                    <span class="card-tag">Build &amp; Innovate</span>
+                    <h2>Hackathons</h2>
+                    <p>Find top hackathons to sharpen your skills, collaborate with innovators, and ship bold ideas.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="card-button" href="hackathons.html" target="_blank" rel="noopener noreferrer">Explore</a>
+                </div>
+            </article>
+
+            <article class="option-card option-card--scholarships">
+                <div class="card-body">
+                    <span class="card-tag">Fund Your Dreams</span>
+                    <h2>Scholarships</h2>
+                    <p>Discover scholarships that support your academic journey, research goals, and future ambitions.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="card-button" href="scholarships.html" target="_blank" rel="noopener noreferrer">Explore</a>
+                </div>
+            </article>
+
+            <article class="option-card option-card--internships">
+                <div class="card-body">
+                    <span class="card-tag">Level Up Experience</span>
+                    <h2>Internships</h2>
+                    <p>Gain real-world exposure with internships from forward-thinking organizations across domains.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="card-button" href="internships.html" target="_blank" rel="noopener noreferrer">Explore</a>
+                </div>
+            </article>
+
+            <article class="option-card option-card--workshops">
+                <div class="card-body">
+                    <span class="card-tag">Learn &amp; Network</span>
+                    <h2>Workshops</h2>
+                    <p>Attend immersive workshops to upskill quickly, meet mentors, and stay ahead in your field.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="card-button" href="workshops.html" target="_blank" rel="noopener noreferrer">Explore</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Opportunity Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

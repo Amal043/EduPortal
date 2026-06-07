@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp - Real-time Messaging</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-box">
+            <div class="login-header">
+                <i class="fas fa-comments"></i>
+                <h1>ChatApp</h1>
+                <p>Connect with anyone, anywhere</p>
+            </div>
+            <div class="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <button class="login-btn" onclick="login()">
+                    <span>Start Chatting</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="login-footer">
+                <p>Real-time messaging • End-to-end encrypted</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat App -->
+    <div class="chat-container" id="chatContainer" style="display: none;">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <h3 id="currentUsername">User</h3>
+                        <span class="status online">
+                            <i class="fas fa-circle"></i> Online
+                        </span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" onclick="showSettings()" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="icon-btn" onclick="logout()" title="Logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchUsers" placeholder="Search users..." oninput="searchUsers()">
+            </div>
+
+            <div class="online-users">
+                <h4><i class="fas fa-users"></i> Online Users (<span id="onlineCount">0</span>)</h4>
+                <div id="usersList" class="users-list">
+                    <div class="no-users">
+                        <i class="fas fa-user-friends"></i>
+                        <p>Waiting for users to join...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <div class="chat-avatar">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="chat-details">
+                        <h3 id="chatTitle">ChatApp</h3>
+                        <span class="chat-status">
+                            <i class="fas fa-circle"></i> 
+                            <span id="chatStatusText">Select a user to start chatting</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="icon-btn" onclick="clearChat()" title="Clear chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="icon-btn" onclick="toggleEmojiPicker()" title="Emoji">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages-container" id="messagesContainer">
+                <div class="welcome-message">
+                    <i class="fas fa-comments"></i>
+                    <h2>Welcome to ChatApp!</h2>
+                    <p>Select a user from the sidebar to start chatting</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Real-time</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe"></i>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-input-container">
+                <div class="emoji-picker" id="emojiPicker" style="display: none;">
+                    <div class="emoji-grid" id="emojiGrid"></div>
+                </div>
+                <div class="message-input">
+                    <button class="icon-btn" onclick="toggleEmojiPicker()">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Type a message..." 
+                        onkeypress="handleEnter(event)"
+                    >
+                    <button class="send-btn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Sound -->
+    <audio id="notificationSound" preload="auto">
+        <source src="data:audio/wav;base64,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" type="audio/wav">
+    </audio>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops | Opportunity Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="logo" href="index.html">Opportunity Portal</a>
+        <div class="controls">
+            <label for="stateSelect" class="visually-hidden">Select your state</label>
+            <select id="stateSelect" title="Select your state"></select>
+            <button id="themeToggle" type="button" aria-label="Toggle dark or light theme">Toggle Theme</button>
+        </div>
+    </header>
+
+    <main class="section-page">
+        <a class="back-link" href="index.html">Back to opportunities</a>
+
+        <section class="section-hero">
+            <h1>Workshops</h1>
+            <p>Workshops deliver hands-on skill building and networking with experts. Explore these platforms for upcoming sessions across domains.</p>
+            <p id="stateMessage" class="state-message">Select a state to highlight workshops happening near you.</p>
+        </section>
+
+        <section class="resource-list">
+            <article class="resource-card">
+                <h3>Coursera Live Events</h3>
+                <p>Interactive workshops hosted by universities and industry partners covering technology, leadership, and more.</p>
+                <a href="https://www.coursera.org/campus/for-students/events" target="_blank" rel="noopener noreferrer">Discover Coursera Events</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>DevRel Events</h3>
+                <p>A community-curated directory of developer workshops, meetups, and conferences around the world.</p>
+                <a href="https://devrel.events/" target="_blank" rel="noopener noreferrer">Browse DevRel Events</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Skillshare Workshops</h3>
+                <p>Creative, design, and entrepreneurship workshops led by practicing professionals.</p>
+                <a href="https://www.skillshare.com/browse/workshops" target="_blank" rel="noopener noreferrer">View Skillshare Workshops</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>IEEE Events</h3>
+                <p>Technical workshops and seminars organized by IEEE chapters focusing on engineering and technology.</p>
+                <a href="https://events.ieee.org/" target="_blank" rel="noopener noreferrer">Explore IEEE Events</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Opportunity Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# robots.txt for EduPortal
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/private/
+
+# Sitemaps
+Sitemap: https://eduportal.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Allow major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

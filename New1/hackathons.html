@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathons | Opportunity Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="logo" href="index.html">Opportunity Portal</a>
+        <div class="controls">
+            <label for="stateSelect" class="visually-hidden">Select your state</label>
+            <select id="stateSelect" title="Select your state"></select>
+            <button id="themeToggle" type="button" aria-label="Toggle dark or light theme">Toggle Theme</button>
+        </div>
+    </header>
+
+    <main class="section-page">
+        <a class="back-link" href="index.html">Back to opportunities</a>
+
+        <section class="section-hero">
+            <h1>Hackathons</h1>
+            <p>Hackathons are a powerful way to learn by building. Explore these reputable competitions to test your ideas, collaborate with peers, and win recognition.</p>
+            <p id="stateMessage" class="state-message">Select a state to highlight regional hackathons and events.</p>
+        </section>
+
+        <section class="resource-list">
+            <article class="resource-card">
+                <h3>MLH (Major League Hacking)</h3>
+                <p>A global league that powers student hackathons with weekend-long events over the academic year.</p>
+                <a href="https://mlh.io/seasons/2025/events" target="_blank" rel="noopener noreferrer">View Upcoming MLH Hackathons</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Smart India Hackathon</h3>
+                <p>India’s nationwide initiative to provide students a platform to solve pressing problems of ministries and industries.</p>
+                <a href="https://www.sih.gov.in/" target="_blank" rel="noopener noreferrer">Explore Smart India Hackathon</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Google Solution Challenge</h3>
+                <p>Build solutions for the United Nations Sustainable Development Goals using Google technologies.</p>
+                <a href="https://developers.google.com/community/gdsc-solution-challenge" target="_blank" rel="noopener noreferrer">Learn About Solution Challenge</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>NASA Space Apps Challenge</h3>
+                <p>A worldwide hackathon that encourages developers, designers, and scientists to tackle real-world challenges on Earth and in space.</p>
+                <a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener noreferrer">Join NASA Space Apps</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Opportunity Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

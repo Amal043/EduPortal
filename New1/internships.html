@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships | Opportunity Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="logo" href="index.html">Opportunity Portal</a>
+        <div class="controls">
+            <label for="stateSelect" class="visually-hidden">Select your state</label>
+            <select id="stateSelect" title="Select your state"></select>
+            <button id="themeToggle" type="button" aria-label="Toggle dark or light theme">Toggle Theme</button>
+        </div>
+    </header>
+
+    <main class="section-page">
+        <a class="back-link" href="index.html">Back to opportunities</a>
+
+        <section class="section-hero">
+            <h1>Internships</h1>
+            <p>Internships bridge learning and real-world experience. Browse trusted platforms to find opportunities that align with your skills and interests.</p>
+            <p id="stateMessage" class="state-message">Select a state to surface internships popular in your region.</p>
+        </section>
+
+        <section class="resource-list">
+            <article class="resource-card">
+                <h3>Internshala</h3>
+                <p>India’s leading internship platform offering opportunities across engineering, business, design, and more.</p>
+                <a href="https://internshala.com/internships" target="_blank" rel="noopener noreferrer">Find Internships on Internshala</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>LinkedIn Internships</h3>
+                <p>Discover internships from organizations worldwide using LinkedIn’s filters for role, location, and expertise.</p>
+                <a href="https://www.linkedin.com/jobs/internship-jobs" target="_blank" rel="noopener noreferrer">Explore on LinkedIn</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>Google STEP Internship</h3>
+                <p>A developmental internship for first- and second-year undergraduate students in computer science.</p>
+                <a href="https://buildyourfuture.withgoogle.com/internships/step" target="_blank" rel="noopener noreferrer">Learn About Google STEP</a>
+            </article>
+
+            <article class="resource-card">
+                <h3>UN Internships</h3>
+                <p>UN internship program offers practical experience within United Nations agencies globally.</p>
+                <a href="https://careers.un.org/lbw/home.aspx?viewtype=IP" target="_blank" rel="noopener noreferrer">Browse UN Internships</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Opportunity Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
