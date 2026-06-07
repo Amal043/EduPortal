@@ -346,18 +346,22 @@ class DashboardWidgets {
                     }
                     
                     track.innerHTML = trending.map(opp => `
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-opp-id="${opp._id || ''}">
                             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
                                 <h4 style="margin: 0; flex: 1;">${opp.icon || '🎓'} ${opp.name}</h4>
-                                ${opp.trending ? '<span class="carousel-badge" style="background: #ff6b6b;">🔥 Trending</span>' : ''}
+                                <div style="display:flex;gap:4px;flex-wrap:wrap">
+                                    ${opp.isFeatured ? '<span class="carousel-badge" style="background: #f59e0b;">⭐ Featured</span>' : ''}
+                                    ${opp.trending ? '<span class="carousel-badge" style="background: #ff6b6b;">🔥 Trending</span>' : ''}
+                                </div>
                             </div>
-                            <p style="margin-bottom: 15px; min-height: 60px;">${opp.description.substring(0, 120)}${opp.description.length > 120 ? '...' : ''}</p>
+                            <p style="margin-bottom: 15px; min-height: 60px;">${(opp.description || '').substring(0, 130)}${(opp.description || '').length > 130 ? '...' : ''}</p>
                             <div style="margin-bottom: 12px;">
                                 <div style="display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
-                                    ${opp.isNational ? 
-                                        '<span class="carousel-badge" style="background: #4CAF50;">🌍 All India</span>' : 
-                                        '<span class="carousel-badge" style="background: #2196F3;">📍 State-Specific</span>'}
-                                    ${opp.category ? `<span class="carousel-badge" style="background: rgba(102, 126, 234, 0.8);">${opp.category}</span>` : ''}
+                                    ${opp.isNational ?
+                                        '<span class="carousel-badge" style="background: #4CAF50;">🌍 All India</span>' :
+                                        '<span class="carousel-badge" style="background: #2196F3;">📍 International</span>'}
+                                    ${opp.category ? `<span class="carousel-badge" style="background: rgba(102,126,234,0.8);">${opp.category}</span>` : ''}
+                                    ${opp.type ? `<span class="carousel-badge" style="background:rgba(16,185,129,0.7);text-transform:capitalize">${opp.type}</span>` : ''}
                                 </div>
                                 ${opp.amount ? `
                                     <div style="color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-bottom: 5px;">
@@ -366,21 +370,28 @@ class DashboardWidgets {
                                 ` : ''}
                                 ${opp.deadline ? `
                                     <div style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 8px;">
-                                        <i class="fas fa-calendar-alt"></i> Deadline: ${opp.deadline}
+                                        <i class="fas fa-calendar-alt"></i> Deadline: <strong>${opp.deadline}</strong>
                                     </div>
                                 ` : ''}
                                 <div style="color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-bottom: 10px;">
-                                    <i class="fas fa-link"></i> Source: 
-                                    <a href="${opp.sourceUrl}" target="_blank" style="color: var(--primary-color); text-decoration: none;">
-                                        ${opp.source}
-                                    </a>
+                                    <i class="fas fa-link"></i> Source:
+                                    <a href="${opp.sourceUrl}" target="_blank" style="color: var(--primary-color); text-decoration: none;">${opp.source}</a>
                                 </div>
                             </div>
-                            <a href="${opp.url}" target="_blank" style="color: white; background: var(--primary-color); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
+                            <a href="${opp.url}" target="_blank"
+                               onclick="if(window.liveOpportunitiesFetcher && '${opp._id}') window.liveOpportunitiesFetcher.trackClick('${opp._id}')"
+                               style="color: white; background: var(--primary-color); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
                                 View Details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     `).join('');
+
+                    // Track views for all visible opportunities
+                    trending.slice(0, 3).forEach(opp => {
+                        if (opp._id && window.liveOpportunitiesFetcher) {
+                            window.liveOpportunitiesFetcher.trackView(opp._id);
+                        }
+                    });
                     
                     // Setup carousel buttons
                     this.setupCarouselButtons();
@@ -450,81 +461,63 @@ class DashboardWidgets {
     loadNewsFeed() {
         const newsContainer = document.getElementById('newsItems');
         if (!newsContainer) return;
-        
-        // Real education news items with actual sources
-        const newsItems = [
-            {
-                title: "New PM Scholarship Scheme 2025 Announced",
-                date: "2 days ago",
-                content: "Government announces enhanced PM Scholarship with increased funding up to ₹2,500/month for meritorious students across India.",
-                link: "https://scholarships.gov.in/",
-                source: "National Scholarship Portal"
-            },
-            {
-                title: "Post Matric Scholarship Deadline Extended",
-                date: "5 days ago",
-                content: "Application deadline for Post Matric SC/ST/OBC scholarships extended by 2 weeks due to overwhelming response.",
-                link: "https://socialjustice.gov.in/",
-                source: "Ministry of Social Justice"
-            },
-            {
-                title: "AICTE Launches New Pragati Scholarship",
-                date: "1 week ago",
-                content: "AICTE announces Pragati scholarship scheme for girl students in technical education with ₹50,000 annual support.",
-                link: "https://www.aicte-india.org/",
-                source: "AICTE Official"
-            },
-            {
-                title: "UGC Merit-cum-Means Scholarship Opens",
-                date: "1 week ago",
-                content: "University Grants Commission opens applications for merit-cum-means scholarship covering undergraduate and postgraduate students.",
-                link: "https://www.ugc.ac.in/",
-                source: "UGC"
-            },
-            {
-                title: "State Scholarships Portal Updated",
-                date: "2 weeks ago",
-                content: "Multiple state governments have updated their scholarship portals with new schemes for the academic year 2025-26.",
-                link: "https://www.india.gov.in/",
-                source: "India.gov.in"
-            },
-            {
-                title: "INSPIRE Scholarship Applications Live",
-                date: "2 weeks ago",
-                content: "Department of Science & Technology opens INSPIRE scholarship applications for top 1% students with ₹80,000 annual support.",
-                link: "https://online-inspire.gov.in/",
-                source: "DST - Govt of India"
-            },
-            {
-                title: "Minority Scholarships Increased by 25%",
-                date: "3 weeks ago",
-                content: "Ministry of Minority Affairs increases scholarship amounts across all minority welfare schemes by 25% for 2025-26.",
-                link: "https://minorityaffairs.gov.in/",
-                source: "Ministry of Minority Affairs"
-            },
-            {
-                title: "Single Girl Child Scholarship Updates",
-                date: "3 weeks ago",
-                content: "CBSE announces updates to Single Girl Child Scholarship with simplified application process and faster disbursement.",
-                link: "https://www.cbse.gov.in/",
-                source: "CBSE Official"
-            }
+
+        // Show loading spinner
+        newsContainer.innerHTML = `
+            <div style="color:rgba(255,255,255,0.6);padding:20px;text-align:center;">
+                <i class="fas fa-spinner fa-spin" style="font-size:1.5rem;margin-bottom:8px;"></i>
+                <p>Loading latest education news...</p>
+            </div>`;
+
+        if (!window.liveOpportunitiesFetcher) {
+            this._renderFallbackNews(newsContainer);
+            return;
+        }
+
+        window.liveOpportunitiesFetcher.fetchLiveNews()
+            .then(items => {
+                if (!items || items.length === 0) {
+                    this._renderFallbackNews(newsContainer);
+                    return;
+                }
+                newsContainer.innerHTML = items.map(news => `
+                    <div class="news-item">
+                        <div class="news-item-header">
+                            <h4 class="news-item-title">${news.title}</h4>
+                            <span class="news-item-date">${news.date || 'Recently'}</span>
+                        </div>
+                        <p class="news-item-content">${(news.content || '').substring(0, 160)}${(news.content || '').length > 160 ? '...' : ''}</p>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+                            <span style="color:rgba(255,255,255,0.5);font-size:0.75rem;">
+                                <i class="fas fa-newspaper"></i> ${news.source}
+                            </span>
+                            <a href="${news.link}" target="_blank" class="news-item-link">
+                                Read more <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+            })
+            .catch(() => this._renderFallbackNews(newsContainer));
+    }
+
+    _renderFallbackNews(container) {
+        const fallbackItems = [
+            { title: 'PM Scholarship 2026 Applications Open', date: 'Today', content: 'National Scholarship Portal is accepting applications for PM Scholarship 2026. Students with 60%+ in Class 12 are eligible for ₹2,500/month.', source: 'NSP', link: 'https://scholarships.gov.in/' },
+            { title: 'Smart India Hackathon 2026 Registrations', date: 'This week', content: 'SIH 2026 is open for team registrations. Form a team of 6, pick a problem statement and win ₹1 lakh prize.', source: 'Ministry of Education', link: 'https://www.sih.gov.in/' },
+            { title: 'AICTE Pragati Scholarship for Girls', date: 'This week', content: 'Girl students in engineering and technology can apply for the AICTE Pragati Scholarship worth ₹50,000/year.', source: 'AICTE', link: 'https://www.aicte-india.org/' },
+            { title: 'INSPIRE Scholarship — Top 1% Students', date: 'Recently', content: 'DST INSPIRE Scholarship is open for top 1% Class 12 scorers pursuing Natural Sciences. ₹80,000/year + research grant.', source: 'DST', link: 'https://online-inspire.gov.in/' }
         ];
-        
-        newsContainer.innerHTML = newsItems.map(news => `
+        container.innerHTML = fallbackItems.map(news => `
             <div class="news-item">
                 <div class="news-item-header">
                     <h4 class="news-item-title">${news.title}</h4>
                     <span class="news-item-date">${news.date}</span>
                 </div>
                 <p class="news-item-content">${news.content}</p>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-                    <span style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">
-                        <i class="fas fa-newspaper"></i> ${news.source}
-                    </span>
-                    <a href="${news.link}" target="_blank" class="news-item-link">
-                        Read more <i class="fas fa-external-link-alt"></i>
-                    </a>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+                    <span style="color:rgba(255,255,255,0.5);font-size:0.75rem;"><i class="fas fa-newspaper"></i> ${news.source}</span>
+                    <a href="${news.link}" target="_blank" class="news-item-link">Read more <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         `).join('');
