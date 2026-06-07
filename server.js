@@ -167,6 +167,62 @@ app.post('/api/auth/login', async (req, res) => {
   }
 });
 
+// Get all registered users (names & emails)
+app.get('/api/auth/users', async (req, res) => {
+  try {
+    const users = await User.find({}, 'name email');
+    res.json(users);
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ message: 'Error fetching users' });
+  }
+});
+
+// Mock Google Auth (logs in existing or registers new user and returns JWT token)
+app.post('/api/auth/google-mock', async (req, res) => {
+  try {
+    const { email, name } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ message: 'Email is required' });
+    }
+    
+    // Find or create user
+    let user = await User.findOne({ email });
+    if (!user) {
+      // Create new user (using a mock password hash)
+      const salt = await bcrypt.genSalt(10);
+      const passwordHash = await bcrypt.hash('google_mock_password_' + Date.now(), salt);
+      
+      user = new User({
+        name: name || email.split('@')[0],
+        email,
+        password: passwordHash
+      });
+      await user.save();
+      console.log('✅ Created new Google mock user:', email);
+    } else {
+      console.log('✅ Found existing Google mock user:', email);
+    }
+    
+    // Generate JWT token
+    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
+    
+    res.json({
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        dashboardData: user.dashboardData
+      }
+    });
+  } catch (error) {
+    console.error('Google mock auth error:', error);
+    res.status(500).json({ message: 'Google authentication failed' });
+  }
+});
+
 // Get User Session (Verify JWT)
 app.get('/api/auth/session', auth, async (req, res) => {
   if (req.isAdmin) {

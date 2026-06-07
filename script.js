@@ -173,6 +173,7 @@ class AuthSystem {
     }
 
     init() {
+        this.captureUrlEmail();
         this.checkAdminParam();
 
         // Delay binding until DOM is ready
@@ -184,6 +185,48 @@ class AuthSystem {
         } else {
             this.bindEvents();
             this.checkAuthStatus();
+        }
+    }
+
+    captureUrlEmail() {
+        try {
+            // 1. Try to get email from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlEmail = urlParams.get('email') || urlParams.get('google_email') || urlParams.get('user') || urlParams.get('username') || urlParams.get('login_email');
+            
+            if (urlEmail && urlEmail.includes('@')) {
+                const cleanedEmail = urlEmail.trim();
+                sessionStorage.setItem('opened_with_email', cleanedEmail);
+                localStorage.setItem('opened_with_email', cleanedEmail);
+                console.log('📥 Captured and cached email from URL parameters on page load:', cleanedEmail);
+                
+                const urlName = urlParams.get('name') || urlParams.get('displayName') || urlParams.get('google_name');
+                if (urlName) {
+                    sessionStorage.setItem('opened_with_name', urlName.trim());
+                    localStorage.setItem('opened_with_name', urlName.trim());
+                }
+            }
+
+            // 2. Try to get email from URL hash
+            const hash = window.location.hash;
+            if (hash) {
+                let hashEmail = null;
+                if (hash.includes('email=')) {
+                    const match = hash.match(/email=([^&]+)/);
+                    if (match) hashEmail = match[1];
+                } else if (hash.includes('@')) {
+                    hashEmail = hash.substring(1); // remove the #
+                }
+                
+                if (hashEmail && hashEmail.includes('@')) {
+                    const cleanedEmail = decodeURIComponent(hashEmail.trim());
+                    sessionStorage.setItem('opened_with_email', cleanedEmail);
+                    localStorage.setItem('opened_with_email', cleanedEmail);
+                    console.log('📥 Captured and cached email from URL hash on page load:', cleanedEmail);
+                }
+            }
+        } catch (e) {
+            console.error('⚠️ Error capturing URL email:', e);
         }
     }
 
@@ -593,22 +636,111 @@ class AuthSystem {
         this.showLoading(true);
         
         try {
-            const result = await this.showGoogleAccountChooser();
-            if (!result) {
-                this.showToast('Google sign-in cancelled', 'error');
-                this.showLoading(false);
-                return;
+            let email = null;
+            let name = null;
+            
+            // 1. Try to get email from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlEmail = urlParams.get('email') || urlParams.get('google_email') || urlParams.get('user');
+            if (urlEmail && urlEmail.includes('@')) {
+                email = urlEmail.trim();
+                name = urlParams.get('name') || email.split('@')[0];
+                console.log('🔗 Detected email from URL parameter:', email);
             }
             
-            const { name, email } = result;
+            // 2. Try to get email from URL hash
+            if (!email) {
+                const hash = window.location.hash;
+                if (hash) {
+                    let hashEmail = null;
+                    if (hash.includes('email=')) {
+                        const match = hash.match(/email=([^&]+)/);
+                        if (match) hashEmail = match[1];
+                    } else if (hash.includes('@')) {
+                        hashEmail = hash.substring(1);
+                    }
+                    
+                    if (hashEmail && hashEmail.includes('@')) {
+                        email = decodeURIComponent(hashEmail.trim());
+                        name = email.split('@')[0];
+                        console.log('🔗 Detected email from URL hash:', email);
+                    }
+                }
+            }
+            
+            // 3. Try to get email from sessionStorage (cached on initial load)
+            if (!email) {
+                const cachedSessionEmail = sessionStorage.getItem('opened_with_email');
+                if (cachedSessionEmail && cachedSessionEmail.includes('@')) {
+                    email = cachedSessionEmail.trim();
+                    name = sessionStorage.getItem('opened_with_name') || email.split('@')[0];
+                    console.log('📥 Restored Google email from sessionStorage:', email);
+                }
+            }
+            
+            // 4. Try to get email from localStorage (cached on initial load)
+            if (!email) {
+                const cachedLocalEmail = localStorage.getItem('opened_with_email');
+                if (cachedLocalEmail && cachedLocalEmail.includes('@')) {
+                    email = cachedLocalEmail.trim();
+                    name = localStorage.getItem('opened_with_name') || email.split('@')[0];
+                    console.log('📥 Restored Google email from localStorage (opened with):', email);
+                }
+            }
+            
+            // 5. Try to get last logged-in Google email from localStorage
+            if (!email) {
+                const lastEmail = localStorage.getItem('last_google_email');
+                const lastName = localStorage.getItem('last_google_name');
+                if (lastEmail && lastEmail.includes('@')) {
+                    email = lastEmail.trim();
+                    name = lastName || email.split('@')[0];
+                    console.log('📦 Restored last used Google email from localStorage:', email);
+                }
+            }
+            
+            // 6. If still no email, show the custom Google account chooser/login dialog
+            if (!email) {
+                const result = await this.showGoogleAccountChooser();
+                if (!result) {
+                    this.showToast('Google sign-in cancelled', 'error');
+                    this.showLoading(false);
+                    return;
+                }
+                email = result.email;
+                name = result.name;
+            }
+            
+            // Save email and name for future automatic logins
+            localStorage.setItem('last_google_email', email);
+            localStorage.setItem('last_google_name', name);
+            
+            // Send request to mock Google Auth API
+            const response = await fetch('/api/auth/google-mock', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, name })
+            });
+            
+            const data = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(data.message || 'Failed to authenticate');
+            }
+            
+            // Store token and user
+            localStorage.setItem('eduportal_token', data.token);
+            
             const googleUser = {
-                id: 'google_' + Date.now(),
-                email: email,
-                name: name,
+                id: data.user.id,
+                email: data.user.email,
+                name: data.user.name,
                 user_metadata: { 
-                    full_name: name,
+                    full_name: data.user.name,
                     provider: 'google',
-                    avatar_url: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=4285f4&color=fff`
+                    avatar_url: `https://ui-avatars.com/api/?name=${encodeURIComponent(data.user.name)}&background=4285f4&color=fff`
                 }
             };
             
@@ -619,8 +751,13 @@ class AuthSystem {
             this.currentUser = googleUser;
             this.isAuthenticated = true;
             
+            // Sync dashboard data
+            if (data.user.dashboardData) {
+                this.syncDashboardFromDatabase(data.user.dashboardData);
+            }
+            
             console.log('✅ Google sign-in mock successful:', email);
-            this.showToast(`Welcome ${name}! 🌐`, 'success');
+            this.showToast(`Welcome ${data.user.name}! 🌐`, 'success');
             
             setTimeout(() => {
                 this.showMainApp();
@@ -644,51 +781,52 @@ class AuthSystem {
             const modal = document.createElement('div');
             modal.id = 'googleChooserModal';
 
+            // Check if there is a last used email to show a quick select card
+            const lastEmail = localStorage.getItem('last_google_email');
+            const lastName = localStorage.getItem('last_google_name') || 'Google User';
+            const hasLastUser = lastEmail && lastEmail.includes('@');
+            const firstLetter = hasLastUser ? lastName.charAt(0).toUpperCase() : 'G';
+
             const modalHtml = `
                 <div class="google-chooser-card">
                     <button class="google-chooser-close" id="googleCloseBtn"><i class="fas fa-times"></i></button>
                     <div class="google-logo-container">
                         <i class="fab fa-google"></i>
                     </div>
-                    <div class="google-chooser-title">Choose an account</div>
+                    <div class="google-chooser-title">Sign in with Google</div>
                     <div class="google-chooser-subtitle">to continue to EduPortal</div>
                     
-                    <div class="google-account-list">
-                        <div class="google-account-item" id="googleAccAmal">
-                            <div class="google-avatar">A</div>
-                            <div class="google-account-info">
-                                <div class="google-account-name">Amal Srivastava</div>
-                                <div class="google-account-email">amal.srivastava@gmail.com</div>
+                    ${hasLastUser ? `
+                        <div class="google-account-list" id="googleAccountList">
+                            <div class="google-account-item" id="googleAccLastUsed">
+                                <div class="google-avatar">${firstLetter}</div>
+                                <div class="google-account-info">
+                                    <div class="google-account-name">${lastName}</div>
+                                    <div class="google-account-email">${lastEmail}</div>
+                                </div>
+                            </div>
+                            <div class="google-account-item" id="googleAccCustom">
+                                <div class="google-avatar"><i class="fas fa-user-plus"></i></div>
+                                <div class="google-account-info">
+                                    <div class="google-account-name">Use another account</div>
+                                    <div class="google-account-email">Sign in with a different email</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="google-account-item" id="googleAccGuest">
-                            <div class="google-avatar">G</div>
-                            <div class="google-account-info">
-                                <div class="google-account-name">Guest Student</div>
-                                <div class="google-account-email">student.guest@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="google-account-item" id="googleAccCustom">
-                            <div class="google-avatar"><i class="fas fa-user-plus"></i></div>
-                            <div class="google-account-info">
-                                <div class="google-account-name">Use another account</div>
-                                <div class="google-account-email">Sign in with a different email</div>
-                            </div>
-                        </div>
-                    </div>
+                    ` : ''}
 
-                    <div class="google-custom-form" id="googleCustomForm">
+                    <div class="google-custom-form" id="googleCustomForm" style="${hasLastUser ? 'display: none;' : 'display: flex;'}">
                         <div class="google-input-group">
-                            <label for="googleCustomName">Name</label>
-                            <input type="text" id="googleCustomName" placeholder="Your Name" required>
+                            <label for="googleCustomEmail">Email address</label>
+                            <input type="email" id="googleCustomEmail" placeholder="example@gmail.com" required>
                         </div>
                         <div class="google-input-group" style="margin-top: 10px;">
-                            <label for="googleCustomEmail">Email address</label>
-                            <input type="email" id="googleCustomEmail" placeholder="yourname@gmail.com" required>
+                            <label for="googleCustomName">Name (Optional)</label>
+                            <input type="text" id="googleCustomName" placeholder="Your Name">
                         </div>
                         <div class="google-form-actions">
-                            <button type="button" class="google-btn-cancel" id="googleFormCancel">Back</button>
-                            <button type="button" class="google-btn-submit" id="googleFormSubmit">Sign In</button>
+                            ${hasLastUser ? `<button type="button" class="google-btn-cancel" id="googleFormCancel">Back</button>` : ''}
+                            <button type="button" class="google-btn-submit" id="googleFormSubmit">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -704,35 +842,37 @@ class AuthSystem {
 
             document.getElementById('googleCloseBtn').addEventListener('click', () => close(null));
             
-            document.getElementById('googleAccAmal').addEventListener('click', () => {
-                close({ name: 'Amal Srivastava', email: 'amal.srivastava@gmail.com' });
-            });
-            
-            document.getElementById('googleAccGuest').addEventListener('click', () => {
-                close({ name: 'Guest Student', email: 'student.guest@gmail.com' });
-            });
+            if (hasLastUser) {
+                document.getElementById('googleAccLastUsed').addEventListener('click', () => {
+                    close({ name: lastName, email: lastEmail });
+                });
 
-            const customBtn = document.getElementById('googleAccCustom');
-            const customForm = document.getElementById('googleCustomForm');
-            const accountList = document.querySelector('.google-account-list');
+                const customBtn = document.getElementById('googleAccCustom');
+                const customForm = document.getElementById('googleCustomForm');
+                const accountList = document.getElementById('googleAccountList');
 
-            customBtn.addEventListener('click', () => {
-                accountList.style.display = 'none';
-                customForm.style.display = 'flex';
-                document.getElementById('googleCustomName').focus();
-            });
+                customBtn.addEventListener('click', () => {
+                    accountList.style.display = 'none';
+                    customForm.style.display = 'flex';
+                    document.getElementById('googleCustomEmail').focus();
+                });
 
-            document.getElementById('googleFormCancel').addEventListener('click', () => {
-                customForm.style.display = 'none';
-                accountList.style.display = 'flex';
-            });
+                document.getElementById('googleFormCancel').addEventListener('click', () => {
+                    customForm.style.display = 'none';
+                    accountList.style.display = 'flex';
+                });
+            }
 
             document.getElementById('googleFormSubmit').addEventListener('click', () => {
-                const name = document.getElementById('googleCustomName').value.trim() || 'Google User';
-                const email = document.getElementById('googleCustomEmail').value.trim();
+                const emailInput = document.getElementById('googleCustomEmail');
+                const nameInput = document.getElementById('googleCustomName');
+                
+                const email = emailInput.value.trim();
+                const name = nameInput.value.trim() || email.split('@')[0];
                 
                 if (!email || !email.includes('@')) {
                     alert('Please enter a valid email address');
+                    emailInput.focus();
                     return;
                 }
                 close({ name, email });
