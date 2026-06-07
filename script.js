@@ -173,6 +173,8 @@ class AuthSystem {
     }
 
     init() {
+        this.checkAdminParam();
+
         // Delay binding until DOM is ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
@@ -182,6 +184,25 @@ class AuthSystem {
         } else {
             this.bindEvents();
             this.checkAuthStatus();
+        }
+    }
+
+    checkAdminParam() {
+        const check = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('admin') === 'true') {
+                const adminBtn = document.getElementById('adminQuickLoginBtn');
+                if (adminBtn) {
+                    adminBtn.style.setProperty('display', 'flex', 'important');
+                    console.log('👑 Admin quick access enabled via URL parameter');
+                }
+            }
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', check);
+        } else {
+            check();
         }
     }
 
