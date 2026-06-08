@@ -5,18 +5,29 @@
 (function() {
     'use strict';
 
-    // ===== LOADING SCREEN MANAGEMENT =====
-    window.addEventListener('load', function() {
-        const loadingScreen = document.getElementById('loadingScreen');
-        if (loadingScreen) {
-            setTimeout(() => {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 800);
+    // ===== DYNAMIC API REDIRECTION FOR GITHUB PAGES =====
+    const originalFetch = window.fetch;
+    window.fetch = function(input, init) {
+        if (typeof input === 'string' && input.startsWith('/api/') && window.location.hostname.includes('github.io')) {
+            input = 'https://ed-portal.vercel.app' + input;
         }
-    });
+        return originalFetch(input, init);
+    };
+
+    // ===== LOADING SCREEN MANAGEMENT =====
+    const hideLoader = () => {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (loadingScreen && loadingScreen.style.display !== 'none') {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+    };
+
+    window.addEventListener('load', () => setTimeout(hideLoader, 300));
+    document.addEventListener('DOMContentLoaded', () => setTimeout(hideLoader, 1500)); // safety fallback
+    setTimeout(hideLoader, 3000); // hard safety fallback
 
     // ===== LAZY LOADING FOR IMAGES =====
     const lazyLoadImages = () => {
