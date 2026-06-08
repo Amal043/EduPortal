@@ -6,7 +6,12 @@
       "dest": "/api/index.js"
     },
     {
-      "handle": "filesystem"
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|json|xml|html))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
