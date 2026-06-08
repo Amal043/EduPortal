@@ -7,22 +7,22 @@
 
     // ===== DYNAMIC API REDIRECTION FOR FRONTEND HOSTS & LOCAL DEV =====
     // If you ever need to change the backend API host (e.g., to Render or Railway), change this URL:
-    const PROD_BACKEND_URL = 'https://ed-portal.vercel.app';
+    const PROD_BACKEND_URL = 'https://eduportal-g63d.onrender.com';
 
     const originalFetch = window.fetch;
     window.fetch = function(input, init) {
         if (typeof input === 'string' && input.startsWith('/api/')) {
             const hostname = window.location.hostname;
             const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '';
-            const isVercel = hostname.endsWith('vercel.app');
+            const isBackendHost = hostname.endsWith('vercel.app') || hostname.endsWith('onrender.com');
 
             if (isLocal) {
                 // If running locally but not on the Express port (8000), redirect to localhost:8000
                 if (window.location.port !== '8000') {
                     input = 'http://localhost:8000' + input;
                 }
-            } else if (!isVercel) {
-                // If running on GitHub Pages (or any other static host), redirect to production Vercel backend
+            } else if (!isBackendHost) {
+                // If running on GitHub Pages (or any other static host), redirect to production Render backend
                 input = PROD_BACKEND_URL + input;
             }
         }
