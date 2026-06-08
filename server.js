@@ -32,18 +32,36 @@ const ADMIN_CREDENTIALS = {
 };
 
 // Database Connection
-console.log('🔌 Connecting to MongoDB Atlas...');
-mongoose.connect(process.env.MONGODB_URI)
-  .then(async () => {
+let isConnected = false;
+async function connectDB() {
+  if (isConnected) return;
+  
+  if (!process.env.MONGODB_URI) {
+    throw new Error('MONGODB_URI environment variable is not defined');
+  }
+
+  console.log('🔌 Connecting to MongoDB Atlas...');
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    isConnected = true;
     console.log('✅ Connected to MongoDB Atlas successfully');
     await seedBaselineOpportunities();
-    await refreshOpportunitiesFromRSS();
-    // Auto-refresh every 6 hours
-    setInterval(refreshOpportunitiesFromRSS, 6 * 60 * 60 * 1000);
-  })
-  .catch((err) => {
+  } catch (err) {
     console.error('❌ MongoDB connection error:', err);
-  });
+    throw err;
+  }
+}
+
+// Middleware to ensure DB connection is ready before handling API requests
+app.use('/api', async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res.status(500).json({ message: 'Database connection failed', error: err.message });
+  }
+});
+
 
 // ============================================
 // RSS PARSER — fetches live Google News feeds
