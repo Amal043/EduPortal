@@ -4524,3 +4524,11 @@ select {
     color: #202124 !important;
 }
 
+/* Custom Responsive Tweaks for Search and Lists */
+@media (max-width: 768px) {
+    .search-items {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+

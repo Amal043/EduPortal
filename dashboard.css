@@ -791,3 +791,19 @@
         min-width: 200px;
     }
 }
+
+/* ===== DASHBOARD SECTIONS GRID (RESPONSIVE) ===== */
+.dashboard-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+@media (max-width: 900px) {
+    .dashboard-sections-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
