@@ -3,9 +3,9 @@
 // Provides offline support and caching
 // ============================================
 
-const CACHE_NAME = 'eduportal-v1.0.5';
-const STATIC_CACHE = 'eduportal-static-v6';
-const DYNAMIC_CACHE = 'eduportal-dynamic-v6';
+const CACHE_NAME = 'eduportal-v1.0.6';
+const STATIC_CACHE = 'eduportal-static-v7';
+const DYNAMIC_CACHE = 'eduportal-dynamic-v7';
 
 // Files to cache immediately
 const STATIC_ASSETS = [
