@@ -3,9 +3,9 @@
 // Provides offline support and caching
 // ============================================
 
-const CACHE_NAME = 'eduportal-v1.0.7';
-const STATIC_CACHE = 'eduportal-static-v8';
-const DYNAMIC_CACHE = 'eduportal-dynamic-v8';
+const CACHE_NAME = 'eduportal-v1.0.8';
+const STATIC_CACHE = 'eduportal-static-v9';
+const DYNAMIC_CACHE = 'eduportal-dynamic-v9';
 
 // Determine base path dynamically (works on both root domains and subdirectories like GitHub Pages)
 const BASE_PATH = self.location.pathname.substring(0, self.location.pathname.lastIndexOf('/') + 1);
