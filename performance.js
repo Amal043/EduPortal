@@ -5,11 +5,26 @@
 (function() {
     'use strict';
 
-    // ===== DYNAMIC API REDIRECTION FOR GITHUB PAGES =====
+    // ===== DYNAMIC API REDIRECTION FOR FRONTEND HOSTS & LOCAL DEV =====
+    // If you ever need to change the backend API host (e.g., to Render or Railway), change this URL:
+    const PROD_BACKEND_URL = 'https://ed-portal.vercel.app';
+
     const originalFetch = window.fetch;
     window.fetch = function(input, init) {
-        if (typeof input === 'string' && input.startsWith('/api/') && window.location.hostname.includes('github.io')) {
-            input = 'https://ed-portal.vercel.app' + input;
+        if (typeof input === 'string' && input.startsWith('/api/')) {
+            const hostname = window.location.hostname;
+            const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '';
+            const isVercel = hostname.endsWith('vercel.app');
+
+            if (isLocal) {
+                // If running locally but not on the Express port (8000), redirect to localhost:8000
+                if (window.location.port !== '8000') {
+                    input = 'http://localhost:8000' + input;
+                }
+            } else if (!isVercel) {
+                // If running on GitHub Pages (or any other static host), redirect to production Vercel backend
+                input = PROD_BACKEND_URL + input;
+            }
         }
         return originalFetch(input, init);
     };

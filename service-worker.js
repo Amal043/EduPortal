@@ -3,26 +3,29 @@
 // Provides offline support and caching
 // ============================================
 
-const CACHE_NAME = 'eduportal-v1.0.6';
-const STATIC_CACHE = 'eduportal-static-v7';
-const DYNAMIC_CACHE = 'eduportal-dynamic-v7';
+const CACHE_NAME = 'eduportal-v1.0.7';
+const STATIC_CACHE = 'eduportal-static-v8';
+const DYNAMIC_CACHE = 'eduportal-dynamic-v8';
+
+// Determine base path dynamically (works on both root domains and subdirectories like GitHub Pages)
+const BASE_PATH = self.location.pathname.substring(0, self.location.pathname.lastIndexOf('/') + 1);
 
 // Files to cache immediately
 const STATIC_ASSETS = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/dashboard.css',
-    '/comparison.css',
-    '/script.js',
-    '/dashboard.js',
-    '/dashboard_widgets.js',
-    '/comparison_tool.js',
-    '/ai_system.js',
-    '/chatbot.js',
-    '/multilanguage.js',
-    '/performance.js',
-    '/manifest.json',
+    BASE_PATH,
+    `${BASE_PATH}index.html`,
+    `${BASE_PATH}styles.css`,
+    `${BASE_PATH}dashboard.css`,
+    `${BASE_PATH}comparison.css`,
+    `${BASE_PATH}script.js`,
+    `${BASE_PATH}dashboard.js`,
+    `${BASE_PATH}dashboard_widgets.js`,
+    `${BASE_PATH}comparison_tool.js`,
+    `${BASE_PATH}ai_system.js`,
+    `${BASE_PATH}chatbot.js`,
+    `${BASE_PATH}multilanguage.js`,
+    `${BASE_PATH}performance.js`,
+    `${BASE_PATH}manifest.json`,
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
     'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'
 ];
